@@ -1,0 +1,12 @@
+body {
+    width: 1000px;
+}
+
+.h1 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.color-contrast {
+    color: #999;
+}
