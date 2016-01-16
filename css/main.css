@@ -23,3 +23,7 @@ body {
 .green {
     color: green;
 }
+
+.no-outine {
+    outline:none;
+}
