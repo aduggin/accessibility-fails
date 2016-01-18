@@ -1,29 +1,182 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="foo">
     <title>A F</title>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-    <div class="h1">Accessibility Fails</div>
+    <h1>Accessibility Fails</h1>
 
 
-    <h2>Use of color - A</h2>
+    <h2>Percievable</h2>
+    <h3>1.3.1 Info and Relationships</h3>
+    <h4>Tables</h4>
+    <p>Table is missing a caption</p>
+    <table>
+        <tbody>
+        <tr>
+            <td></td>
+            <th scope="col">United Kingdom</th>
+            <th scope="col">Japan</th>
+            <th scope="col">Australia</th>
+        </tr>
+        <tr>
+            <th scope="row">Spring</th>
+            <td>5.3 (highest)</td>
+            <td>2.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <th scope="row">Summer</th>
+            <td>4.5 (highest)</td>
+            <td>3.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <th scope="row">Autumn</th>
+            <td>3.5 (highest)</td>
+            <td>1.8</td>
+            <td>1.5 (lowest)</td>
+        </tr>
+        <tr>
+            <th scope="row">Winter</th>
+            <td>1.5 (highest)</td>
+            <td>1.2</td>
+            <td>1 (lowest)</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <p>Table has an empty table header</p>
+    <table>
+        <tbody>
+        <tr>
+            <th></th>
+            <th scope="col">United Kingdom</th>
+            <th scope="col">Japan</th>
+            <th scope="col">Australia</th>
+        </tr>
+        <tr>
+            <th scope="row">Spring</th>
+            <td>5.3 (highest)</td>
+            <td>2.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <th scope="row">Summer</th>
+            <td>4.5 (highest)</td>
+            <td>3.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <th scope="row">Autumn</th>
+            <td>3.5 (highest)</td>
+            <td>1.8</td>
+            <td>1.5 (lowest)</td>
+        </tr>
+        <tr>
+            <th scope="row">Winter</th>
+            <td>1.5 (highest)</td>
+            <td>1.2</td>
+            <td>1 (lowest)</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>Table has no scope atributes</p>
+    <table>
+        <tbody>
+        <tr>
+            <td></td>
+            <th>United Kingdom</th>
+            <th>Japan</th>
+            <th>Australia</th>
+        </tr>
+        <tr>
+            <th>Spring</th>
+            <td>5.3 (highest)</td>
+            <td>2.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <th>Summer</th>
+            <td>4.5 (highest)</td>
+            <td>3.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <th>Autumn</th>
+            <td>3.5 (highest)</td>
+            <td>1.8</td>
+            <td>1.5 (lowest)</td>
+        </tr>
+        <tr>
+            <th>Winter</th>
+            <td>1.5 (highest)</td>
+            <td>1.2</td>
+            <td>1 (lowest)</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>Table has table headings</p>
+    <table>
+        <tbody>
+        <tr>
+            <td></td>
+            <td>United Kingdom</td>
+            <td>Japan</td>
+            <td>Australia</td>
+        </tr>
+        <tr>
+            <td>Spring</td>
+            <td>5.3 (highest)</td>
+            <td>2.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <td>Summer</td>
+            <td>4.5 (highest)</td>
+            <td>3.4</td>
+            <td>2 (lowest)</td>
+        </tr>
+        <tr>
+            <td>Autumn</td>
+            <td>3.5 (highest)</td>
+            <td>1.8</td>
+            <td>1.5 (lowest)</td>
+        </tr>
+        <tr>
+            <td>Winter</td>
+            <td>1.5 (highest)</td>
+            <td>1.2</td>
+            <td>1 (lowest)</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <h3>1.4.1 Use of color - A</h3>
     <p>To claim your prize click the green link:</span>
     <ul>
         <li><a href="/claim1" class="red">Claim prize</a></li>
         <li><a href="/claim2" class="green">Claim prize</a></li>
     </ul>
 
+    <h2>Operable</h2>
+    <h3>2.4.2 Page Titled - A </h3>
+    <p>This page has a title element that does not describe the page</p>
 
-    <h2>Contrast (minimum) - A</h2>
+    <h3>Contrast (minimum) - AA</h3>
     <p class="color-contrast">This text does not have enough contrast with it's background</p>
 
-    <h2>Focus Visible - AA</h2>
+    <h3>2.4.7 Focus Visible - AA</h3>
     <p>The following element have not focus</p>
     <a href="#dummy" class="no-outine">Link with no focus style</a>
 
-    <h2>2.4.1 Bypass Blocks</h2>
+
+    <h3>2.4.1 Bypass Blocks</h3>
     <p>iframe is missing a title attribute</p>
     <iframe src="http://www.bbc.co.uk/" width="300" height="100">
 
@@ -34,7 +187,13 @@
 
     </iframe>
 
+    <h2>Understandable</h2>
+    <h2>3.1.1 Language of Page</h2>
+    <p>This page has a lang attribute on the html element but it contains an incorrect value</p>
 
 
 
-
+    <h2>Robust</h2>
+    <h3>4.1.1 Parsing</h3>
+    <p>Here's some invalid HTML - Start and close tags don’t match</p>
+    <div><span><div>strings of pearls</span></div></div>
