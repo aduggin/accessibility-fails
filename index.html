@@ -2,15 +2,16 @@
 <html>
 <head lang="foo">
     <title>A F</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
     <h1>Accessibility Fails</h1>
 
-
-    <h2>Percievable</h2>
-    <h3>1.3.1 Info and Relationships</h3>
-    <h4>Tables</h4>
+    <h2>1. Percievable</h2>
+    <h3>1.3 Adaptable</h3>
+    <h4>1.3.1 Info and Relationships - A</h4>
+    <h5>Tables</h5>
     <p>Table is missing a caption</p>
     <table>
         <tbody>
@@ -157,7 +158,8 @@
     </table>
 
 
-    <h3>1.4.1 Use of color - A</h3>
+    <h3>1.4 Distinguishable</h3>
+    <h4>1.4.1 Use of color - A</h4>
     <p>To claim your prize click the green link:</span>
     <ul>
         <li><a href="/claim1" class="red">Claim prize</a></li>
@@ -165,18 +167,19 @@
     </ul>
 
     <h2>Operable</h2>
-    <h3>2.4.2 Page Titled - A </h3>
+    <h3>2.4 Navigable</h3>
+    <h4>2.4.2 Page Titled - A</h4>
     <p>This page has a title element that does not describe the page</p>
 
-    <h3>Contrast (minimum) - AA</h3>
-    <p class="color-contrast">This text does not have enough contrast with it's background</p>
+    <h4>Contrast (minimum) - AA</h4>
+    <p class="low-contrast">This text does not have enough contrast with it's background</p>
 
-    <h3>2.4.7 Focus Visible - AA</h3>
+    <h4>2.4.7 Focus Visible - AA</h4>
     <p>The following element have not focus</p>
     <a href="#dummy" class="no-outine">Link with no focus style</a>
 
 
-    <h3>2.4.1 Bypass Blocks</h3>
+    <h4>2.4.1 Bypass Blocks - A</h4>
     <p>iframe is missing a title attribute</p>
     <iframe src="http://www.bbc.co.uk/" width="300" height="100">
 
@@ -188,12 +191,14 @@
     </iframe>
 
     <h2>Understandable</h2>
-    <h2>3.1.1 Language of Page</h2>
+    <h3>3.1 Readable</h3>
+    <h4>3.1.1 Language of Page - A</h4>
     <p>This page has a lang attribute on the html element but it contains an incorrect value</p>
 
 
 
     <h2>Robust</h2>
-    <h3>4.1.1 Parsing</h3>
-    <p>Here's some invalid HTML - Start and close tags don’t match</p>
+    <h3>4. Robust</h3>
+    <h4>4.1.1 Parsing - A</h4>
+    <p>Here's some invalid HTML, the start and close tags don't match</p>
     <div><span><div>strings of pearls</span></div></div>
