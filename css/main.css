@@ -1,29 +1,35 @@
 body {
     width: 1000px;
+    margin: 20px;
 }
 
-.h1 {
-    font-weight: bold;
-    font-size: 2.6em;
+h2 {
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #aaa;
 }
 
-.h2 {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.color-contrast {
-    color: #999;
+h5 {
+    font-size: 1em;
 }
 
 .red {
-    color: red;
+    color: #B31212;
 }
-
 .green {
     color: green;
 }
 
 .no-outine {
     outline:none;
+}
+
+.low-contrast,
+a.low-contrast-active:active,
+a.low-contrast-focus:focus,
+a.low-contrast-visited:visited {
+    color: #dddddd;
+}
+
+input.low-contrast {
+    border: 1px #dddddd solid;
 }

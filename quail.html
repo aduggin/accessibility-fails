@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<title>Quail tests</title>
+<link rel="stylesheet" href="css/normalize.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body bgcolor="#ffffff">
+<h1>Quail tests</h1>
+
+<h2>Adjacent links that point to the same location should be merged</h2>
+<p>You can also <a href="article.html">read more of</a> <a href="article.html">my great article</a>.</p>
+
+<h2>When an image is in a link, its "alt" attribute should not repeat other text in the link</h2>
+<a href="home.html"><img src="home.png" alt="Return home">Return home</a>
+
+<h2>Lists of links should be seperated by printable characters</h2>
+<a href="a.html">Page A</a> <a href="b.html">Page B</a> <a href="c.html">Page C</a>
+
+<h2>Links should not open a new window without warning</h2>
+<a href="page.html" target="_blank">View my page</a>
+
+<h2>The text in links should make sense out of context</h2>
+<p>To know more about me, visit my <a href="page.html">page</a>.</p>
+
+<h2>Any links to a multimedia file should also include a link to a transcript</h2>
+<a href="interview.mov">Watch the interview</a>
+
+<h2>Any links to a sound file should also include a link to a transcript</h2>
+<a href="interview.mp3">Listen to the interview</a>
+
+<h2>Links should contain text</h2>
+<a href="home.png"></a>
+
+
+<h2>Links should not use "javascript" in their location</h2>
+<a href="javascript:alert('Hello world!')">Press me!</a>
+
+<h2>Links should not have an onclick and hash in the url</h2>
+<a href="#" onclick="alert('Hello world!')">Press me!</a>
+
+<h2>All applets should contain the same content within the body of the applet</h2>
+<applet archive="whyareyouusingapplet.jar">Why are you still using applets?</applet>
+
+<h2>All applets should contain a text equivalent in the “alt” attribute</h2>
+<applet archive="whyareyouusingapplet.jar"></applet>
+
+<h2>All "area" elements must have an "alt" attribute which describes the link destination</h2>
+<map name="primary">
+    <area shape="circle" coords="200,250,25" href="another.htm" />
+    <area shape="default" nohref />
+</map>
+
+<h2>The "blink" tag should not be used</h2>
+<blink>Please read me!</blink>
+
+<h2>The "blockquote" tag should not be used just for indentation</h2>
+<blockquote>Something I just wanted indented.</blockquote>
+
+<h2>If long quotes are in the document, use the “blockquote” element to mark them</h2>
+<p>A long quote of several sentences. This should probably be placed in a blockquote, as it is too long to read in a single sentence, and the presence of a blockquote tag would help indicate it is actually an excerpt from somewhere else.</p>
+
+
+<h2>Contrast between text and background should be 5:1</h2>
+<p class="low-contrast">This text does not have enough contrast with it's background</p>
+
+<h2>Contrast between link text and background should be 5:1</h2>
+<a href="/claim1" class="low-contrast">Claim prize</a>
+
+<h2>Contrast between link text with focus and background should be 5:1</h2>
+<a href="/spain" class="low-contrast-focus">Win a holiday to Spain</a>
+
+<h2>Contrast between active link text and background should be 5:1</h2>
+<a href="/france" class="low-contrast-active">Win a holiday to France</a>
+
+<h2>Contrast between visited link text and background should be 5:1</h2>
+<a href="https://www.google.co.uk" class="low-contrast-visited">Win a holiday to Italy</a>
+
+<h2>Body elements do not use a background image</h2>
+This page has the following:
+<pre>
+    <code>&lt;body bgcolor="#ffffff"&gt;</code>
+</pre>
+
+<h2>All checkboxes must have a corresponding label</h2>
+<input type="checkbox" id="cbox1" name="terms"  value="true"> Accept Terms and Conditions
+
+<h2>All "checkbox" input elements have a label that is close</h2>
+<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2" style="float:right">This is the second checkbox</label>
+
+
+<h2>The document must be readable with styles turned off</h2>
+<p>This would need to be a manual test</p>
+
+<h2>All elements should have appropriate color contrast</h2>
+<label for="first-name">First name</label>
+<input class="low-contrast" id="first-name" name="first-name" type="text">
+
+
+
+</body>
+</html>
