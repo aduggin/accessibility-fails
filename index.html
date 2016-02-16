@@ -6,199 +6,703 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
+<div class="container">
     <h1>Accessibility Fails</h1>
 
-    <h2>1. Percievable</h2>
-    <h3>1.3 Adaptable</h3>
-    <h4>1.3.1 Info and Relationships - A</h4>
-    <h5>Tables</h5>
-    <p>Table is missing a caption</p>
-    <table>
-        <tbody>
-        <tr>
-            <td></td>
-            <th scope="col">United Kingdom</th>
-            <th scope="col">Japan</th>
-            <th scope="col">Australia</th>
-        </tr>
-        <tr>
-            <th scope="row">Spring</th>
-            <td>5.3 (highest)</td>
-            <td>2.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <th scope="row">Summer</th>
-            <td>4.5 (highest)</td>
-            <td>3.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <th scope="row">Autumn</th>
-            <td>3.5 (highest)</td>
-            <td>1.8</td>
-            <td>1.5 (lowest)</td>
-        </tr>
-        <tr>
-            <th scope="row">Winter</th>
-            <td>1.5 (highest)</td>
-            <td>1.2</td>
-            <td>1 (lowest)</td>
-        </tr>
-        </tbody>
-    </table>
+    <p>last updated: 15 February 2016</p>
+
+    <h2>Content</h2>
+
+    <h3>Plain Language is not used</h3>
+    <div class="example">
+        Title I of the CARE Act creates a program of formula and supplemental competitive grants to help metropolitan areas
+        with 2,000 or more reported AIDS cases meet emergency care needs of low-income HIV patients. Title II of the Ryan
+        White Act provides formula grants to States and territories for operation of HIV service consortia in the localities
+        most affected bu the epidemic, provision of home and community -based care, continuation of insurance coverage for
+        persons with HIV infection, and treatments that prolong life and prevent serious deterioration of health.
+        Up to 10 percent of the funds for this program can be used to support Special Projects of National Significance.
+    </div>
+
+    <h3>Content is not organised into into well-defined groups or chunks, using headings, lists, and other visual mechanisms</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h3>First instance of abbreviations and acronyms not expanded</h3>
+    <div class="example">
+        GDS is part of the Cabinet Office. Our job is digital transformation of government.
+    </div>
+
+    <h2>Page Layout</h2>
+    <h3>Page is too wide, users have to scroll horizontally</h3>
+    <div class="example example--wide">
+        When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.
+    </div>
+
+    <h3>Page is not readable and functional when text is increased</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h3>White space not used for separation</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h3>Distractions are present e.g animations</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h3>Focusable items do not have visible focus</h3>
+    <div class="example">
+        <a href="#dummy" class="no-outine">Link with no focus style</a>
+    </div>
+
+    <h2>Colour and Contrast</h2>
+    <h3>Color alone is used to convey content</h3>
+    <div class="example">
+        <p>To claim your prize click the green link:</span>
+        <ul>
+            <li><a href="/claim1" class="red">You are a winner</a></li>
+            <li><a href="/claim2" class="green">You won</a></li>
+        </ul>
+    </div>
+
+    <h3>The contrast between foreground and background colors does not meets WCAG 2 AA contrast ratio thresholds</h3>
+    <div class="example">
+        <p class="low-contrast">This text does not have enough contrast with it's background</p>
+    </div>
+
+    <h3>The contrast between foreground and background colors does not meets WCAG 2 AAA contrast ratio thresholds</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h2>Typography</h2>
+    <h3>Very small text found</h3>
+    <div class="example">
+        <p class="small-text">This is some tiny text, much too small for some people to read</p>
+    </div>
+
+    <h3>Blink element found</h3>
+    <div class="example">
+        <p><blink>Blinking text and moving text (such as a marquee) can distract the reader's attention. This is especially relevant to people with attention deficits or cognitive disabilities. Neither is likely to cause a seizure, but they are likely to decrease the readability of the document as a whole and increase the time it takes for users to finish reading it.</blink></p>
+    </div>
+
+    <h3>Marquee element found</h3>
+    <div class="example">
+        <p><marquee>The BLINK and MARQUEE element animates content in a way that cannot be overridden or disabled by the user.</marquee></p>
+    </div>
+
+    <h3>Italics used on long sections of text</h3>
+    <div class="example">
+        <p class="italic">Italics are sometimes used to highlight text. But you shouldn’t use italicized text because they make letters hard to read. The letters have a jagged line compared to non-italic fonts. The letters also lean over making it hard for dyslexic users to make out the words. When the text size is small, the text is even more illegible.</p>
+    </div>
+
+    <h3>All caps text found</h3>
+    <div class="example">
+        <p class="all-caps">Typing sentences or phrases IN ALL CAPITALS is rarely a good idea. It may make sense under some circumstances, but only rarely. Lengthy segments of capitalized content are more difficult to read. In some cases, a screen reader may interpret ALL CAPITAL text as being an acronym and may read it as letters rather than words. For example, a screen reader may read the uppercase text CONTACT US as "Contact U. S." because it interprets the uppercase "US" as being an acronym for "United States".</p>
+    </div>
+
+    <h3>Justified text found</h3>
+    <div class="example">
+        <p class="justify">When text is justified to both margins it may add additional spaces between words which may be difficult for users with visual or cognitive impairments to read. Full text justification can also cause words to be spaced closely together thus making it difficult to determine where a word starts and ends.</p>
+    </div>
 
 
-    <p>Table has an empty table header</p>
-    <table>
-        <tbody>
-        <tr>
-            <th></th>
-            <th scope="col">United Kingdom</th>
-            <th scope="col">Japan</th>
-            <th scope="col">Australia</th>
-        </tr>
-        <tr>
-            <th scope="row">Spring</th>
-            <td>5.3 (highest)</td>
-            <td>2.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <th scope="row">Summer</th>
-            <td>4.5 (highest)</td>
-            <td>3.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <th scope="row">Autumn</th>
-            <td>3.5 (highest)</td>
-            <td>1.8</td>
-            <td>1.5 (lowest)</td>
-        </tr>
-        <tr>
-            <th scope="row">Winter</th>
-            <td>1.5 (highest)</td>
-            <td>1.2</td>
-            <td>1 (lowest)</td>
-        </tr>
-        </tbody>
-    </table>
+    <h3>Inadequate line height used</h3>
+    <div class="example">
+        <p class="line-height">Many people with cognitive disabilities have trouble tracking lines of text when a block of text is single spaced. Providing spacing between 1.5 to 2 allows them to start a new line more easily once they have finished the previous one.</p>
+    </div>
 
-    <p>Table has no scope atributes</p>
-    <table>
-        <tbody>
-        <tr>
-            <td></td>
-            <th>United Kingdom</th>
-            <th>Japan</th>
-            <th>Australia</th>
-        </tr>
-        <tr>
-            <th>Spring</th>
-            <td>5.3 (highest)</td>
-            <td>2.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <th>Summer</th>
-            <td>4.5 (highest)</td>
-            <td>3.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <th>Autumn</th>
-            <td>3.5 (highest)</td>
-            <td>1.8</td>
-            <td>1.5 (lowest)</td>
-        </tr>
-        <tr>
-            <th>Winter</th>
-            <td>1.5 (highest)</td>
-            <td>1.2</td>
-            <td>1 (lowest)</td>
-        </tr>
-        </tbody>
-    </table>
+    <h2>Language of content</h2>
+    <h3>Text language changed without required change in direction</h3>
+    <div class="example">
+        <p lang="am" id="x_1">WHEE</p>
+    </div>
 
-    <p>Table has table headings</p>
-    <table>
-        <tbody>
-        <tr>
-            <td></td>
-            <td>United Kingdom</td>
-            <td>Japan</td>
-            <td>Australia</td>
-        </tr>
-        <tr>
-            <td>Spring</td>
-            <td>5.3 (highest)</td>
-            <td>2.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <td>Summer</td>
-            <td>4.5 (highest)</td>
-            <td>3.4</td>
-            <td>2 (lowest)</td>
-        </tr>
-        <tr>
-            <td>Autumn</td>
-            <td>3.5 (highest)</td>
-            <td>1.8</td>
-            <td>1.5 (lowest)</td>
-        </tr>
-        <tr>
-            <td>Winter</td>
-            <td>1.5 (highest)</td>
-            <td>1.2</td>
-            <td>1 (lowest)</td>
-        </tr>
-        </tbody>
-    </table>
+    <h2>Page Title</h2>
+    <h3>Empty page title</h3>
+    <div class="example">
+        <title></title>
+    </div>
+
+    <h2>Headings</h2>
+    <h3>Empty heading</h3>
+    <div class="example">
+        <h2></h2>
+    </div>
+
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h2>Lists</h2>
+    <h3>improperly nested lists</h3>
+    <div class="example">
+        <ul>
+            <ul>oops!</ul>
+        </ul>
+    </div>
 
 
-    <h3>1.4 Distinguishable</h3>
-    <h4>1.4.1 Use of color - A</h4>
-    <p>To claim your prize click the green link:</span>
-    <ul>
-        <li><a href="/claim1" class="red">Claim prize</a></li>
-        <li><a href="/claim2" class="green">Claim prize</a></li>
-    </ul>
+    <h3>LI element with no parent</h3>
+    <div class="example">
+        <li>
+            apple
+        </li>
+    </div>
 
-    <h2>Operable</h2>
-    <h3>2.4 Navigable</h3>
-    <h4>2.4.2 Page Titled - A</h4>
-    <p>This page has a title element that does not describe the page</p>
+    <h3> DT or DD elements that are not contained within a DL element</h3>
+    <div class="example">
+        <dt>html</dt>
+        <dd>a markup language for describing web documents</dd>
+    </div>
 
-    <h4>Contrast (minimum) - AA</h4>
-    <p class="low-contrast">This text does not have enough contrast with it's background</p>
+    <h3> ordered list with type set</h3>
+    <div class="example">
+        <ol type="A">
+            <li>read</li>
+            <li>reply</li>
+        </ol>
+    </div>
 
-    <h4>2.4.7 Focus Visible - AA</h4>
-    <p>The following element have not focus</p>
-    <a href="#dummy" class="no-outine">Link with no focus style</a>
+    <h3> ordered list with type set</h3>
+    <div class="example">
+        <ul type="1">
+            <li>shoes</li>
+        </ul>
+    </div>
 
 
-    <h4>2.4.1 Bypass Blocks - A</h4>
-    <p>iframe is missing a title attribute</p>
-    <iframe src="http://www.bbc.co.uk/" width="300" height="100">
-
-    </iframe>
-
-    <p>iframe title attribute does not describes the content or purpose in the iframe</p>
-    <iframe src="http://www.bbc.co.uk/" width="300" height="100" title="Foo bar">
-
-    </iframe>
-
-    <h2>Understandable</h2>
-    <h3>3.1 Readable</h3>
-    <h4>3.1.1 Language of Page - A</h4>
-    <p>This page has a lang attribute on the html element but it contains an incorrect value</p>
+    <h3>list that is not marked up as a list</h3>
+    <div class="example">
+        * apple <br />
+        * orange <br />
+        * banana <br />
+        * pear
+    </div>
 
 
 
-    <h2>Robust</h2>
-    <h3>4. Robust</h3>
-    <h4>4.1.1 Parsing - A</h4>
-    <p>Here's some invalid HTML, the start and close tags don't match</p>
-    <div><span><div>strings of pearls</span></div></div>
+    <h2>Landmarks</h2>
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h2>Tables</h2>
+    <h3>Table is missing a caption</h3>
+    <div class="example">
+        <table>
+            <tr>
+                <td></td>
+                <th scope="col">United Kingdom</th>
+                <th scope="col">Japan</th>
+                <th scope="col">Australia</th>
+            </tr>
+            <tr>
+                <th scope="row">Spring</th>
+                <td>5.3 (highest)</td>
+                <td>2.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <th scope="row">Summer</th>
+                <td>4.5 (highest)</td>
+                <td>3.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <th scope="row">Autumn</th>
+                <td>3.5 (highest)</td>
+                <td>1.8</td>
+                <td>1.5 (lowest)</td>
+            </tr>
+            <tr>
+                <th scope="row">Winter</th>
+                <td>1.5 (highest)</td>
+                <td>1.2</td>
+                <td>1 (lowest)</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Table has an empty table header</h3>
+    <div class="example">
+        <table>
+            <tr>
+                <th></th>
+                <th scope="col">United Kingdom</th>
+                <th scope="col">Japan</th>
+                <th scope="col">Australia</th>
+            </tr>
+            <tr>
+                <th scope="row">Spring</th>
+                <td>5.3 (highest)</td>
+                <td>2.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <th scope="row">Summer</th>
+                <td>4.5 (highest)</td>
+                <td>3.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <th scope="row">Autumn</th>
+                <td>3.5 (highest)</td>
+                <td>1.8</td>
+                <td>1.5 (lowest)</td>
+            </tr>
+            <tr>
+                <th scope="row">Winter</th>
+                <td>1.5 (highest)</td>
+                <td>1.2</td>
+                <td>1 (lowest)</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Table has no scope atributes</h3>
+    <div class="example">
+        <table>
+            <tr>
+                <td></td>
+                <th>United Kingdom</th>
+                <th>Japan</th>
+                <th>Australia</th>
+            </tr>
+            <tr>
+                <th>Spring</th>
+                <td>5.3 (highest)</td>
+                <td>2.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <th>Summer</th>
+                <td>4.5 (highest)</td>
+                <td>3.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <th>Autumn</th>
+                <td>3.5 (highest)</td>
+                <td>1.8</td>
+                <td>1.5 (lowest)</td>
+            </tr>
+            <tr>
+                <th>Winter</th>
+                <td>1.5 (highest)</td>
+                <td>1.2</td>
+                <td>1 (lowest)</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Table has no table headings</h3>
+    <div class="example">
+        <table>
+            <tr>
+                <td></td>
+                <td>United Kingdom</td>
+                <td>Japan</td>
+                <td>Australia</td>
+            </tr>
+            <tr>
+                <td>Spring</td>
+                <td>5.3 (highest)</td>
+                <td>2.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <td>Summer</td>
+                <td>4.5 (highest)</td>
+                <td>3.4</td>
+                <td>2 (lowest)</td>
+            </tr>
+            <tr>
+                <td>Autumn</td>
+                <td>3.5 (highest)</td>
+                <td>1.8</td>
+                <td>1.5 (lowest)</td>
+            </tr>
+            <tr>
+                <td>Winter</td>
+                <td>1.5 (highest)</td>
+                <td>1.2</td>
+                <td>1 (lowest)</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h3>Table that only has TH elements in it</h3>
+    <div class="example">
+        <table>
+            <thead>
+            <tr>
+                <th>Foo</th>
+                <th>Bar</th>
+                <th>Bat</th>
+                <th>Baz</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <h3>table nested within table header</h3>
+    <div class="example">
+        <table>
+            <th>
+                <table>
+                    <tr>
+                        <td>Foo</td>
+                    </tr>
+                </table>
+            </th>
+            <tr>
+                <td>Bar</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>table nested within table</h3>
+    <div class="example">
+        <table>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>I'm so nested</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h3>Table used for layout</h3>
+    <div class="example">
+        <table>
+            <tr>
+                <td>I am a layout table</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <h2>Images</h2>
+    <h3>Image with no alt attribute</h3>
+    <div class="example">
+        <img src="images/bbc-blocks-dark.png" />
+    </div>
+
+    <h3>Image that conveys information has an empty alt attribute </h3>
+    <div class="example">
+        <img src="images/bbc-blocks-dark.png" alt="" />
+    </div>
+
+    <h3>Image that conveys information has inappropriate alt text </h3>
+    <div class="example">
+        <img src="images/bbc-blocks-dark.png" alt="Twitter" />
+    </div>
+
+    <h3>Image alt attribute contains image file name </h3>
+    <div class="example">
+        <img src="images/bbc-blocks-dark.png" alt="bbc-blocks-dark.png" />
+    </div>
+
+    <h3>Image with presentation role has non-empty alt</h3>
+    <div class="example">
+        <img role="presentation" src="images/foo.png" alt="foo">
+    </div>
+
+    <h3>Image has empty alt and non-empty title</h3>
+    <div class="example">
+        <img src="images/bbc-blocks-dark.png" alt="" title="BBC"/>
+    </div>
+
+    <h3>Image has alt &amp; title that are different</h3>
+    <div class="example">
+        <img src="images/bbc-blocks-dark.png" alt="BBC" title="BBC homepage"/>
+    </div>
+
+
+    <!-- <h2>Multimedia</h2>
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+    -->
+
+    <h2>Frames</h2>
+    <h3>iframe is missing a title attribute</h3>
+    <div class="example">
+        <iframe src="http://www.bbc.co.uk/" width="300" height="100"></iframe>
+    </div>
+
+    <h3>iframe title attribute does not describes the content or purpose in the iframe</h3>
+    <div class="example">
+        <iframe src="http://www.bbc.co.uk/" width="300" height="100" title="Facebook"></iframe>
+    </div>
+
+
+    <h2>Links</h2>
+    <h3>Link text with identical title</h3>
+    <div class="example">
+        <a href="http://www.google.com" title="Google">Google</a>
+    </div>
+
+    <h3>Blank link text</h3>
+    <div class="example">
+        <a href="http://www.google.com"></a>
+    </div>
+
+    <h3>Uninformative link text</h3>
+    <div class="example">
+        <a href="food.html" >Read more</a>
+    </div>
+
+    <h3>Link points directly to an image </h3>
+    <div class="example">
+        <a href="bat.jpg">bat</a>
+    </div>
+
+    <h3>Link uses invalid hypertext reference</h3>
+    <div class="example">
+        <a href="#">a link</a>
+    </div>
+
+
+
+    <h2>Buttons</h2>
+    <h3>Empty button</h3>
+    <div class="example">
+        <button></button>
+    </div>
+
+    <h2>Forms</h2>
+    <h3>fieldset without a legend</h3>
+    <div class="example">
+        <fieldset>
+            I am a fieldset without a legend
+        </fieldset>
+    </div>
+
+    <h3>Empty LEGEND</h3>
+    <div class="example">
+        <fieldset>
+            <legend></legend>
+        </fieldset>
+    </div>
+
+
+    <h3>Form element has no label</h3>
+    <div class="example">
+        <input type="text">
+    </div>
+
+    <h3>Empty label found</h3>
+    <div class="example">
+        <label for="txt3" class="add-mass"></label>
+        <input type="text" name="txt3" value="">
+    </div>
+
+
+
+
+    <h3>Non-unique field label found</h3>
+    <div class="example">
+        <label for="x_3">Two
+            <input type="text" name="x_3" id="x_3">
+        </label>
+
+        <label for="x_4">Two
+            <input type="text" name="x_4" id="x_4">
+        </label>
+    </div>
+
+    <h3>Image button has no alt attribute</h3>
+    <div class="example">
+        <input type="image" src="foo.jpg">
+    </div>
+
+    <h3>Empty alt attribute on image button</h3>
+    <div class="example">
+        <input type="image" alt="" id="one">
+    </div>
+
+
+    <h3>Uninformative alt attribute value on image button</h3>
+    <div class="example">
+        <input type="image" src="foo.jpg" alt="click" />
+    </div>
+
+
+
+
+
+
+
+    <h2>Navigation</h2>
+    <h3>Navigation placement, display, and functionality should not change from page to page</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h3>Inadequately-sized clickable targets found</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h2>Dynamic Content</h2>
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h2>Focus Control</h2>
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h2>Keyboard Access</h2>
+    <h3>Don't use the accesskey attribute</h3>
+    <div class="example">
+        <a href="#foo" accesskey="A">A link with an accesskey attribute</a>
+    </div>
+
+    <h3>Tabindex greater than 0</h3>
+    <div class="example">
+        <p tabindex="5">some text</p>
+    </div>
+
+
+
+
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+
+
+
+
+
+    <h2>Timeouts</h2>
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+    <h2>Embedded Media and Object Elements</h2>
+    <h3>Object not embedded accessibly - wmode parameter not set to window</h3>
+    <div class="example">
+        <object data="foo" type="bar"></object>
+    </div>
+
+    <h2>HTML</h2>
+
+    <h3>Duplicate id</h3>
+    <div class="example">
+        <div id="nav">global nav</div>
+        <div id="nav">page nav</div>
+    </div>
+
+    <h3>Start and close tags don't match</h3>
+    <div class="example">
+        <div><span><div>strings of pearls</span></div></div>
+    </div>
+
+    <h3>Empty paragraph/h3>
+    <div class="example">
+        <p></p>
+    </div>
+
+
+
+    <h3>Deprecated color definition</h3>
+    <div class="example">
+        <p><font color="blue">The colour of this text is set using the font element an dthe colr attribute</font></p>
+    </div>
+
+    <h3>Deprecated center elemet</h3>
+    <div class="example">
+        <center>This text is centred using the center element</center>
+    </div>
+
+    <h3>Deprecated dir elemet</h3>
+    <div class="example">
+        <p>A directory list:</p>
+        <dir>
+            <li>html</li>
+            <li>xhtml</li>
+            <li>css</li>
+        </dir>
+    </div>
+
+    <h3>Deprecated font element</h3>
+    <div class="example">
+        <font>font</font>
+    </div>
+
+    <h3>Deprecated strike element</h3>
+    <div class="example">
+        <strike>strike</strike>
+    </div>
+
+    <h3>Spacer image found</h3>
+    <div class="example">
+        <img src="spacer.gif">
+    </div>
+
+
+    <h3>PRE element without CODE element inside it</h3>
+    <div class="example">
+        <pre>
+Your
+
+  /\ (`/`|| _     +
+ /--\,)\,||   (||`|
+
+        goes here
+</pre>
+    </div>
+
+
+
+<h2>CSS</h2>
+    <h3>display:none used to visual hide content when it should be available to screenreader</h3>
+    <div class="example">
+        <a href="football.html">Read more <span style="display:none"> about football</span></a>
+    </div>
+
+    <h3>visibility:hidden used to visual hide content when it should be available to screenreader</h3>
+    <div class="example">
+        <a href="rugby.html">Read more <span style="visibility:hidden"> about rugby</span></a>
+    </div>
+
+
+    <h3>The document must be readable with styles turned off</h3>
+    <p>Requires manual test</p>
+
+    <h2>Javascript</h2>
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+
+
+    <h2>WAI-ARIA</h2>
+    <h3>insert_title</h3>
+    <div class="example">
+        insert_example
+    </div>
+</div>

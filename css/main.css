@@ -1,6 +1,10 @@
 body {
-    width: 1000px;
     margin: 20px;
+    line-height: 150%;
+}
+
+.container {
+    width: 800px;
 }
 
 h2 {
@@ -23,6 +27,22 @@ h5 {
     outline:none;
 }
 
+.small-text {
+    font-size: 8px;
+}
+.italic {
+    font-style: italic;
+}
+.all-caps {
+    text-transform: uppercase;
+}
+.justify {
+    text-align: justify;
+}
+.line-height {
+    line-height: 100%;
+}
+
 .low-contrast,
 a.low-contrast-active:active,
 a.low-contrast-focus:focus,
@@ -32,4 +52,13 @@ a.low-contrast-visited:visited {
 
 input.low-contrast {
     border: 1px #dddddd solid;
+}
+
+.example {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.example--wide {
+    width: 200%;
 }
