@@ -3,9 +3,13 @@ body {
     line-height: 150%;
 }
 
-.container {
-    width: 800px;
+
+.h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-weight: bold;
 }
+
 
 h2 {
     padding-bottom: 0.2em;
@@ -15,6 +19,20 @@ h2 {
 h5 {
     font-size: 1em;
 }
+
+.container {
+    width: 800px;
+}
+
+.example {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.example--wide {
+    width: 200%;
+}
+
 
 .red {
     color: #B31212;
@@ -40,25 +58,89 @@ h5 {
     text-align: justify;
 }
 .line-height {
-    line-height: 100%;
+    line-height: 90%;
 }
 
-.low-contrast,
-a.low-contrast-active:active,
-a.low-contrast-focus:focus,
-a.low-contrast-visited:visited {
-    color: #dddddd;
+.low-contrast-small-aa,
+a.low-contrast-small-aa:active,
+a.low-contrast-small-aa:focus,
+a.low-contrast-small-aa:visited {
+    font-size: 12px;
+    color: #757980;
+}
+
+.low-contrast-large-aa,
+a.low-contrast-large-aa:active,
+a.low-contrast-large-aa:focus,
+a.low-contrast-large-aa:visited {
+    font-size: 20px;
+    color: #878c8c;
+}
+
+.low-contrast-small-aaa,
+a.low-contrast-small-aaa:active,
+a.low-contrast-small-aaa:focus,
+a.low-contrast-small-aaa:visited {
+    font-size: 12px;
+    color: #9499a1;
+}
+
+.low-contrast-large-aaa,
+a.low-contrast-large-aaa:active,
+a.low-contrast-large-aaa:focus,
+a.low-contrast-large-aaa:visited {
+    font-size: 20px;
+    color: #81858c;
 }
 
 input.low-contrast {
     border: 1px #dddddd solid;
 }
 
-.example {
-    border: 1px solid #000;
+.resize {
+    font-size:1.5em;
+    line-height: 24px;
+    max-height: 64px;
+    overflow: hidden;
+}
+
+#css-generated-text:after {
+    content: 'Pizza';
+}
+
+.poisonous {
+    color: #a1150b;
+}
+
+.safe {
+    color: #0a6703;
+}
+
+#webchat {
+    background-color: #00823b;
+    color: #fff;
+    width: 10em;
     padding: 10px;
 }
 
-.example--wide {
-    width: 200%;
+.warning {
+    background-image: url("../images/important.png");
+    background-size: 34px 34px;
+    background-repeat: no-repeat;
+    background-position: 0 4px;
+    min-height: 40px;
+    padding-left: 40px;
+    font-weight: bold;
+    width: 30em;
+}
+
+.display-table {
+    display:table;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+.display-table-cell {
+    display:table-cell;
+    vertical-align:middle;
 }

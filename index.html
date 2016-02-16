@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head lang="foo">
-    <title>A F</title>
+    <title>Accessibility Fails</title>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" id="main">
     <h1>Accessibility Fails</h1>
 
-    <p>last updated: 15 February 2016</p>
+    <p>last updated: 16 February 2016</p>
+
+    <p>87 examples</p>
 
     <h2>Content</h2>
 
@@ -39,44 +43,42 @@
         When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.
     </div>
 
-    <h3>Page is not readable and functional when text is increased</h3>
-    <div class="example">
-        insert_example
-    </div>
-
     <h3>White space not used for separation</h3>
     <div class="example">
         insert_example
     </div>
 
-    <h3>Distractions are present e.g animations</h3>
-    <div class="example">
-        insert_example
-    </div>
-
-    <h3>Focusable items do not have visible focus</h3>
-    <div class="example">
-        <a href="#dummy" class="no-outine">Link with no focus style</a>
-    </div>
-
     <h2>Colour and Contrast</h2>
     <h3>Color alone is used to convey content</h3>
     <div class="example">
-        <p>To claim your prize click the green link:</span>
+        <p>The green mushrooms listed here are OK to eat. The red mushrooms will kill you.</span>
         <ul>
-            <li><a href="/claim1" class="red">You are a winner</a></li>
-            <li><a href="/claim2" class="green">You won</a></li>
+            <li class="poisonous">Amanita</li>
+            <li class="safe">Chanterelle</li>
+            <li class="safe">Porcini</li>
+            <li class="safe">Shitake</li>
+            <li class="poisonous">Tylopilus</li>
         </ul>
     </div>
 
-    <h3>The contrast between foreground and background colors does not meets WCAG 2 AA contrast ratio thresholds</h3>
+    <h3>Small text does not have a contrast ratio of at least 4.5:1 so does not meet AA</h3>
     <div class="example">
-        <p class="low-contrast">This text does not have enough contrast with it's background</p>
+        <p class="low-contrast-small-aa">This small text does not have enough contrast with it's background</p>
     </div>
 
-    <h3>The contrast between foreground and background colors does not meets WCAG 2 AAA contrast ratio thresholds</h3>
+    <h3>Large text does not have a contrast ratio of at least 3:1 so does not meet AA</h3>
     <div class="example">
-        insert_example
+        <p class="low-contrast-large-aa">This small text does not have enough contrast with it's background</p>
+    </div>
+
+    <h3>Small text does not have a contrast ratio of at least 7:1 so does not meet AAA</h3>
+    <div class="example">
+        <p class="low-contrast-small-aaa">This small text does not have enough contrast with it's background</p>
+    </div>
+
+    <h3>Large text does not have a contrast ratio of at least 4.5:1 so does not meet AAA</h3>
+    <div class="example">
+        <p class="low-contrast-large-aa">This small text does not have enough contrast with it's background</p>
     </div>
 
     <h2>Typography</h2>
@@ -110,7 +112,6 @@
         <p class="justify">When text is justified to both margins it may add additional spaces between words which may be difficult for users with visual or cognitive impairments to read. Full text justification can also cause words to be spaced closely together thus making it difficult to determine where a word starts and ends.</p>
     </div>
 
-
     <h3>Inadequate line height used</h3>
     <div class="example">
         <p class="line-height">Many people with cognitive disabilities have trouble tracking lines of text when a block of text is single spaced. Providing spacing between 1.5 to 2 allows them to start a new line more easily once they have finished the previous one.</p>
@@ -119,19 +120,35 @@
     <h2>Language of content</h2>
     <h3>Text language changed without required change in direction</h3>
     <div class="example">
-        <p lang="am" id="x_1">WHEE</p>
+        <p lang="am" >placeholder text</p>
     </div>
 
     <h2>Page Title</h2>
     <h3>Empty page title</h3>
     <div class="example">
-        <title></title>
+        <a href="empty.html">Example page with a empty page title</a>
+    </div>
+
+    <h3>Missing page title</h3>
+    <div class="example">
+        <a href="missing.html">Example page with a missing page title</a>
+    </div>
+
+    <h3>Inapproriate page title</h3>
+    <div class="example">
+        <a href="inappropriate.html">Example page with a inappropriate page title</a>
     </div>
 
     <h2>Headings</h2>
     <h3>Empty heading</h3>
     <div class="example">
         <h2></h2>
+        <p>This paragraph is preceded by an empty H2</p>
+    </div>
+
+    <h3>Missing H1</h3>
+    <div class="example">
+        <a href="missing.html">Example page with no H1</a>
     </div>
 
     <h3>insert_title</h3>
@@ -146,7 +163,6 @@
             <ul>oops!</ul>
         </ul>
     </div>
-
 
     <h3>LI element with no parent</h3>
     <div class="example">
@@ -176,7 +192,6 @@
         </ul>
     </div>
 
-
     <h3>list that is not marked up as a list</h3>
     <div class="example">
         * apple <br />
@@ -185,12 +200,10 @@
         * pear
     </div>
 
-
-
     <h2>Landmarks</h2>
-    <h3>insert_title</h3>
+    <h3>Page does not utilise landmark roles such as main</h3>
     <div class="example">
-        insert_example
+        This page has no landmark roles
     </div>
 
     <h2>Tables</h2>
@@ -338,7 +351,6 @@
         </table>
     </div>
 
-
     <h3>Table that only has TH elements in it</h3>
     <div class="example">
         <table>
@@ -384,7 +396,6 @@
         </table>
     </div>
 
-
     <h3>Table used for layout</h3>
     <div class="example">
         <table>
@@ -393,8 +404,6 @@
             </tr>
         </table>
     </div>
-
-
 
     <h2>Images</h2>
     <h3>Image with no alt attribute</h3>
@@ -419,7 +428,7 @@
 
     <h3>Image with presentation role has non-empty alt</h3>
     <div class="example">
-        <img role="presentation" src="images/foo.png" alt="foo">
+        <img role="presentation" src="images/decoration.png" width="368" height="118" alt="Decorative line clipart">
     </div>
 
     <h3>Image has empty alt and non-empty title</h3>
@@ -427,9 +436,21 @@
         <img src="images/bbc-blocks-dark.png" alt="" title="BBC"/>
     </div>
 
-    <h3>Image has alt &amp; title that are different</h3>
+    <h3>Image has alt and title that are different</h3>
     <div class="example">
         <img src="images/bbc-blocks-dark.png" alt="BBC" title="BBC homepage"/>
+    </div>
+
+    <h3>Background image that conveys information does not have a text alternative</h3>
+    <div class="example">
+        <div class="warning">
+            Taking too much of your pension money in early retirement could mean you don't have enough for later.
+        </div>
+    </div>
+
+    <h3>A distraction is present, an animated gif</h3>
+    <div class="example">
+        <img src="images/animated-tree.gif" width="157" height="193" alt="Animated gif of a Christmas tree with a toy train round and round the base of the tree">
     </div>
 
 
@@ -443,12 +464,12 @@
     <h2>Frames</h2>
     <h3>iframe is missing a title attribute</h3>
     <div class="example">
-        <iframe src="http://www.bbc.co.uk/" width="300" height="100"></iframe>
+        <iframe src="demo.html" width="300" height="100"></iframe>
     </div>
 
     <h3>iframe title attribute does not describes the content or purpose in the iframe</h3>
     <div class="example">
-        <iframe src="http://www.bbc.co.uk/" width="300" height="100" title="Facebook"></iframe>
+        <iframe src="demo.html" width="300" height="100" title="Facebook"></iframe>
     </div>
 
 
@@ -470,15 +491,13 @@
 
     <h3>Link points directly to an image </h3>
     <div class="example">
-        <a href="bat.jpg">bat</a>
+        My favourite <a href="images/bat.jpg">bat</a>
     </div>
 
     <h3>Link uses invalid hypertext reference</h3>
     <div class="example">
         <a href="#">a link</a>
     </div>
-
-
 
     <h2>Buttons</h2>
     <h3>Empty button</h3>
@@ -501,7 +520,6 @@
         </fieldset>
     </div>
 
-
     <h3>Form element has no label</h3>
     <div class="example">
         <input type="text">
@@ -512,9 +530,6 @@
         <label for="txt3" class="add-mass"></label>
         <input type="text" name="txt3" value="">
     </div>
-
-
-
 
     <h3>Non-unique field label found</h3>
     <div class="example">
@@ -529,25 +544,18 @@
 
     <h3>Image button has no alt attribute</h3>
     <div class="example">
-        <input type="image" src="foo.jpg">
+        <input type="image" src="images/submit.png">
     </div>
 
     <h3>Empty alt attribute on image button</h3>
     <div class="example">
-        <input type="image" alt="" id="one">
+        <input type="image" src="images/submit.png" alt="">
     </div>
-
 
     <h3>Uninformative alt attribute value on image button</h3>
     <div class="example">
-        <input type="image" src="foo.jpg" alt="click" />
+        <input type="image" src="images/submit.png" alt="click" />
     </div>
-
-
-
-
-
-
 
     <h2>Navigation</h2>
     <h3>Navigation placement, display, and functionality should not change from page to page</h3>
@@ -557,7 +565,32 @@
 
     <h3>Inadequately-sized clickable targets found</h3>
     <div class="example">
-        insert_example
+        <a href="a.html">a</a>
+        <a href="b.html">b</a>
+        <a href="c.html">c</a>
+        <a href="d.html">d</a>
+        <a href="e.html">e</a>
+        <a href="f.html">f</a>
+        <a href="g.html">g</a>
+        <a href="h.html">h</a>
+        <a href="i.html">i</a>
+        <a href="j.html">j</a>
+        <a href="k.html">k</a>
+        <a href="l.html">l</a>
+        <a href="m.html">m</a>
+        <a href="n.html">n</a>
+        <a href="o.html">o</a>
+        <a href="p.html">p</a>
+        <a href="q.html">q</a>
+        <a href="r.html">r</a>
+        <a href="s.html">s</a>
+        <a href="t.html">t</a>
+        <a href="u.html">u</a>
+        <a href="v.html">v</a>
+        <a href="w.html">w</a>
+        <a href="x.html">x</a>
+        <a href="y.html">y</a>
+        <a href="z.html">z</a>
     </div>
 
     <h2>Dynamic Content</h2>
@@ -566,47 +599,40 @@
         insert_example
     </div>
 
-    <h2>Focus Control</h2>
-    <h3>insert_title</h3>
+    <h2>Keyboard Access</h2>
+    <h3>Keyboard focus is not indicated visually</h3>
     <div class="example">
-        insert_example
+        <a href="link.html" class="no-outine">Link with no focus style</a>
     </div>
 
-    <h2>Keyboard Access</h2>
     <h3>Don't use the accesskey attribute</h3>
     <div class="example">
-        <a href="#foo" accesskey="A">A link with an accesskey attribute</a>
+        <a href="page.html" accesskey="A">A link with an accesskey attribute</a>
     </div>
 
     <h3>Tabindex greater than 0</h3>
     <div class="example">
-        <p tabindex="5">some text</p>
+        <a href="page.html" tabindex="5">A link with a tabindex greater than 0</a>
     </div>
 
 
+    <h3>Fake button is not keyboard accessible</h3>
+    <div class="example">
+        <div id="webchat">launch webchat</div>
+    </div>
+
+    <h3>Keyboard focus assigned to a non focusable element using tabindex=0</h3>
+    <div class="example">
+        <p tabindex="0">My favourite car</p>
+    </div>
 
 
+    <!-- <h2>Timeouts</h2>
     <h3>insert_title</h3>
     <div class="example">
         insert_example
     </div>
-
-
-
-
-
-
-    <h2>Timeouts</h2>
-    <h3>insert_title</h3>
-    <div class="example">
-        insert_example
-    </div>
-
-    <h2>Embedded Media and Object Elements</h2>
-    <h3>Object not embedded accessibly - wmode parameter not set to window</h3>
-    <div class="example">
-        <object data="foo" type="bar"></object>
-    </div>
+    -->
 
     <h2>HTML</h2>
 
@@ -621,11 +647,10 @@
         <div><span><div>strings of pearls</span></div></div>
     </div>
 
-    <h3>Empty paragraph/h3>
+    <h3>Empty paragraph</h3>
     <div class="example">
         <p></p>
     </div>
-
 
 
     <h3>Deprecated color definition</h3>
@@ -648,11 +673,6 @@
         </dir>
     </div>
 
-    <h3>Deprecated font element</h3>
-    <div class="example">
-        <font>font</font>
-    </div>
-
     <h3>Deprecated strike element</h3>
     <div class="example">
         <strike>strike</strike>
@@ -660,9 +680,8 @@
 
     <h3>Spacer image found</h3>
     <div class="example">
-        <img src="spacer.gif">
+        <img src="images/spacer.gif" width="100" height="1">
     </div>
-
 
     <h3>PRE element without CODE element inside it</h3>
     <div class="example">
@@ -676,33 +695,44 @@ Your
 </pre>
     </div>
 
+    <h3>Object not embedded accessibly - wmode parameter not set to window</h3>
+    <div class="example">
+        <object data="foo" type="bar"></object>
+    </div>
 
-
-<h2>CSS</h2>
-    <h3>display:none used to visual hide content when it should be available to screenreader</h3>
+    <h2>CSS</h2>
+    <h3>display:none used to visually hide content when it should be available to screenreader</h3>
     <div class="example">
         <a href="football.html">Read more <span style="display:none"> about football</span></a>
     </div>
 
-    <h3>visibility:hidden used to visual hide content when it should be available to screenreader</h3>
+    <h3>visibility:hidden used to visually hide content when it should be available to screenreader</h3>
     <div class="example">
         <a href="rugby.html">Read more <span style="visibility:hidden"> about rugby</span></a>
     </div>
 
-
-    <h3>The document must be readable with styles turned off</h3>
-    <p>Requires manual test</p>
-
-    <h2>Javascript</h2>
-    <h3>insert_title</h3>
+    <h3>Content is not readable and functional when text is increased</h3>
     <div class="example">
-        insert_example
+        <p class="resize">This text becomes unreadable when you increase the text-size  (Zoom text only) in
+            <a href="https://www.mozilla.org/en-GB/firefox/desktop/">Firefox</a></p>
     </div>
 
-
-    <h2>WAI-ARIA</h2>
-    <h3>insert_title</h3>
+    <h3>CSS generated content used to add core content to the page</h3>
     <div class="example">
-        insert_example
+        <p id="css-generated-text">My favourite food is </p>
+    </div>
+
+    <h3>display:table being used for layout</h3>
+    <div class="example">
+        <div class="display-table">
+            <div class="display-table-cell">
+                Vertically and horzontally aligned text
+            </div>
+        </div>
+    </div>
+
+    <h3>The document must be readable with styles turned off</h3>
+    <div class="example">
+        <p>A manual test is requiered to confirm a document is readble with styles turned off</p>
     </div>
 </div>

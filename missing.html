@@ -5,19 +5,29 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-    <div class="h1">Accessibility Fails</div>
+    <div class="h1">Accessibility Fails: Missing elements and attributes</div>
 
-    <h2>1. Percievable</h2>
-    <h3>1.3 Adaptable</h3>
-    <h4>1.3.1 Info and Relationships - A</h4>
-    <p>This page has no h1</p>
+    <p>last updated: 16 February 2016</p>
 
-    <h2>Operable</h2>
-    <h3>2.4 Navigable</h3>
-    <h2>2.4.2 Page Titled - A </h2>
-    <p>This page has no title element</p>
+    <h2>Language of content</h2>
+    <h3>No lang attribute on the html element</h3>
+    <div class="example">
+        <p>This page has no lang attribute on the html element</p>
+    </div>
 
-    <h2>Understandable</h2>
-    <h3>3.1 Readable</h3>
-    <h4>3.1.1 Language of Page - A</h4>
-    <p>This page has no lang attribute on the html element</p>
+    <h2>Page Title</h2>
+    <h3>Missing page title</h3>
+    <div class="example">
+        <p>This page has no title element</p>
+    </div>
+
+    <h2>Headings</h2>
+    <h3>Missing H1</h3>
+    <div class="example">
+        <p>This page has no h1</p>
+    </div>
+
+    <h3>Implicit heading</h3>
+    <div class="example">
+        <p>This page has a div which is being styled to look like an H1</p>
+    </div>
