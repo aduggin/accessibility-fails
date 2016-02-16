@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="foo">
+<html lang="en">
+<head>
     <title>Accessibility Fails</title>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -13,7 +13,7 @@
 
     <p>last updated: 16 February 2016</p>
 
-    <p>87 examples</p>
+    <p>100 examples</p>
 
     <h2>Content</h2>
 
@@ -34,8 +34,30 @@
 
     <h3>First instance of abbreviations and acronyms not expanded</h3>
     <div class="example">
-        GDS is part of the Cabinet Office. Our job is digital transformation of government.
+        <abbr>GDS</abbr> is part of the Cabinet Office. Our job is digital transformation of government.
     </div>
+
+    <h3>Content identified by location </h3>
+    <div class="example example--contain">
+        <p>The artist on the right won the Album of the year</p>
+
+        <a href="swift.html" style="float:right">Taylor Swift</a>
+
+        <a href="sheeran.html" style="float:left">Ed Sheeran</a>
+    </div>
+
+    <h3>Content is not in correct reading order in source code</h3>
+    <div class="example example--contain">
+
+        <h4>3-Step Skin Care</h4>
+
+        <div style="float:right; width:33%">Moisturise</div>
+
+        <div style="float:right; width:33%">Exfoliate</div>
+
+        <div style="float:right; width:33%">Cleanse</div>
+    </div>
+
 
     <h2>Page Layout</h2>
     <h3>Page is too wide, users have to scroll horizontally</h3>
@@ -140,27 +162,44 @@
     </div>
 
     <h2>Headings</h2>
-    <h3>Empty heading</h3>
-    <div class="example">
-        <h2></h2>
-        <p>This paragraph is preceded by an empty H2</p>
-    </div>
-
     <h3>Missing H1</h3>
     <div class="example">
         <a href="missing.html">Example page with no H1</a>
     </div>
 
-    <h3>insert_title</h3>
+    <h3>Headings not structured in a hierarchical manner</h3>
     <div class="example">
-        insert_example
+        <h3>Heading 3</h3>
+        <p>Pages should be structured in a hierarchical manner, generally with one 1st degree headings (h1) being the
+        most important (usually page titles or main content heading), then 2nd degree headings (h2 - usually major
+            section headings), down to 3rd degree headings (sub-sections of the h2), and so on. </p>
+
+        <h5>Heading 5</h5>
+        <p>Technically, lower degree headings should be contained within headings of the next highest degree
+            (i.e., one should not skip heading levels, such as from an h2 to an h4, going down the document).</p>
+
+        <h4>Heading 4</h4>
+        <p>This is an example where heading levels have been skipped and are not in a logical order, which makes the page
+            difficult to understand and navigate for people using assitive technologies such as screen reader.</p>
+    </div>
+
+    <h3>Empty heading</h3>
+    <div class="example">
+        <h4></h4>
+        <p>This paragraph is preceded by an empty H4</p>
+    </div>
+
+    <h3>Text formatting  used instead of an actual heading</h3>
+    <div class="example">
+        <div class="fake-heading">Fake Heading</div>
+        <p>This paragraph is preceded by a div that is styled to look like a heading</p>
     </div>
 
     <h2>Lists</h2>
-    <h3>improperly nested lists</h3>
+    <h3>Improperly nested lists</h3>
     <div class="example">
         <ul>
-            <ul>oops!</ul>
+            <ul>apple</ul>
         </ul>
     </div>
 
@@ -177,22 +216,7 @@
         <dd>a markup language for describing web documents</dd>
     </div>
 
-    <h3> ordered list with type set</h3>
-    <div class="example">
-        <ol type="A">
-            <li>read</li>
-            <li>reply</li>
-        </ol>
-    </div>
-
-    <h3> ordered list with type set</h3>
-    <div class="example">
-        <ul type="1">
-            <li>shoes</li>
-        </ul>
-    </div>
-
-    <h3>list that is not marked up as a list</h3>
+    <h3>List that is not marked up as a list</h3>
     <div class="example">
         * apple <br />
         * orange <br />
@@ -200,154 +224,126 @@
         * pear
     </div>
 
-    <h2>Landmarks</h2>
-    <h3>Page does not utilise landmark roles such as main</h3>
+    <h3>Ordered list with type set</h3>
     <div class="example">
-        This page has no landmark roles
+        <ol type="A">
+            <li>read</li>
+            <li>reply</li>
+        </ol>
+    </div>
+
+    <h3>Ordered list with type set</h3>
+    <div class="example">
+        <ul type="1">
+            <li>shoes</li>
+        </ul>
     </div>
 
     <h2>Tables</h2>
     <h3>Table is missing a caption</h3>
     <div class="example">
         <table>
+            <thead>
             <tr>
-                <td></td>
-                <th scope="col">United Kingdom</th>
-                <th scope="col">Japan</th>
-                <th scope="col">Australia</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Birthday</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
-                <th scope="row">Spring</th>
-                <td>5.3 (highest)</td>
-                <td>2.4</td>
-                <td>2 (lowest)</td>
+                <th scope="row">Jackie</th>
+                <td>5</td>
+                <td>April 5</td>
             </tr>
+
             <tr>
-                <th scope="row">Summer</th>
-                <td>4.5 (highest)</td>
-                <td>3.4</td>
-                <td>2 (lowest)</td>
+                <th scope="row">Beth</th>
+                <td>8</td>
+                <td>January 14</td>
             </tr>
-            <tr>
-                <th scope="row">Autumn</th>
-                <td>3.5 (highest)</td>
-                <td>1.8</td>
-                <td>1.5 (lowest)</td>
-            </tr>
-            <tr>
-                <th scope="row">Winter</th>
-                <td>1.5 (highest)</td>
-                <td>1.2</td>
-                <td>1 (lowest)</td>
-            </tr>
+            </tbody>
         </table>
     </div>
 
     <h3>Table has an empty table header</h3>
     <div class="example">
         <table>
+            <caption>Shelly's Daughters</caption>
+            <thead>
             <tr>
                 <th></th>
-                <th scope="col">United Kingdom</th>
-                <th scope="col">Japan</th>
-                <th scope="col">Australia</th>
+                <th scope="col">Age</th>
+                <th scope="col">Birthday</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
-                <th scope="row">Spring</th>
-                <td>5.3 (highest)</td>
-                <td>2.4</td>
-                <td>2 (lowest)</td>
+                <th scope="row">Jackie</th>
+                <td>5</td>
+                <td>April 5</td>
             </tr>
+
             <tr>
-                <th scope="row">Summer</th>
-                <td>4.5 (highest)</td>
-                <td>3.4</td>
-                <td>2 (lowest)</td>
+                <th scope="row">Beth</th>
+                <td>8</td>
+                <td>January 14</td>
             </tr>
-            <tr>
-                <th scope="row">Autumn</th>
-                <td>3.5 (highest)</td>
-                <td>1.8</td>
-                <td>1.5 (lowest)</td>
-            </tr>
-            <tr>
-                <th scope="row">Winter</th>
-                <td>1.5 (highest)</td>
-                <td>1.2</td>
-                <td>1 (lowest)</td>
-            </tr>
+            </tbody>
         </table>
     </div>
 
-    <h3>Table has no scope atributes</h3>
+    <h3>Table has no scope attributes</h3>
     <div class="example">
         <table>
+            <caption>Shelly's Daughters</caption>
+            <thead>
             <tr>
-                <td></td>
-                <th>United Kingdom</th>
-                <th>Japan</th>
-                <th>Australia</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Birthday</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
-                <th>Spring</th>
-                <td>5.3 (highest)</td>
-                <td>2.4</td>
-                <td>2 (lowest)</td>
+                <th>Jackie</th>
+                <td>5</td>
+                <td>April 5</td>
             </tr>
+
             <tr>
-                <th>Summer</th>
-                <td>4.5 (highest)</td>
-                <td>3.4</td>
-                <td>2 (lowest)</td>
+                <th>Beth</th>
+                <td>8</td>
+                <td>January 14</td>
             </tr>
-            <tr>
-                <th>Autumn</th>
-                <td>3.5 (highest)</td>
-                <td>1.8</td>
-                <td>1.5 (lowest)</td>
-            </tr>
-            <tr>
-                <th>Winter</th>
-                <td>1.5 (highest)</td>
-                <td>1.2</td>
-                <td>1 (lowest)</td>
-            </tr>
+            </tbody>
         </table>
     </div>
 
     <h3>Table has no table headings</h3>
     <div class="example">
         <table>
+            <caption>Shelly's Daughters</caption>
+            <thead>
             <tr>
-                <td></td>
-                <td>United Kingdom</td>
-                <td>Japan</td>
-                <td>Australia</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Birthday</td>
             </tr>
+            </thead>
+            <tbody>
             <tr>
-                <td>Spring</td>
-                <td>5.3 (highest)</td>
-                <td>2.4</td>
-                <td>2 (lowest)</td>
+                <td>Jackie</td>
+                <td>5</td>
+                <td>April 5</td>
             </tr>
+
             <tr>
-                <td>Summer</td>
-                <td>4.5 (highest)</td>
-                <td>3.4</td>
-                <td>2 (lowest)</td>
+                <td>Beth</td>
+                <td>8</td>
+                <td>January 14</td>
             </tr>
-            <tr>
-                <td>Autumn</td>
-                <td>3.5 (highest)</td>
-                <td>1.8</td>
-                <td>1.5 (lowest)</td>
-            </tr>
-            <tr>
-                <td>Winter</td>
-                <td>1.5 (highest)</td>
-                <td>1.2</td>
-                <td>1 (lowest)</td>
-            </tr>
+            </tbody>
         </table>
     </div>
 
@@ -365,7 +361,7 @@
         </table>
     </div>
 
-    <h3>table nested within table header</h3>
+    <h3>Table nested within table header</h3>
     <div class="example">
         <table>
             <th>
@@ -381,7 +377,7 @@
         </table>
     </div>
 
-    <h3>table nested within table</h3>
+    <h3>Table nested within table</h3>
     <div class="example">
         <table>
             <tr>
@@ -400,7 +396,8 @@
     <div class="example">
         <table>
             <tr>
-                <td>I am a layout table</td>
+                <td>navigation</td>
+                <td>main content</td>
             </tr>
         </table>
     </div>
@@ -461,22 +458,24 @@
     </div>
     -->
 
-    <h2>Frames</h2>
-    <h3>iframe is missing a title attribute</h3>
-    <div class="example">
-        <iframe src="demo.html" width="300" height="100"></iframe>
-    </div>
-
-    <h3>iframe title attribute does not describes the content or purpose in the iframe</h3>
-    <div class="example">
-        <iframe src="demo.html" width="300" height="100" title="Facebook"></iframe>
-    </div>
-
-
     <h2>Links</h2>
-    <h3>Link text with identical title</h3>
+    <h3>Uninformative link text</h3>
     <div class="example">
-        <a href="http://www.google.com" title="Google">Google</a>
+        <h4>Polar bear</h4>
+        <p>The polar bear is a carnivorous bear whose native range lies largely within the Arctic Circle,
+            encompassing the Arctic Ocean, its surrounding seas and surrounding land masses.</p>
+        <a href="https://en.wikipedia.org/wiki/Polar_bear">Read more</a>
+    </div>
+
+    <h3>Non-specific link text</h3>
+    <div class="example">
+        <a href="rockies.html">Click here</a> for more information on the Rocky Mountains.
+    </div>
+
+    <h3>Adjacent links going to the same destination</h3>
+    <div class="example">
+        <a href="https://en.wikipedia.org/wiki/Red_panda"><img src="images/red_panda.jpg" width="220" height="165" alt="Red Panda" /></a>
+        <a href="https://en.wikipedia.org/wiki/Red_panda">Red Panda</a>
     </div>
 
     <h3>Blank link text</h3>
@@ -484,9 +483,42 @@
         <a href="http://www.google.com"></a>
     </div>
 
-    <h3>Uninformative link text</h3>
+    <h3>Link contains only a full stop</h3>
     <div class="example">
-        <a href="food.html" >Read more</a>
+        Visit the GOV.UK website <a href="https://www.gov.uk/">.</a>
+    </div>
+
+    <h3>Link with the same text go to different pages</h3>
+    <div class="example">
+        <a href="https://en.wikipedia.org/wiki/Lion">Lions</a> are the only truly social cats, with related females
+        living together in prides overseen by male coalitio that compete for possession in fierce and often fatal battles.
+        <a href="http://animals.nationalgeographic.com/animals/mammals/african-lion/">Lions</a> are predatory carnivores and it's the females that perform most of the hunting at night; the majority
+        of the prey being antelope, zebra and wildebeest.
+    </div>
+
+    <h3>Link text with identical title</h3>
+    <div class="example">
+        <a href="http://www.google.com" title="Google">Google</a>
+    </div>
+
+    <h3>Link launches new window with no warning</h3>
+    <div class="example">
+        <a href="https://twitter.com/" target="_blank">Twitter</a>
+    </div>
+
+    <h3>Link with no text content</h3>
+    <div class="example">
+        <a href="https://www.facebook.com/"></a>
+    </div>
+
+    <h3>Image link with no alternative text</h3>
+    <div class="example">
+        <a href="http://www.bbc.co.uk"><img src="images/bbc-blocks-dark.png" /></a>
+    </div>
+
+    <h3>Links not clearly identifiable and distinguishable from surrounding text</h3>
+    <div class="example">
+        <p class="unobvious-link">Find out more about <a href="http://www.bbc.co.uk/programmes/b006q2x0">Doctor Who</a></p>
     </div>
 
     <h3>Link points directly to an image </h3>
@@ -494,52 +526,20 @@
         My favourite <a href="images/bat.jpg">bat</a>
     </div>
 
+    <h3>Link to pdf does not include information on file format and file size</h3>
+    <div class="example">
+        <a href="http://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf">Dyslexia style guide</a>
+    </div>
+
     <h3>Link uses invalid hypertext reference</h3>
     <div class="example">
-        <a href="#">a link</a>
+        <a href="#">Do something</a>
     </div>
 
     <h2>Buttons</h2>
     <h3>Empty button</h3>
     <div class="example">
         <button></button>
-    </div>
-
-    <h2>Forms</h2>
-    <h3>fieldset without a legend</h3>
-    <div class="example">
-        <fieldset>
-            I am a fieldset without a legend
-        </fieldset>
-    </div>
-
-    <h3>Empty LEGEND</h3>
-    <div class="example">
-        <fieldset>
-            <legend></legend>
-        </fieldset>
-    </div>
-
-    <h3>Form element has no label</h3>
-    <div class="example">
-        <input type="text">
-    </div>
-
-    <h3>Empty label found</h3>
-    <div class="example">
-        <label for="txt3" class="add-mass"></label>
-        <input type="text" name="txt3" value="">
-    </div>
-
-    <h3>Non-unique field label found</h3>
-    <div class="example">
-        <label for="x_3">Two
-            <input type="text" name="x_3" id="x_3">
-        </label>
-
-        <label for="x_4">Two
-            <input type="text" name="x_4" id="x_4">
-        </label>
     </div>
 
     <h3>Image button has no alt attribute</h3>
@@ -555,6 +555,89 @@
     <h3>Uninformative alt attribute value on image button</h3>
     <div class="example">
         <input type="image" src="images/submit.png" alt="click" />
+    </div>
+
+    <h2>Forms</h2>
+    <h3>Fieldset without a legend</h3>
+    <div class="example">
+        <fieldset>
+            I am a fieldset without a legend
+        </fieldset>
+    </div>
+
+    <h3>Empty legend</h3>
+    <div class="example">
+        <fieldset>
+            <legend></legend>
+        </fieldset>
+    </div>
+
+    <h3>Form element has no label</h3>
+    <div class="example">
+        <input type="text">
+    </div>
+
+    <h3>Empty label found</h3>
+    <div class="example">
+        <label for="empty"></label>
+        <input type="text" id="empty" value="">
+    </div>
+
+    <h3>Placeholder no label</h3>
+    <div class="example">
+        <input type="search" name="q" id="search-main" Placeholder="Search">
+        <input class="submit" type="submit" value="Search">
+    </div>
+
+    <h3>Non-unique field label found</h3>
+    <div class="example">
+        <label for="x_3">Two
+            <input type="text" name="x_3" id="x_3">
+        </label>
+
+        <label for="x_4">Two
+            <input type="text" name="x_4" id="x_4">
+        </label>
+    </div>
+
+    <h3>Field hint not associated with input</h3>
+    <div class="example">
+        <label class="form-label" for="ni-number">
+            National Insurance number
+        </label>
+        <p class="form-hint">It'll be on your last payslip. For example, JH 21 90 0A.</p>
+        <input class="form-control" id="ni-number" type="text">
+    </div>
+
+    <h3>Group of radio buttons not enclosed in a fieldset</h3>
+    <div class="example">
+        <h4>Do you already have a personal user account?</h4>
+
+        <label class="block-label" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+            Yes
+        </label><br />
+        <label class="block-label" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+            No
+        </label>
+    </div>
+
+    <h3>Group of check boxes not enclosed in a fieldset</h3>
+    <div class="example">
+        <h4>Which types of waste do you transport regularly?</h4>
+        <label class="block-label" for="waste-type-1">
+            <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+            Waste from animal carcasses
+        </label><br />
+        <label class="block-label" for="waste-type-2">
+            <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+            Waste from mines or quarries
+        </label><br />
+        <label class="block-label" for="waste-type-3">
+            <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+            Farm or agricultural waste
+        </label>
     </div>
 
     <h2>Navigation</h2>
@@ -593,11 +676,13 @@
         <a href="z.html">z</a>
     </div>
 
-    <h2>Dynamic Content</h2>
+
+    <!-- <h2>Dynamic Content</h2>
     <h3>insert_title</h3>
     <div class="example">
         insert_example
     </div>
+    -->
 
     <h2>Keyboard Access</h2>
     <h3>Keyboard focus is not indicated visually</h3>
@@ -615,7 +700,6 @@
         <a href="page.html" tabindex="5">A link with a tabindex greater than 0</a>
     </div>
 
-
     <h3>Fake button is not keyboard accessible</h3>
     <div class="example">
         <div id="webchat">launch webchat</div>
@@ -626,6 +710,10 @@
         <p tabindex="0">My favourite car</p>
     </div>
 
+    <h3>Keyboard trap</h3>
+    <div class="example">
+        <p><a href="keyboardtrap.html">Example page that contains a keyboard trap</a></p>
+    </div>
 
     <!-- <h2>Timeouts</h2>
     <h3>insert_title</h3>
@@ -633,6 +721,17 @@
         insert_example
     </div>
     -->
+
+    <h2>Frames</h2>
+    <h3>iframe is missing a title attribute</h3>
+    <div class="example">
+        <iframe src="demo.html" width="300" height="100"></iframe>
+    </div>
+
+    <h3>iframe title attribute does not describes the content or purpose in the iframe</h3>
+    <div class="example">
+        <iframe src="demo.html" width="300" height="100" title="Facebook"></iframe>
+    </div>
 
     <h2>HTML</h2>
 
@@ -717,7 +816,7 @@ Your
             <a href="https://www.mozilla.org/en-GB/firefox/desktop/">Firefox</a></p>
     </div>
 
-    <h3>CSS generated content used to add core content to the page</h3>
+    <h3>Non-decorative content inserted using CSS</h3>
     <div class="example">
         <p id="css-generated-text">My favourite food is </p>
     </div>

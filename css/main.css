@@ -3,13 +3,11 @@ body {
     line-height: 150%;
 }
 
-
 .h1 {
     font-size: 2em;
     margin: 0.67em 0;
     font-weight: bold;
 }
-
 
 h2 {
     padding-bottom: 0.2em;
@@ -20,6 +18,55 @@ h5 {
     font-size: 1em;
 }
 
+.fake-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+th {
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 4px;
+}
+
+tbody th {
+    text-align: left;
+
+}
+
+.table--tool {
+    width: 100%;
+}
+
+.table--tool tbody th {
+    width: 20%;
+}
+
+.table--tool td {
+    width: 4%;
+}
+
+
+
+.error {
+    background: #a8ff26;
+}
+
+.warning {
+    backgroun: #fba30;
+}
+
 .container {
     width: 800px;
 }
@@ -27,6 +74,10 @@ h5 {
 .example {
     border: 1px solid #000;
     padding: 10px;
+}
+
+.example--contain {
+    overflow: hidden;
 }
 
 .example--wide {
@@ -143,4 +194,45 @@ input.low-contrast {
 .display-table-cell {
     display:table-cell;
     vertical-align:middle;
+}
+
+.unobvious-link {
+    font-weight: bold;
+    color: #000;
+}
+
+.unobvious-link a,
+.unobvious-link a:visited,
+.unobvious-link a:active,
+.unobvious-link a:hover {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.unobvious-link a:hover {
+    text-decoration: underline;
+}
+
+
+.form-label {
+    display: block;
+}
+.form-hint {
+    color: #6f777b;
+    margin: 0;
+}
+
+
+
+.quail-result {
+    outline: 4px solid grey;
+}
+
+.quail-result.severe {
+    outline: 4px solid red;
+}
+
+.quail-result.suggestion {
+    outline: 4px solid blue;
 }
