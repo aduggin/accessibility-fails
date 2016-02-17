@@ -15,7 +15,7 @@
 
     <p>The aim of this page is to run autmated tools against it to see which fails are identified.</p>
 
-    <p>There are 106 fails grouped into 18 categories. This is a work in progress, I'll be adding many more fails.</p>
+    <p>There are 111 fails grouped into 18 categories. This is a work in progress, I'll be adding many more fails.</p>
 
     <nav>
     <ul>
@@ -29,7 +29,7 @@
         <li><a href="#lists">Lists</a> 6</li>
         <li><a href="#tables">Tables</a> 8</li>
         <li><a href="#images">Images</a> 9</li>
-        <li><a href="#links">Links</a> 13 </li>
+        <li><a href="#links">Links</a> 18 </li>
         <li><a href="#buttons">Buttons</a> 4</li>
         <li><a href="#forms">Forms</a> 9</li>
         <li><a href="#navigation">Navigation</a> 2</li>
@@ -524,10 +524,28 @@
         <a href="rockies.html">Click here</a> for more information on the Rocky Mountains.
     </div>
 
+    <h3>Link text does not make sense out of context</h3>
+    <div class="example">
+        <p>To know more about me, visit my <a href="page.html">page</a>.</p>
+    </div>
+
     <h3>Adjacent links going to the same destination</h3>
     <div class="example">
         <a href="https://en.wikipedia.org/wiki/Red_panda"><img src="images/red_panda.jpg" width="220" height="165" alt="Red Panda" /></a>
         <a href="https://en.wikipedia.org/wiki/Red_panda">Red Panda</a>
+    </div>
+
+    <h3>Image link alt text repeats text in the link</h3>
+    <div class="example">
+        <a href="https://en.wikipedia.org/wiki/Red_panda">
+            <img src="images/red_panda.jpg" width="220" height="165" alt="Red Panda" />
+            Red Panda
+        </a>
+    </div>
+
+    <h3>Image link with no alternative text</h3>
+    <div class="example">
+        <a href="http://www.bbc.co.uk"><img src="images/bbc-blocks-dark.png" /></a>
     </div>
 
     <h3>Blank link text</h3>
@@ -558,11 +576,6 @@
         <a href="https://twitter.com/" target="_blank">Twitter</a>
     </div>
 
-    <h3>Image link with no alternative text</h3>
-    <div class="example">
-        <a href="http://www.bbc.co.uk"><img src="images/bbc-blocks-dark.png" /></a>
-    </div>
-
     <h3>Links not clearly identifiable and distinguishable from surrounding text</h3>
     <div class="example">
         <p class="unobvious-link">Find out more about <a href="http://www.bbc.co.uk/programmes/b006q2x0">Doctor Who</a></p>
@@ -576,6 +589,21 @@
     <h3>Link to pdf does not include information on file format and file size</h3>
     <div class="example">
         <a href="http://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf">Dyslexia style guide</a>
+    </div>
+
+    <h3>Links to a multimedia file does not include link to a transcript</h3>
+    <div class="example">
+        <a href="interview.mov">Watch the interview</a>
+    </div>
+
+    <h3>Links to a sound file does not include a link to a transcript</h3>
+    <div class="example">
+        <a href="interview.mp3">Listen to the interview</a>
+    </div>
+
+    <h3>Links not seperated by printable characters</h3>
+    <div class="example">
+        <a href="a.html">Page A</a> <a href="b.html">Page B</a> <a href="c.html">Page C</a>
     </div>
 
     <h3>Link uses invalid hypertext reference</h3>
