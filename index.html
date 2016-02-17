@@ -15,7 +15,30 @@
 
     <p>107 examples</p>
 
-    <h2>Content</h2>
+    <nav>
+    <ul>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#pagelayout">Page Layout</a></li>
+        <li><a href="#colourandcontrast">Colour and Contrast</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#languageofcontent">Language of content</a></li>
+        <li><a href="#pagetitle">Page Title</a></li>
+        <li><a href="#headings">Headings</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#navigation">Navigation</a></li>
+        <li><a href="#keyboardaccess">Keyboard Access</a></li>
+        <li><a href="#frames">Frames</a></li>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+    </ul>
+    </nav>
+
+    <h2 id="content">Content</h2>
 
     <h3>Plain Language is not used</h3>
     <div class="example">
@@ -59,7 +82,7 @@
     </div>
 
 
-    <h2>Page Layout</h2>
+    <h2 id="pagelayout">Page Layout</h2>
     <h3>Page is too wide, users have to scroll horizontally</h3>
     <div class="example example--wide">
         When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.
@@ -70,7 +93,7 @@
         insert_example
     </div>
 
-    <h2>Colour and Contrast</h2>
+    <h2 id="colourandcontrast">Colour and Contrast</h2>
     <h3>Color alone is used to convey content</h3>
     <div class="example">
         <p>The green mushrooms listed here are OK to eat. The red mushrooms will kill you.</span>
@@ -103,7 +126,7 @@
         <p class="low-contrast-large-aa">This small text does not have enough contrast with it's background</p>
     </div>
 
-    <h2>Typography</h2>
+    <h2 id="typography">Typography</h2>
     <h3>Very small text found</h3>
     <div class="example">
         <p class="small-text">This is some tiny text, much too small for some people to read</p>
@@ -139,7 +162,7 @@
         <p class="line-height">Many people with cognitive disabilities have trouble tracking lines of text when a block of text is single spaced. Providing spacing between 1.5 to 2 allows them to start a new line more easily once they have finished the previous one.</p>
     </div>
 
-    <h2>Language of content</h2>
+    <h2 id="languageofcontent">Language of content</h2>
     <h3>html element is missing a lang attribute</h3>
     <div class="example">
         <a href="missing.html">Example page with a missing lang attribute</a>
@@ -175,14 +198,12 @@
         <p>Mother, he's asking you to go. He's saying, <span lang="es">"Allons, Madame plaisante!"</span></p>
     </div>
 
-
-
     <h3>Text language changed without required change in direction</h3>
     <div class="example">
         <p lang="am" >placeholder text</p>
     </div>
 
-    <h2>Page Title</h2>
+    <h2 id="pagetitle">Page Title</h2>
     <h3>Empty page title</h3>
     <div class="example">
         <a href="empty.html">Example page with a empty page title</a>
@@ -198,7 +219,7 @@
         <a href="inappropriate.html">Example page with a inappropriate page title</a>
     </div>
 
-    <h2>Headings</h2>
+    <h2 id="headings">Headings</h2>
     <h3>Missing H1</h3>
     <div class="example">
         <a href="missing.html">Example page with no H1</a>
@@ -232,7 +253,7 @@
         <p>This paragraph is preceded by a div that is styled to look like a heading</p>
     </div>
 
-    <h2>Lists</h2>
+    <h2 id="lists">Lists</h2>
     <h3>Improperly nested lists</h3>
     <div class="example">
         <ul>
@@ -276,7 +297,7 @@
         </ul>
     </div>
 
-    <h2>Tables</h2>
+    <h2 id="tables">Tables</h2>
     <h3>Table is missing a caption</h3>
     <div class="example">
         <table>
@@ -439,7 +460,7 @@
         </table>
     </div>
 
-    <h2>Images</h2>
+    <h2 id="images">Images</h2>
     <h3>Image with no alt attribute</h3>
     <div class="example">
         <img src="images/bbc-blocks-dark.png" />
@@ -487,7 +508,7 @@
         <img src="images/animated-tree.gif" width="157" height="193" alt="Animated gif of a Christmas tree with a toy train round and round the base of the tree">
     </div>
 
-    <h2>Links</h2>
+    <h2 id="links">Links</h2>
     <h3>Uninformative link text</h3>
     <div class="example">
         <h4>Polar bear</h4>
@@ -565,7 +586,7 @@
         <a href="#">Do something</a>
     </div>
 
-    <h2>Buttons</h2>
+    <h2 id="buttons">Buttons</h2>
     <h3>Empty button</h3>
     <div class="example">
         <button></button>
@@ -586,7 +607,7 @@
         <input type="image" src="images/submit.png" alt="click" />
     </div>
 
-    <h2>Forms</h2>
+    <h2 id="forms">Forms</h2>
     <h3>Fieldset without a legend</h3>
     <div class="example">
         <fieldset>
@@ -669,7 +690,7 @@
         </label>
     </div>
 
-    <h2>Navigation</h2>
+    <h2 id="navigation">Navigation</h2>
     <h3>Navigation placement, display, and functionality should not change from page to page</h3>
     <div class="example">
         insert_example
@@ -705,7 +726,7 @@
         <a href="z.html">z</a>
     </div>
 
-    <h2>Keyboard Access</h2>
+    <h2 id="keyboardaccess">Keyboard Access</h2>
     <h3>Keyboard focus is not indicated visually</h3>
     <div class="example">
         <a href="link.html" class="no-outine">Link with no focus style</a>
@@ -736,7 +757,7 @@
         <p><a href="keyboardtrap.html">Example page that contains a keyboard trap</a></p>
     </div>
 
-    <h2>Frames</h2>
+    <h2 id="frames">Frames</h2>
     <h3>iframe is missing a title attribute</h3>
     <div class="example">
         <iframe src="demo.html" width="300" height="100"></iframe>
@@ -747,8 +768,7 @@
         <iframe src="demo.html" width="300" height="100" title="Facebook"></iframe>
     </div>
 
-    <h2>HTML</h2>
-
+    <h2 id="html">HTML</h2>
     <h3>Duplicate id</h3>
     <div class="example">
         <div id="nav">global nav</div>
@@ -812,7 +832,7 @@ Your
         <object data="foo" type="bar"></object>
     </div>
 
-    <h2>CSS</h2>
+    <h2 id="css">CSS</h2>
     <h3>display:none used to visually hide content when it should be available to screenreader</h3>
     <div class="example">
         <a href="football.html">Read more <span style="display:none"> about football</span></a>
