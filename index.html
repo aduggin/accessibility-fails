@@ -13,7 +13,7 @@
 
     <p>last updated: 17 February 2016</p>
 
-    <p>104 examples</p>
+    <p>107 examples</p>
 
     <h2>Content</h2>
 
@@ -159,6 +159,23 @@
     <div class="example">
         <a href="inappropriate.html">Example page with a lang attribute set to the wrong language</a>
     </div>
+
+    <h3>lang attribute not used to identify change of language</h3>
+    <div class="example">
+        <p>Mother, he's asking you to go. He's saying, "Allons, Madame plaisante!"</p>
+    </div>
+
+    <h3>lang attribute used to identify change of language, but with invalid value</h3>
+    <div class="example">
+        <p>Mother, he's asking you to go. He's saying, <span lang="frrr">"Allons, Madame plaisante!"</span></p>
+    </div>
+
+    <h3>lang attribute used to identify change of language, but with wrong language</h3>
+    <div class="example">
+        <p>Mother, he's asking you to go. He's saying, <span lang="es">"Allons, Madame plaisante!"</span></p>
+    </div>
+
+
 
     <h3>Text language changed without required change in direction</h3>
     <div class="example">
