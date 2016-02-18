@@ -63,7 +63,12 @@ tbody th {
 }
 
 .warning {
-    background: #fba30;
+    background: #fba300;
+}
+
+.different {
+    background: #980f0f;
+    color: #fff;
 }
 
 .container {

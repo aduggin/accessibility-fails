@@ -14,7 +14,11 @@
     <tr>
         <th scope="col">Test case</th>
         <th scope="col">WCAG Level</th>
-        <th scope="col"><a href="https://github.com/GoogleChrome/accessibility-developer-tools">Google Accessibility Developer Tools</a></th>
+        <th scope="col">
+            <a href="https://github.com/GoogleChrome/accessibility-developer-tools">Google Accessibility Developer Tools</a> /
+            <a href="http://accesslint.com/results?url=http%3A%2F%2Faduggin.github.io%2Faccessibility-fails%2F">AccessLint</a>
+
+        </th>
         <th scope="col"><a href="tenon.io">Tenon</a></th>
         <th scope="col"><a href="wave.webaim.org">Wave</a></th>
         <th scope="col"><a href="http://squizlabs.github.io/HTML_CodeSniffer/">HTML Code Sniffer</a></th>
@@ -144,7 +148,7 @@
     <tr>
         <th scope="row">Small text does not have a contrast ratio of at least 4.5:1 so does not meet AA</th>
         <td class="level">AA</td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -158,7 +162,7 @@
     <tr>
         <th scope="row">Large text does not have a contrast ratio of at least 3:1 so does not meet AA</th>
         <td class="level">AA</td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -172,7 +176,7 @@
     <tr>
         <th scope="row">Small text does not have a contrast ratio of at least 7:1 so does not meet AAA</th>
         <td class="level">AAA</td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -186,7 +190,7 @@
     <tr>
         <th scope="row">Large text does not have a contrast ratio of at least 4.5:1 so does not meet AAA</th>
         <td class="level">AAA</td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -648,7 +652,7 @@
     <tr>
         <th scope="row">Table has no table headings</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -704,7 +708,7 @@
     <tr>
         <th scope="row">Table used for layout</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google different">different error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -718,7 +722,7 @@
     <tr>
         <th scope="row">Image with no alt attribute</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -858,7 +862,7 @@
     <tr>
         <th scope="row">Non-specific link text</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -872,7 +876,7 @@
     <tr>
         <th scope="row">Link text does not make sense out of context</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -914,7 +918,7 @@
     <tr>
         <th scope="row">Image link with no alternative text</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -928,7 +932,7 @@
     <tr>
         <th scope="row">Blank link text</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -942,7 +946,7 @@
     <tr>
         <th scope="row">Link contains only a full stop</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -1110,7 +1114,7 @@
     <tr>
         <th scope="row">Empty button</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -1124,7 +1128,7 @@
     <tr>
         <th scope="row">Image button has no alt attribute</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -1194,7 +1198,7 @@
     <tr>
         <th scope="row">Form element has no label</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -1222,7 +1226,7 @@
     <tr>
         <th scope="row">Placeholder no label</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
@@ -1348,7 +1352,7 @@
     <tr>
         <th scope="row">Tabindex greater than 0</th>
         <td class="level"></td>
-        <td class="google"></td>
+        <td class="google error">error found</td>
         <td class="tenon"></td>
         <td class="wave"></td>
         <td class="codesniffer"></td>
