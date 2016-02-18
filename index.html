@@ -424,35 +424,43 @@
     <h3>Table nested within table header</h3>
     <div class="example">
         <table>
-            <th>
+            <tr>
                 <table>
                     <tr>
-                        <th>2</th>
+                        <th>2.1</th>
                     </tr>
                     <tr>
-                        <td>3</td>
+                        <td>2.1</td>
                     </tr>
                 </table>
-            </th>
+            </tr>
             <tr>
-                <td>1</td>
+                <td>1.2</td>
             </tr>
         </table>
     </div>
 
     <h3>Table nested within table</h3>
     <div class="example">
-        <table>
-            <tr>
-                <td>
-                    <table>
-                        <tr>
-                            <td>I'm so nested</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+        <div class="example">
+            <table>
+                <tr>
+                    <th>1.1</th>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>2.1</th>
+                            </tr>
+                            <tr>
+                                <td>2.2</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <h3>Table used for layout</h3>
