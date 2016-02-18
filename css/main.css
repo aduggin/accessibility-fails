@@ -71,6 +71,11 @@ tbody th {
     color: #fff;
 }
 
+.false-positive {
+    background: #981389;
+    color: #fff;
+}
+
 .container {
     width: 800px;
 }
