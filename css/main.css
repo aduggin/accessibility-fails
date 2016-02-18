@@ -43,7 +43,7 @@ th, td {
 
 tbody th {
     text-align: left;
-
+    font-weight: normal;
 }
 
 .table--tool {

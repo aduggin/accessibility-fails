@@ -425,14 +425,16 @@
     <div class="example">
         <table>
             <tr>
-                <table>
-                    <tr>
-                        <th>2.1</th>
-                    </tr>
-                    <tr>
-                        <td>2.1</td>
-                    </tr>
-                </table>
+                <th>
+                    <table>
+                        <tr>
+                            <th>2.1</th>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                        </tr>
+                    </table>
+                </th>
             </tr>
             <tr>
                 <td>1.2</td>
@@ -442,25 +444,23 @@
 
     <h3>Table nested within table</h3>
     <div class="example">
-        <div class="example">
-            <table>
-                <tr>
-                    <th>1.1</th>
-                </tr>
-                <tr>
-                    <td>
-                        <table>
-                            <tr>
-                                <th>2.1</th>
-                            </tr>
-                            <tr>
-                                <td>2.2</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <table>
+            <tr>
+                <th>1.1</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th>2.1</th>
+                        </tr>
+                        <tr>
+                            <td>2.2</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <h3>Table used for layout</h3>
@@ -597,7 +597,7 @@
         <a href="http://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf">Dyslexia style guide</a>
     </div>
 
-    <h3>Link to a image, no text alternative </h3>
+    <h3>Link to an image, no text alternative</h3>
     <div class="example">
         My favourite <a href="images/bat.jpg">bat</a>
     </div>
