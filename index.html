@@ -15,7 +15,7 @@
 
     <p>The aim of this page is to run autmated tools against it to see which fails are identified.</p>
 
-    <p>There are 110 fails grouped into 18 categories. This is a work in progress, I'll be adding many more fails.</p>
+    <p>There are 108 fails grouped into 18 categories. This is a work in progress, I'll be adding many more fails.</p>
 
     <nav>
     <ul>
@@ -35,7 +35,7 @@
         <li><a href="#navigation">Navigation</a> 2</li>
         <li><a href="#keyboardaccess">Keyboard Access</a> 6</li>
         <li><a href="#frames">Frames</a> 2</li>
-        <li><a href="#html">HTML</a> 10</li>
+        <li><a href="#html">HTML</a> 8</li>
         <li><a href="#css">CSS</a> 5</li>
     </ul>
     </nav>
@@ -93,7 +93,7 @@
     <h2 id="colourandcontrast">Colour and Contrast</h2>
     <h3>Color alone is used to convey content</h3>
     <div class="example">
-        <p>The green mushrooms listed here are OK to eat. The red mushrooms will kill you.</span>
+        <p>The green mushrooms listed here are OK to eat. The red mushrooms will kill you.</p>
         <ul>
             <li class="poisonous">Amanita</li>
             <li class="safe">Chanterelle</li>
@@ -256,6 +256,14 @@
     </div>
 
     <h2 id="lists">Lists</h2>
+    <h3>List not marked up as a list</h3>
+    <div class="example">
+        * apple <br />
+        * orange <br />
+        * banana <br />
+        * pear
+    </div>
+
     <h3>Improperly nested lists</h3>
     <div class="example">
         <ul>
@@ -276,29 +284,6 @@
     <div class="example">
         <dt>html</dt>
         <dd>a markup language for describing web documents</dd>
-    </div>
-
-    <h3>List that is not marked up as a list</h3>
-    <div class="example">
-        * apple <br />
-        * orange <br />
-        * banana <br />
-        * pear
-    </div>
-
-    <h3>Ordered list with type set</h3>
-    <div class="example">
-        <ol type="A">
-            <li>read</li>
-            <li>reply</li>
-        </ol>
-    </div>
-
-    <h3>Ordered list with type set</h3>
-    <div class="example">
-        <ul type="1">
-            <li>shoes</li>
-        </ul>
     </div>
 
     <h2 id="tables">Tables</h2>
