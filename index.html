@@ -15,14 +15,14 @@
 
     <p>The aim of this page is to run autmated tools against it to see which fails are identified.</p>
 
-    <p>There are 111 fails grouped into 18 categories. This is a work in progress, I'll be adding many more fails.</p>
+    <p>There are 113 fails grouped into 18 categories. This is a work in progress, I'll be adding many more fails.</p>
 
     <nav>
     <ul>
         <li><a href="#content">Content</a> 5</li>
         <li><a href="#pagelayout">Page Layout</a> 2</li>
         <li><a href="#colourandcontrast">Colour and Contrast</a> 5</li>
-        <li><a href="#typography">Typography</a> 7</li>
+        <li><a href="#typography">Typography</a> 8</li>
         <li><a href="#languageofcontent">Language of content</a> 8</li>
         <li><a href="#pagetitle">Page Title</a> 3</li>
         <li><a href="#headings">Headings</a> 4</li>
@@ -30,7 +30,7 @@
         <li><a href="#tables">Tables</a> 8</li>
         <li><a href="#images">Images</a> 9</li>
         <li><a href="#links">Links</a> 18 </li>
-        <li><a href="#buttons">Buttons</a> 4</li>
+        <li><a href="#buttons">Buttons</a> 5</li>
         <li><a href="#forms">Forms</a> 9</li>
         <li><a href="#navigation">Navigation</a> 2</li>
         <li><a href="#keyboardaccess">Keyboard Access</a> 6</li>
@@ -83,11 +83,11 @@
         <div style="float:right; width:33%">Cleanse</div>
     </div>
 
-
     <h2 id="pagelayout">Page Layout</h2>
-    <h3>Page is too wide, users have to scroll horizontally</h3>
+    <h3>Wide page forces users to scroll horizontally</h3>
     <div class="example example--wide">
-        When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.
+        <p class="constrained">When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.</p>
+        <p style="float:right;">This is some text you have to horizontally scroll to read.</p>
     </div>
 
     <h3>White space not used for separation</h3>
@@ -162,6 +162,11 @@
     <h3>Inadequate line height used</h3>
     <div class="example">
         <p class="line-height">Many people with cognitive disabilities have trouble tracking lines of text when a block of text is single spaced. Providing spacing between 1.5 to 2 allows them to start a new line more easily once they have finished the previous one.</p>
+    </div>
+
+    <h3>Long lines of text</h3>
+    <div class="example example--wide">
+        <p>For people with some reading or vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines should not exceed 80 characters</p>
     </div>
 
     <h2 id="languageofcontent">Language of content</h2>
@@ -769,7 +774,12 @@
 
     <h3>Fake button is not keyboard accessible</h3>
     <div class="example">
-        <div id="webchat">launch webchat</div>
+        <div id="webchat" class="button">launch webchat</div>
+    </div>
+
+    <h3>Link with a role=button does not work with space bar</h3>
+    <div class="example">
+        <a href="next.html" class="button" role="button">Continue</a>
     </div>
 
     <h3>Keyboard focus assigned to a non focusable element using tabindex=0</h3>

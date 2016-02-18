@@ -58,14 +58,12 @@ tbody th {
     width: 4%;
 }
 
-
-
 .error {
     background: #a8ff26;
 }
 
 .warning {
-    backgroun: #fba30;
+    background: #fba30;
 }
 
 .container {
@@ -83,8 +81,12 @@ tbody th {
 
 .example--wide {
     width: 200%;
+    overflow: hidden;
 }
 
+.constrained {
+    width: 50em;
+}
 
 .red {
     color: #B31212;
@@ -168,11 +170,14 @@ input.low-contrast {
     color: #0a6703;
 }
 
-#webchat {
-    background-color: #00823b;
+.button {
+    display: inline-block;
+    padding: 10px 20px;
     color: #fff;
-    width: 10em;
-    padding: 10px;
+    background: #00823b;
+    border-bottom: 2px solid #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .warning {
@@ -223,8 +228,6 @@ input.low-contrast {
     color: #6f777b;
     margin: 0;
 }
-
-
 
 .quail-result {
     outline: 4px solid grey;
