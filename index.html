@@ -129,16 +129,6 @@
         <p class="small-text">This is some tiny text, much too small for some people to read</p>
     </div>
 
-    <h3>Blink element found</h3>
-    <div class="example">
-        <p><blink>Blinking text and moving text (such as a marquee) can distract the reader's attention. This is especially relevant to people with attention deficits or cognitive disabilities. Neither is likely to cause a seizure, but they are likely to decrease the readability of the document as a whole and increase the time it takes for users to finish reading it.</blink></p>
-    </div>
-
-    <h3>Marquee element found</h3>
-    <div class="example">
-        <p><marquee>The BLINK and MARQUEE element animates content in a way that cannot be overridden or disabled by the user.</marquee></p>
-    </div>
-
     <h3>Italics used on long sections of text</h3>
     <div class="example">
         <p class="italic">Italics are sometimes used to highlight text. But you shouldn't use italicized text because they make letters hard to read. The letters have a jagged line compared to non-italic fonts. The letters also lean over making it hard for dyslexic users to make out the words. When the text size is small, the text is even more illegible.</p>
@@ -162,6 +152,16 @@
     <h3>Long lines of text</h3>
     <div class="example example--wide">
         <p>For people with some reading or vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines should not exceed 80 characters</p>
+    </div>
+
+    <h3>Blink element found</h3>
+    <div class="example">
+        <p><blink>Blinking text and moving text (such as a marquee) can distract the reader's attention. This is especially relevant to people with attention deficits or cognitive disabilities. Neither is likely to cause a seizure, but they are likely to decrease the readability of the document as a whole and increase the time it takes for users to finish reading it.</blink></p>
+    </div>
+
+    <h3>Marquee element found</h3>
+    <div class="example">
+        <p><marquee>The BLINK and MARQUEE element animates content in a way that cannot be overridden or disabled by the user.</marquee></p>
     </div>
 
     <h2 id="languageofcontent">Language of content</h2>
@@ -216,7 +216,7 @@
         <a href="missing.html">Example page with a missing page title</a>
     </div>
 
-    <h3>Inapproriate page title</h3>
+    <h3>Inappropriate page title</h3>
     <div class="example">
         <a href="inappropriate.html">Example page with a inappropriate page title</a>
     </div>
@@ -581,22 +581,22 @@
         <p class="unobvious-link">Find out more about <a href="http://www.bbc.co.uk/programmes/b006q2x0">Doctor Who</a></p>
     </div>
 
-    <h3>Link points directly to an image </h3>
-    <div class="example">
-        My favourite <a href="images/bat.jpg">bat</a>
-    </div>
-
     <h3>Link to pdf does not include information on file format and file size</h3>
     <div class="example">
         <a href="http://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf">Dyslexia style guide</a>
     </div>
 
-    <h3>Links to a multimedia file does not include link to a transcript</h3>
+    <h3>Link to a image, no text alternative </h3>
+    <div class="example">
+        My favourite <a href="images/bat.jpg">bat</a>
+    </div>
+
+    <h3>Link to a multimedia file, no transcript</h3>
     <div class="example">
         <a href="interview.mov">Watch the interview</a>
     </div>
 
-    <h3>Links to a sound file does not include a link to a transcript</h3>
+    <h3>Links to a sound file, no transcript</h3>
     <div class="example">
         <a href="interview.mp3">Listen to the interview</a>
     </div>
@@ -606,9 +606,14 @@
         <a href="a.html">Page A</a> <a href="b.html">Page B</a> <a href="c.html">Page C</a>
     </div>
 
-    <h3>Link uses invalid hypertext reference</h3>
+    <h3>Link to #, invalid hypertext reference</h3>
     <div class="example">
         <a href="#">Do something</a>
+    </div>
+
+    <h3>Link to javascript, invalid hypertext reference</h3>
+    <div class="example">
+        <a href="javascript:alert('Hello world!')">Press me!</a>
     </div>
 
     <h2 id="buttons">Buttons</h2>
@@ -666,11 +671,11 @@
 
     <h3>Non-unique field label found</h3>
     <div class="example">
-        <label for="x_3">Two
+        <label for="x_3">Name
             <input type="text" name="x_3" id="x_3">
-        </label>
+        </label><br >
 
-        <label for="x_4">Two
+        <label for="x_4">Name
             <input type="text" name="x_4" id="x_4">
         </label>
     </div>
@@ -716,7 +721,7 @@
     </div>
 
     <h2 id="navigation">Navigation</h2>
-    <h3>Navigation placement, display, and functionality should not change from page to page</h3>
+    <h3>Navigation placement, display, or functionality changes from from page to page</h3>
     <div class="example">
         insert_example
     </div>
@@ -820,7 +825,7 @@
         <p><font color="blue">The colour of this text is set using the font element an dthe colr attribute</font></p>
     </div>
 
-    <h3>Deprecated center elemet</h3>
+    <h3>Deprecated center element</h3>
     <div class="example">
         <center>This text is centred using the center element</center>
     </div>
