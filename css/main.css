@@ -75,6 +75,18 @@ tbody th {
     background: #ff7c7c;
 }
 
+.identified {
+    background: #A5D9FF;
+}
+
+.manual {
+    background: #e685ff;
+}
+
+.wrong {
+    background: #ffcccc;
+}
+
 .false-positive {
     background: #981389;
     color: #fff;
@@ -194,7 +206,7 @@ input.low-contrast {
     cursor: pointer;
 }
 
-.warning {
+.warning-icon {
     background-image: url("../images/important.png");
     background-size: 34px 34px;
     background-repeat: no-repeat;
