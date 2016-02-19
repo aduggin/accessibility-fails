@@ -71,6 +71,10 @@ tbody th {
     color: #fff;
 }
 
+.notfound {
+    background: #ff7c7c;
+}
+
 .false-positive {
     background: #981389;
     color: #fff;
