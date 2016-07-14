@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accessibility Fails - Test Page 2</title>
+
+    <meta charset="utf-8" /> 
+
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/test2.css"/>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/main2.js"></script>
+</head>
+<body>
+<div class="container" id="main">
+    <h1>Accessibility Fails - Test Page 2</h1>
+
+    <nav>
+    <ul>
+        <li><a href="#content">Content</a> 5</li>
+        <li><a href="#pagelayout">Page Layout</a> 1</li>
+        <li><a href="#colourandcontrast">Colour and Contrast</a> 5</li>
+        <li><a href="#typography">Typography</a> 8</li>
+        <li><a href="#languageofcontent">Language of content</a> 8</li>
+        <li><a href="#pagetitle">Page Title</a> 3</li>
+        <li><a href="#headings">Headings</a> 4</li>
+        <li><a href="#lists">Lists</a> 6</li>
+        <li><a href="#tables">Tables</a> 8</li>
+        <li><a href="#images">Images</a> 9</li>
+        <li><a href="#links">Links</a> 18 </li>
+        <li><a href="#buttons">Buttons</a> 5</li>
+        <li><a href="#forms">Forms</a> 9</li>
+        <li><a href="#navigation">Navigation</a> 2</li>
+        <li><a href="#keyboardaccess">Keyboard Access</a> 6</li>
+        <li><a href="#frames">Frames</a> 2</li>
+        <li><a href="#html">HTML</a> 9</li>
+        <li><a href="#css">CSS</a> 5</li>
+    </ul>
+    </nav>
+
+    <h2 id="content">Content</h2>
+
+
+    <h2 id="pagelayout">Page Layout</h2>
+    
+
+    <h2 id="colourandcontrast">Colour and Contrast</h2>
+    
+    <h3>Focus not visible</h3>
+    <div class="example">
+        <a href="#" class="not-visible-outline-link">This links has visible focus</a> but this button
+        <button class="not-visible-outline">Search</button> doesn't
+    </div>
+
+    <h2 id="typography">Typography</h2>
+    
+
+    <h2 id="languageofcontent">Language of content</h2>
+    
+    <h3>Text language changed without required change in direction</h3>
+    <div class="example">
+        <p lang="ar">الإعفاء الإلكتروني من التأشيرة</p>
+    </div>
+
+    <h3>Text language is in the wrong direction</h3>
+    <div class="example">
+        <p dir="rtl" lang="en">Electronic visa waiver</p>
+    </div>
+
+    <h2 id="pagetitle">Page Title</h2>
+    
+
+    <h2 id="headings">Headings</h2>
+    
+
+    <h2 id="lists">Lists</h2>
+    
+
+    <h2 id="tables">Tables</h2>
+
+    <h3>Table with inconsistent numbers of columns in rows</h3>
+    <div class="example">
+        <table>
+            <caption>Requester information</caption>
+            <thead>
+                <tr>
+                    <th colspan="10">Requester Information</th>
+                </tr>       
+            </thead>
+            <tbody>
+                <tr>
+                  <th colspan="1" id="name" class="label">Name</th>
+                  <td colspan="7" headers="name">Jon Smith</td>
+                  <th colspan="1" id="date" class="label">Date</th>
+                  <td colspan="1" headers="date">9/9/2005</td>
+                </tr>
+                <tr>
+                  <th colspan="1" id="dept" class="label">Department</th>
+                  <td colspan="9" headers="ri dept">Customer Service</td>
+                </tr>
+                <tr>
+                  <th colspan="1" id="remail" class="label">E-mail</th>
+                  <td colspan="4" headers="ri remail">jon.smith@gov.uk</td>
+                  <th colspan="1" id="rphone" class="label">Phone</th>
+                  <td colspan="4" headers="ri rphone">07700 900258</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Table with some empty cells</h3>
+    <div class="example">
+        <table>
+            <caption>Bills before Parliament 2016-17</caption>
+            <thead>
+                <tr>
+                    <th>
+                        Current House
+                    </th>
+                    <th>
+                        Bill title
+                    </th>
+                    <th>
+                        Last updated
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>A</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Lords
+                    </td>
+                    <td>
+                        Abortion (Disability Equality) Bill [HL]
+                    </td>
+                    <td>26.05.2016</td>
+                </tr>
+                <tr>
+                    <td>
+                        Lords
+                    </td>
+                    <td>
+                        Access to Palliative Care Bill [HL]
+                    </td>
+                    <td>10.06.2016</td>
+                </tr>            
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Table with column headers and double row headers</h3>
+    <div class="example">
+        <table>
+            <caption>Road Traffic at Junctions</caption>
+            <tr>
+                <th>Road</th>
+                <th>Junction</th>
+                <th>Car</th>
+                <th>Bus</th>
+            </tr>
+            <tr>
+                <th>Regent Street</th>
+                <th>Oxford Street</th>
+                <td>307</td>
+                <td>12</td>
+            </tr>
+
+            <tr>
+                <th>Regent Street</th>
+                <th>Bond Street</th>
+                <td>1731</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <th>Southwark Street</th>
+                <th>Union Street</th>
+                <td>1975</td>
+                <td>51</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2 id="images">Images</h2>
+    
+    <h3>Embedded video file is missing text alternative</h3>
+    <div class="example">
+        <video controls>
+           <source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.ogv" type='video/ogg; codecs="theora, vorbis"' />
+           <source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        </video>
+    </div>
+
+    <h3>Embedded audio file is missing text alternative</h3>
+    <div class="example">
+        <audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" controls></audio>
+    </div>
+
+    <h2 id="links">Links</h2>
+    
+
+    <h2 id="buttons">Buttons</h2>
+    
+
+    <h2 id="forms">Forms</h2>
+    
+    <h3>Missing labels in checkboxes</h3>
+    <div class="example">
+        <fieldset>
+            <legend>What is your nationality?</legend>
+
+            <label>British (including English, Scottish, Welsh and Northern Irish)</label>
+            <input type="checkbox" id="nationality_british" name="nationality.british" value="true">
+
+            <label>Irish</label>
+            <input type="checkbox" id="nationality_irish" name="nationality.irish" value="true">
+
+            <label>Citizen of a different country</label>
+            <input type="checkbox" id="nationality_hasOtherCountry" name="nationality.hasOtherCountry" value="true">
+        </fieldset>
+    </div>
+
+    <h3>Two unique labels, but identical for= attributes</h3>
+    <div class="example">
+        <label for="two-labels-day">Date of Birth</label>
+        <p>
+            <label for="two-labels-day">Day</label>
+            <input type="text" id="two-labels-day" />
+            <label for="two-labels-month">Month</label>
+            <input type="text" id="two-labels-month" />
+            <label for="two-labels-year">Year</label>
+            <input type="text" id="two-labels-year" />
+        </p>
+    </div>
+
+    <h3>Label element with for= attribute but not matching id= attribute of form control</h3>
+    <div class="example">
+        <fieldset>
+            <legend>Non-matching for attribute</legend>
+
+            <label id="not-matching-anything">form</label>
+            <input type="checkbox" id="label-for-not-matching" value="yes" />
+        </fieldset>
+    </div>
+
+    <h3>Labels missing when they would look clumsy for some form controls</h3>
+    <div class="example">
+        <label for="missing-labels-day">Date of Birth</label>
+        <p>
+            <input type="text" id="missing-labels-day" />
+            <input type="text" id="missing-labels-month" />
+            <input type="text" id="missing-labels-year" />
+        </p>
+    </div>
+
+    <h3>Left aligned form labels with too much white space</h3>
+    <div class="example">
+        <p class="too-much-whitespace">
+            <label for="input-too-far-away">Name</label>
+            <input id="input-too-far-away" type="text" />
+        </p>
+    </div>
+
+    <h2 id="navigation">Navigation</h2>
+    
+
+    <h2 id="keyboardaccess">Keyboard Access</h2>
+    
+    <h3>Lightbox – focus doesn’t move to the lightbox</h3>
+    <div class="example">
+        <a class="open-lightbox-not-focused" href="#">Open lightbox</a>
+
+        <div class="lightbox not-focused hidden">
+            <a class="close-button" alt="Close lightbox" href="#">X</a>
+            Lightbox content
+        </div>
+    </div>
+
+    <h3>Lightbox – close button doesn’t receive focus</h3>
+    <div class="example">
+        <a class="open-lightbox-close-button" href="#">Open lightbox</a>
+
+        <div class="lightbox close-button hidden">
+            <span class="close-button" alt="Close lightbox" >X</span>
+            Lightbox content
+        </div>
+    </div>
+
+
+
+    <h2 id="frames">Frames</h2>
+    
+
+    <h2 id="html">HTML</h2>
+    
+    <h3>Invalid ARIA role names</h3>
+    <div class="example">
+        <div id="global-breadcrumb" class="header-context">
+            <ol class="group" role="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li><a href="/browse/housing-local-services">Housing and local services</a></li>
+                <li><strong><a href="/browse/housing-local-services/local-councils">Local councils and services</a></strong></li>
+            </ol>
+        </div>
+    </div>
+
+    <h2 id="css">CSS</h2>
+
+</div>
+</body>
+</html>
