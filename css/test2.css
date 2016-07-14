@@ -110,3 +110,32 @@ body {
     cursor: hand;
 }
 
+/* Links only identifiable by colour alone */
+.links-by-colour-alone a {
+    color: #005ea5;
+}
+
+.links-by-colour-alone a:hover {
+    color: #2e8aca;
+}
+
+.links-by-colour-alone .colour-alone-link {
+    text-decoration: none;
+}
+
+/* Wrong focus order */
+
+.focus-order-broken a {
+    margin-left: 0.75em;
+}
+
+.focus-order-broken .first, 
+.focus-order-broken .third {
+    float: left;
+}
+
+.focus-order-broken .second {
+    float: right;
+}
+
+
