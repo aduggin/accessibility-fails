@@ -286,25 +286,62 @@
 
     <h2 id="keyboardaccess">Keyboard Access</h2>
     
-    <h3>Lightbox – focus doesn’t move to the lightbox</h3>
+    <h3>Lightbox &ndash; focus is not retained within the lightbox</h3>
     <div class="example">
         <a class="open-lightbox-not-focused" href="#">Open lightbox</a>
 
         <div class="lightbox not-focused hidden">
             <a class="close-button" alt="Close lightbox" href="#">X</a>
-            Lightbox content
+
+            <p>
+                This lightbox doesn't retain the focus within itself.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
         </div>
     </div>
 
-    <h3>Lightbox – close button doesn’t receive focus</h3>
+    <h3>Lightbox &ndash; close button doesn’t receive focus</h3>
     <div class="example">
         <a class="open-lightbox-close-button" href="#">Open lightbox</a>
 
         <div class="lightbox close-button hidden">
             <span class="close-button" alt="Close lightbox" >X</span>
-            Lightbox content
+
+            <p>
+                This lightbox's close button isn't a link so you can't focus on it.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
         </div>
     </div>
+
+    <h3>Lightbox &ndash; focus is not moved immediately to lightbox</h3>
+    <div class="example">
+        <a class="open-lightbox-focus-far" href="#">Open lightbox</a>
+
+        <div class="lightbox focus-far hidden">
+            <span class="close-button" alt="Close lightbox" >X</span>
+
+            <p>
+                This lightbox is placed at the end of the DOM so you'll have to tab through other links to reach it.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
+        </div>
+    </div>
+
+    <h3>Lightbox &ndash; ESC key doesn't close the lightbox</h3>
+    <div class="example">
+        <a class="open-lightbox-unescapable" href="#">Open lightbox</a>
+
+        <div class="lightbox unescapable hidden">
+            <a class="close-button" alt="Close lightbox" href="#">X</a>
+
+            <p>
+                This lightbox can't be closed with an escape key.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
+        </div>
+    </div>
+
 
     <h3>Focus order in wrong order</h3>
     <div class="example">
