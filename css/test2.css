@@ -237,7 +237,11 @@ body {
     height: 1.5em;
     display: inline-block;
     text-align: center;
-    text-indent: -1px;
+    text-indent: -0.1em;
+}
+
+.tooltips-not-focusable .tooltip-icon:hover + .tooltip-information {
+    display: block;
 }
 
 .tooltips-not-focusable .tooltip-information {
@@ -247,10 +251,11 @@ body {
     background: #6F777B;
     color: white;
     padding: 1em;
-    margin-top: -10.1em;
+    margin-top: -10.2em;
     margin-left: 6.3em;
 }
 
+/* Tooltip arrow */
 .tooltips-not-focusable .tooltip-information:after, .tooltips-not-focusable .tooltip-information:before {
     top: 100%;
     left: 50%;
@@ -274,10 +279,4 @@ body {
     border-width: 11px;
     margin-left: -11px;
 }
-
-
-.tooltips-not-focusable .tooltip-icon:hover + .tooltip-information {
-    display: block;
-}
-
 

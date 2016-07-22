@@ -65,6 +65,12 @@ $(function (){
         window.location = window.location.href;
     });
 
-    $('.tooltip-icon')
+    $('.disappearing-alert').next('label').find('input').focus(function (){
+        $('.disappearing-alert').removeClass('hidden');
+        setTimeout(function (){
+            $('.disappearing-alert').addClass('hidden');
+        }, 500);
+    });
+
 
 });
