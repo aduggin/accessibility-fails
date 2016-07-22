@@ -17,24 +17,24 @@
 
     <nav>
     <ul>
-        <li><a href="#content">Content</a> 5</li>
-        <li><a href="#pagelayout">Page Layout</a> 1</li>
-        <li><a href="#colourandcontrast">Colour and Contrast</a> 5</li>
-        <li><a href="#typography">Typography</a> 8</li>
-        <li><a href="#languageofcontent">Language of content</a> 8</li>
-        <li><a href="#pagetitle">Page Title</a> 3</li>
-        <li><a href="#headings">Headings</a> 4</li>
-        <li><a href="#lists">Lists</a> 6</li>
-        <li><a href="#tables">Tables</a> 8</li>
-        <li><a href="#images">Images</a> 9</li>
-        <li><a href="#links">Links</a> 18 </li>
-        <li><a href="#buttons">Buttons</a> 5</li>
-        <li><a href="#forms">Forms</a> 9</li>
-        <li><a href="#navigation">Navigation</a> 2</li>
-        <li><a href="#keyboardaccess">Keyboard Access</a> 6</li>
-        <li><a href="#frames">Frames</a> 2</li>
-        <li><a href="#html">HTML</a> 9</li>
-        <li><a href="#css">CSS</a> 5</li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#pagelayout">Page Layout</a></li>
+        <li><a href="#colourandcontrast">Colour and Contrast</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#languageofcontent">Language of content</a></li>
+        <li><a href="#pagetitle">Page Title</a></li>
+        <li><a href="#headings">Headings</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#navigation">Navigation</a></li>
+        <li><a href="#keyboardaccess">Keyboard Access</a></li>
+        <li><a href="#frames">Frames</a></li>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
     </ul>
     </nav>
 
@@ -187,7 +187,14 @@
     </div>
 
     <h2 id="images">Images</h2>
-    
+   
+    <h3>Image with partial text alternative</h3>
+    <div class="example">
+        <p>The image below contains a lot of information, such as which departments the sale is on. The text alternative in the alt attribute does not include this information, only a partial "25% off sale"</p>
+
+        <img src="images/sale.jpg" alt="25% off sale" />
+    </div>
+
     <h3>Embedded video file is missing text alternative</h3>
     <div class="example">
         <video controls>
@@ -223,7 +230,82 @@
     
 
     <h2 id="forms">Forms</h2>
-    
+   
+    <h3>Errors are not identified</h3>
+    <div class="example">
+        <form class="errors-badly-identified errors-not-identified">
+            <div class="validation-summary" role="alert" aria-labelledby="error-heading">
+                You need to fix the errors on this page before continuing.
+            </div>
+
+            <label>
+                Name
+                <input type"text" name="name" />
+            </label>
+            <label>
+                Surname
+                <input type"text" name="surname" />
+            </label>
+            <label>
+                Date of birth
+                <input type"text" name="date-of-birth" />
+            </label>
+        </form>
+    </div>
+
+    <h3>Errors identified by colour only</h3>
+    <div class="example">
+        <form class="errors-badly-identified errors-colour-only">
+            <div class="validation-summary" role="alert" aria-labelledby="error-heading">
+                You need to fix the errors on this page before continuing.
+            </div>
+
+            <label>
+                Name
+                <input type"text" class="has-errors" name="name" />
+            </label>
+            <label>
+                Surname
+                <input type"text" name="surname" />
+            </label>
+            <label>
+                Date of birth
+                <input type"text" class="has-errors" name="date-of-birth" />
+            </label>
+        </form>
+    </div>
+
+    <h3>Errors identified with a poor colour contrast</h3>
+    <div class="example">
+        <form class="errors-badly-identified error-poor-contrast">
+            <div class="validation-summary" role="alert" aria-labelledby="error-heading">
+                You need to fix the errors on this page before continuing.
+            </div>
+
+            <label>
+                Name
+                <input type"text" class="has-errors" name="name" />
+            </label>
+            <label>
+                Surname
+                <input type"text" name="surname" />
+            </label>
+            <label>
+                Date of birth
+                <input type"text" class="has-errors" name="date-of-birth" />
+            </label>
+        </form>
+    </div>
+
+    <h3>Error messages - no suggestion for corrections given, eg. required format</h3>
+    <div class="example">
+        <label class="required-format-not-given">
+            Phone number
+            <span class="error-message">is not valid</span>
+            <input class="has-errors" type="tel" required pattern="7[0-9]{9}" />
+        </label>
+    </div>
+
     <h3>Missing labels in checkboxes</h3>
     <div class="example">
         <fieldset>
@@ -279,6 +361,16 @@
             <label for="input-too-far-away">Name</label>
             <input id="input-too-far-away" type="text" />
         </p>
+    </div>
+
+    <h3>Form control that changes context without warning</h3>
+    <div class="example">
+        <select class="language-selector">
+            <option value="">Change your language</option>
+            <option value="en">English</option>
+            <option value="de">German</option>
+            <option value="fr">French</option>
+        </select>
     </div>
 
     <h2 id="navigation">Navigation</h2>
@@ -342,6 +434,40 @@
         </div>
     </div>
 
+    <h3>Concertina items don’t get keyboard focus</h3>
+    <div class="example">
+        <dl class="concertina">
+            <dt>Understanding user research</dt>
+            <dd>
+                <ul>
+                    <li>How user research improves service design</li>
+                    <li>Start by learning user needs</li>
+                    <li>Understanding users who don't use digital services</li>
+                </ul>
+            </dd>
+
+            <dt>Preparing for user research</dt>
+            <dd>
+                <ul>
+                    <li>Plan user research for your service</li>
+                    <li>Plan a round of user research</li>
+                    <li>Find user research participants</li>
+                    <li>Choose a location for user research</li>
+                    <li>Write a recruitment brief</li>
+                    <li>Getting users' consent for research</li>
+                </ul>
+            </dd>
+           
+            <dt>Analysing and sharing findings</dt>
+            <dd>
+                <ul>
+                    <li>Sharing user research findings</li>
+                    <li>Analyse a research session</li>
+                </ul>
+            </dd>
+        </dl>
+    </div> 
+
 
     <h3>Focus order in wrong order</h3>
     <div class="example">
@@ -350,6 +476,32 @@
             <a class="second" href="#">Second link</a>
             <a class="Third" href="#">Third link</a>
         </div>
+    </div>
+
+    <h3>Dropdown navigation – only the top level items receive focus</h3>
+    <div class="example">
+        <nav role="navigation" class="dropdown-nav">
+            <ul>
+                <li>
+                    <a href="https://www.gov.uk/browse/benefits">Benefits</a>
+                    <ul class="submenu">
+                        <li><a href="#">Benefits entitlement</a></li>
+                        <li><a href="#">Benefits for families</a></li>
+                        <li><a href="#">Carers and disability benefits</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <h3>Tooltips don't receive keyboard focus</h3>
+    <div class="example">
+        <label for="drivers-licence-no" class="tooltips-not-focusable">
+            Your driving licence number
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-information">Your driving licence number can be found in section 5 of your driving licence photocard</span>
+        </label>
+        <input id="drivers-licence-no" type"text" />
     </div>
 
     <h2 id="frames">Frames</h2>
@@ -369,6 +521,16 @@
     </div>
 
     <h2 id="css">CSS</h2>
+
+    <h3>Page zoom - boxes that don’t expand with the text</h3>
+    <div class="example">
+        <div class="wont-expand-box">The box below this example won't expand to fit the text contained within when zoomed in.
+
+            <p class="wont-expand">
+                This service is for England and Wales only. You must contact individual <a rel="external" href="https://www.justice-ni.gov.uk/topics/prisons/prison-visits">prisons in Northern Ireland</a> or <a rel="external" href="http://www.sps.gov.uk/Corporate/Prisons/Prisons.aspx">Scotland</a> to book a visit.
+            </p>
+        </div>
+    </div>
 
 </div>
 </body>

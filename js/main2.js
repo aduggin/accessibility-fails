@@ -50,8 +50,21 @@ $(function (){
         }
     });
 
+    /* Concertina */
 
+    $('.concertina dd').addClass('hidden');
 
+    $('.concertina dt').click(function (e){
+        var $dt = $(this);
+        var $dd = $dt.next('dd');
+        $dt.toggleClass('expanded');
+        $dd.toggleClass('hidden');
+    });
 
+    $('.language-selector').change(function (){
+        window.location = window.location.href;
+    });
+
+    $('.tooltip-icon')
 
 });

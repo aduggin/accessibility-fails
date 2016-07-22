@@ -139,3 +139,145 @@ body {
 }
 
 
+.wont-expand-box {
+    overflow: hidden;
+    height: 8em;
+}
+
+.wont-expand {
+    border: 1px solid #BFC1C3;
+    padding: 1em;
+    position: absolute;
+    width: 50%;
+    height: 7%;
+    overflow: hidden;
+}
+
+/* Concertina */
+.concertina dt {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-top: 1px solid #bfc1c3;
+}
+
+.concertina dt:hover {
+    cursor: pointer;
+    cursor: hand;
+    background: #f8f8f8;
+}
+
+.concertina dt:before {
+    content: '>';
+    font-size: 0.7em;
+    margin-left: 1em;
+    margin-right: 0.4em;
+    position: relative;
+    top: -0.25em;
+}
+
+.concertina dt.expanded:before {
+    content: 'v';
+}
+
+/* Validation */
+.errors-badly-identified .validation-summary {
+    padding: 1em;
+    border: 3px solid #df3034;
+    background: #fae1e1;
+}
+
+.errors-badly-identified label {
+    display: block;
+    margin: 1em 0 1em 0;
+}
+
+.errors-badly-identified label input {
+    display: block;
+}
+
+.errors-colour-only .has-errors {
+    background: #fae1e1;
+    border: 1px solid #df3034;
+}
+
+.error-poor-contrast .validation-summary {
+    color: #fff;
+}
+
+.error-poor-contrast .has-errors {
+    border: 1px solid #fae1e1;
+}
+
+.required-format-not-given .error-message {
+    display: block;
+    color: #df3034;
+    margin: 0 0 0.3em 0;
+}
+
+.dropdown-nav > ul > li > ul {
+    display: none;
+}
+
+.dropdown-nav > ul > li:hover > ul {
+    display: block;
+}
+
+.tooltips-not-focusable {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.tooltips-not-focusable .tooltip-icon {
+    cursor: pointer;
+    cursor: hand;
+    background: #6F777B;
+    color: #fff;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    text-align: center;
+    text-indent: -1px;
+}
+
+.tooltips-not-focusable .tooltip-information {
+    display: none;
+    position: absolute;
+    width: 12em;
+    background: #6F777B;
+    color: white;
+    padding: 1em;
+    margin-top: -10.1em;
+    margin-left: 6.3em;
+}
+
+.tooltips-not-focusable .tooltip-information:after, .tooltips-not-focusable .tooltip-information:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.tooltips-not-focusable .tooltip-information:after {
+    border-color: rgba(111, 119, 123, 0);
+    border-top-color: #6F777B;
+    border-width: 10px;
+    margin-left: -10px;
+}
+.tooltips-not-focusable .tooltip-information:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #;
+    border-width: 11px;
+    margin-left: -11px;
+}
+
+
+.tooltips-not-focusable .tooltip-icon:hover + .tooltip-information {
+    display: block;
+}
+
+
