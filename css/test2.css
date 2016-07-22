@@ -280,3 +280,7 @@ body {
     margin-left: -11px;
 }
 
+
+.not-article-content h2 {
+    margin: 0.5em 0;
+}
