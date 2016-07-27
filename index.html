@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8" /> 
+
     <title>Accessibility Fails</title>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/test1.css"/>
+    <link rel="stylesheet" href="css/test2.css"/>
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
 </head>
 <body>
 <div class="container" id="main">
@@ -124,6 +128,14 @@
         <p class="low-contrast-large-aa">This small text does not have enough contrast with it's background</p>
     </div>
 
+    <!-- From test2 -->
+    <h3>Focus not visible</h3>
+    <div class="example">
+        <a href="#" class="not-visible-outline-link">This links has visible focus</a> but this button
+        <button class="not-visible-outline">Search</button> doesn't
+    </div>
+    <!-- /From test2 -->
+
     <h2 id="typography">Typography</h2>
     <h3>Very small text found</h3>
     <div class="example">
@@ -206,12 +218,25 @@
         <p lang="am" >placeholder text</p>
     </div>
 
+    <!-- From test2 -->
+    <h3>Text language changed without required change in direction</h3>
+    <div class="example">
+        <p lang="ar">الإعفاء الإلكتروني من التأشيرة</p>
+    </div>
+
+    <h3>Text language is in the wrong direction</h3>
+    <div class="example">
+        <p dir="rtl" lang="en">Electronic visa waiver</p>
+    </div>
+    <!-- /From test2 -->
+
+    <h2 id="pagetitle">Page Title</h2>
     <h3>Missing page title</h3>
     <div class="example">
         <a href="missing.html">Example page with a missing page title</a>
     </div>
 
-    <h2 id="pagetitle">Page Title</h2>
+
     <h3>Empty page title</h3>
     <div class="example">
         <a href="empty.html">Example page with a empty page title</a>
@@ -461,6 +486,117 @@
         </table>
     </div>
 
+
+    <!-- From test2 -->
+    <h3>Table with inconsistent numbers of columns in rows</h3>
+    <div class="example">
+        <table>
+            <caption>Requester information</caption>
+            <thead>
+                <tr>
+                    <th colspan="10">Requester Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th colspan="1" id="name" class="label">Name</th>
+                  <td colspan="7" headers="name">Jon Smith</td>
+                  <th colspan="1" id="date" class="label">Date</th>
+                  <td colspan="1" headers="date">9/9/2005</td>
+                </tr>
+                <tr>
+                  <th colspan="1" id="dept" class="label">Department</th>
+                  <td colspan="9" headers="dept">Customer Service</td>
+                </tr>
+                <tr>
+                  <th colspan="1" id="remail" class="label">E-mail</th>
+                  <td colspan="4" headers="remail">jon.smith@gov.uk</td>
+                  <th colspan="1" id="rphone" class="label">Phone</th>
+                  <td colspan="4" headers="rphone">07700 900258</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Table with some empty cells</h3>
+    <div class="example">
+        <table>
+            <caption>Bills before Parliament 2016-17</caption>
+            <thead>
+                <tr>
+                    <th>
+                        Current House
+                    </th>
+                    <th>
+                        Bill title
+                    </th>
+                    <th>
+                        Last updated
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>A</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Lords
+                    </td>
+                    <td>
+                        Abortion (Disability Equality) Bill [HL]
+                    </td>
+                    <td>26.05.2016</td>
+                </tr>
+                <tr>
+                    <td>
+                        Lords
+                    </td>
+                    <td>
+                        Access to Palliative Care Bill [HL]
+                    </td>
+                    <td>10.06.2016</td>
+                </tr>            
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Table with column headers and double row headers</h3>
+    <div class="example">
+        <table>
+            <caption>Road Traffic at Junctions</caption>
+            <tr>
+                <th>Road</th>
+                <th>Junction</th>
+                <th>Car</th>
+                <th>Bus</th>
+            </tr>
+            <tr>
+                <th>Regent Street</th>
+                <th>Oxford Street</th>
+                <td>307</td>
+                <td>12</td>
+            </tr>
+
+            <tr>
+                <th>Regent Street</th>
+                <th>Bond Street</th>
+                <td>1731</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <th>Southwark Street</th>
+                <th>Union Street</th>
+                <td>1975</td>
+                <td>51</td>
+            </tr>
+        </table>
+    </div>
+    <!-- /From test2 -->
+
     <h2 id="images">Images</h2>
     <h3>Image with no alt attribute</h3>
     <div class="example">
@@ -508,6 +644,33 @@
     <div class="example">
         <img src="images/animated-tree.gif" width="157" height="193" alt="Animated gif of a Christmas tree with a toy train round and round the base of the tree">
     </div>
+
+    <!-- From test2 -->
+    <h3>Image with partial text alternative</h3>
+    <div class="example">
+        <p>The image below contains a lot of information, such as which departments the sale is on. The text alternative in the alt attribute does not include this information, only a partial "25% off sale"</p>
+
+        <img src="images/sale.jpg" alt="25% off sale" />
+    </div>
+
+    <h3>Embedded video file is missing text alternative</h3>
+    <div class="example">
+        <video controls>
+           <source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.ogv" type='video/ogg; codecs="theora, vorbis"' />
+           <source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        </video>
+    </div>
+
+    <h3>Embedded audio file is missing text alternative</h3>
+    <div class="example">
+        <audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" controls></audio>
+    </div>
+
+    <h3>Flashing content doesn't have warning</h3>
+    <div class="example">
+        <iframe width="560" height="315" title="Banned Pokemon scene" src="https://www.youtube.com/embed/gwoQRKCEHgY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- /From test2 -->
 
     <h2 id="links">Links</h2>
     <h3>Uninformative link text</h3>
@@ -615,6 +778,19 @@
         <a href="javascript:alert('Hello world!')">Press me!</a>
     </div>
 
+    <!-- From test2 -->
+    <h3>Identifying links by colour alone</h3>
+    <div class="example">
+        <p class="links-by-colour-alone">
+            <a href="#">A normal link</a>
+            <br />
+            Some text
+            <br />
+            <a class="colour-alone-link" href="#">Link only identifiable by colour alone</a>
+        </p>
+    </div>
+    <!-- /From test2 -->
+
     <h2 id="buttons">Buttons</h2>
     <h3>Empty button</h3>
     <div class="example">
@@ -719,6 +895,152 @@
         </label>
     </div>
 
+
+    <!-- From test2 -->
+    <h3>Errors are not identified</h3>
+    <div class="example">
+        <form class="errors-badly-identified errors-not-identified">
+            <div class="validation-summary" role="alert">
+                You need to fix the errors on this page before continuing.
+            </div>
+
+            <label>
+                Name
+                <input type="text" name="name" />
+            </label>
+            <label>
+                Surname
+                <input type="text" name="surname" />
+            </label>
+            <label>
+                Date of birth
+                <input type="text" name="date-of-birth" />
+            </label>
+        </form>
+    </div>
+
+    <h3>Errors identified by colour only</h3>
+    <div class="example">
+        <form class="errors-badly-identified errors-colour-only">
+            <div class="validation-summary" role="alert">
+                You need to fix the errors on this page before continuing.
+            </div>
+
+            <label>
+                Passport number
+                <input type="text" class="has-errors" name="name" />
+            </label>
+            <label>
+                Name on passport
+                <input type="text" name="surname" />
+            </label>
+            <label>
+                Date of expiry
+                <input type="text" class="has-errors" name="date-of-birth" />
+            </label>
+        </form>
+    </div>
+
+    <h3>Errors identified with a poor colour contrast</h3>
+    <div class="example">
+        <form class="errors-badly-identified error-poor-contrast">
+            <div class="validation-summary" role="alert">
+                You need to fix the errors on this page before continuing.
+            </div>
+
+            <label>
+                Claimant's name
+                <input type="text" class="has-errors" name="name" />
+            </label>
+            <label>
+                Claimant's surname
+                <input type="text" name="surname" />
+            </label>
+            <label>
+                Claimant's date of birth
+                <input type="text" class="has-errors" name="date-of-birth" />
+            </label>
+        </form>
+    </div>
+
+    <h3>Error messages - no suggestion for corrections given, eg. required format</h3>
+    <div class="example">
+        <label class="required-format-not-given">
+            Phone number
+            <span class="error-message">is not valid</span>
+            <input class="has-errors" type="tel" required pattern="7[0-9]{9}" />
+        </label>
+    </div>
+
+    <h3>Missing labels in checkboxes</h3>
+    <div class="example">
+        <fieldset>
+            <legend>What is your nationality?</legend>
+
+            <label>British (including English, Scottish, Welsh and Northern Irish)</label>
+            <input type="checkbox" id="nationality_british" name="nationality.british" value="true">
+
+            <label>Irish</label>
+            <input type="checkbox" id="nationality_irish" name="nationality.irish" value="true">
+
+            <label>Citizen of a different country</label>
+            <input type="checkbox" id="nationality_hasOtherCountry" name="nationality.hasOtherCountry" value="true">
+        </fieldset>
+    </div>
+
+    <h3>Two unique labels, but identical for= attributes</h3>
+    <div class="example">
+        <label for="two-labels-day">Date of issue</label>
+        <p>
+            <label for="two-labels-day">Day</label>
+            <input type="text" id="two-labels-day" />
+            <label for="two-labels-month">Month</label>
+            <input type="text" id="two-labels-month" />
+            <label for="two-labels-year">Year</label>
+            <input type="text" id="two-labels-year" />
+        </p>
+    </div>
+
+    <h3>Label element with for= attribute but not matching id= attribute of form control</h3>
+    <div class="example">
+        <fieldset>
+            <legend>Non-matching for attribute</legend>
+
+            <label id="not-matching-anything">form</label>
+            <input type="checkbox" id="label-for-not-matching" value="yes" />
+        </fieldset>
+    </div>
+
+    <h3>Labels missing when they would look clumsy for some form controls</h3>
+    <div class="example">
+        <label for="missing-labels-day">Your child's date of birth</label>
+        <p>
+            <input type="text" id="missing-labels-day" />
+            <input type="text" id="missing-labels-month" />
+            <input type="text" id="missing-labels-year" />
+        </p>
+    </div>
+
+    <h3>Left aligned form labels with too much white space</h3>
+    <div class="example">
+        <p class="too-much-whitespace">
+            <label for="input-too-far-away">Country</label>
+            <input id="input-too-far-away" type="text" />
+        </p>
+    </div>
+
+    <h3>Form control that changes context without warning</h3>
+    <div class="example">
+        <label for="language-selector">Select your language</label>
+        <select id="language-selector" class="language-selector">
+            <option value="">Change your language</option>
+            <option value="en">English</option>
+            <option value="de">German</option>
+            <option value="fr">French</option>
+        </select>
+    </div>
+    <!-- /From test2 -->
+
     <h2 id="navigation">Navigation</h2>
     <h3>Navigation placement, display, or functionality changes from from page to page</h3>
     <div class="example">
@@ -791,6 +1113,145 @@
         <p><a href="keyboardtrap.html">Example page that contains a keyboard trap</a></p>
     </div>
 
+    <!-- From test2 -->
+    <h3>Lightbox &ndash; focus is not retained within the lightbox</h3>
+    <div class="example">
+        <a class="open-lightbox-not-focused" href="#">Open lightbox</a>
+
+        <div class="lightbox not-focused hidden">
+            <a class="close-button" alt="Close lightbox" href="#">X</a>
+
+            <p>
+                This lightbox doesn't retain the focus within itself.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
+        </div>
+    </div>
+
+    <h3>Lightbox &ndash; close button doesn’t receive focus</h3>
+    <div class="example">
+        <a class="open-lightbox-close-button" href="#">Open lightbox</a>
+
+        <div class="lightbox close-button hidden">
+            <span class="close-button" alt="Close lightbox" >X</span>
+
+            <p>
+                This lightbox's close button isn't a link so you can't focus on it.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
+        </div>
+    </div>
+
+    <h3>Lightbox &ndash; focus is not moved immediately to lightbox</h3>
+    <div class="example">
+        <a class="open-lightbox-focus-far" href="#">Open lightbox</a>
+
+        <div class="lightbox focus-far hidden">
+            <span class="close-button" alt="Close lightbox" >X</span>
+
+            <p>
+                This lightbox is placed at the end of the DOM so you'll have to tab through other links to reach it.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
+        </div>
+    </div>
+
+    <h3>Lightbox &ndash; ESC key doesn't close the lightbox</h3>
+    <div class="example">
+        <a class="open-lightbox-unescapable" href="#">Open lightbox</a>
+
+        <div class="lightbox unescapable hidden">
+            <a class="close-button" alt="Close lightbox" href="#">X</a>
+
+            <p>
+                This lightbox can't be closed with an escape key.
+                The Ministry of Justice website has <a href="http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act" rel="external" target="_blank">information about mental capacity</a>.
+            </p>
+        </div>
+    </div>
+
+    <h3>Concertina items don’t get keyboard focus</h3>
+    <div class="example">
+        <dl class="concertina">
+            <dt>Understanding user research</dt>
+            <dd>
+                <ul>
+                    <li>How user research improves service design</li>
+                    <li>Start by learning user needs</li>
+                    <li>Understanding users who don't use digital services</li>
+                </ul>
+            </dd>
+
+            <dt>Preparing for user research</dt>
+            <dd>
+                <ul>
+                    <li>Plan user research for your service</li>
+                    <li>Plan a round of user research</li>
+                    <li>Find user research participants</li>
+                    <li>Choose a location for user research</li>
+                    <li>Write a recruitment brief</li>
+                    <li>Getting users' consent for research</li>
+                </ul>
+            </dd>
+           
+            <dt>Analysing and sharing findings</dt>
+            <dd>
+                <ul>
+                    <li>Sharing user research findings</li>
+                    <li>Analyse a research session</li>
+                </ul>
+            </dd>
+        </dl>
+    </div> 
+
+
+    <h3>Focus order in wrong order</h3>
+    <div class="example">
+        <div class="focus-order-broken">
+            <a class="first" href="#">First link</a>
+            <a class="second" href="#">Second link</a>
+            <a class="Third" href="#">Third link</a>
+        </div>
+    </div>
+
+    <h3>Dropdown navigation – only the top level items receive focus</h3>
+    <div class="example">
+        <nav role="navigation" class="dropdown-nav">
+            <ul>
+                <li>
+                    <a href="https://www.gov.uk/browse/benefits">Benefits</a>
+                    <ul class="submenu">
+                        <li><a href="#">Benefits entitlement</a></li>
+                        <li><a href="#">Benefits for families</a></li>
+                        <li><a href="#">Carers and disability benefits</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <h3>Tooltips don't receive keyboard focus</h3>
+    <div class="example">
+        <label for="drivers-licence-no" class="tooltips-not-focusable">
+            Your driving licence number
+            <span class="tooltip-icon">?</span>
+            <span class="tooltip-information">Your driving licence number can be found in section 5 of your driving licence photocard</span>
+        </label>
+        <input id="drivers-licence-no" type="text" />
+    </div>
+
+    <h3>Alert shows for a short time</h3>
+    <div class="example">
+        <p class="disappearing-alert hidden">
+            You should complete this form in 20 minutes
+        </p>
+        <label>
+            Prisoner's name
+            <input type="text" />
+        </label>
+    </div>
+    <!-- /From test2 -->
+
     <h2 id="frames">Frames</h2>
     <h3>iframe is missing a title attribute</h3>
     <div class="example">
@@ -856,6 +1317,32 @@ Your
         <object data="foo" type="bar"></object>
     </div>
 
+    <!-- From test2 -->
+    <h3>Invalid ARIA role names</h3>
+    <div class="example">
+        <div id="global-breadcrumb" class="header-context">
+            <ol class="group" role="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li><a href="/browse/housing-local-services">Housing and local services</a></li>
+                <li><strong><a href="/browse/housing-local-services/local-councils">Local councils and services</a></strong></li>
+            </ol>
+        </div>
+    </div>
+
+    <h3>Article element used to mark-up an element that's not an article/blog post etc.</h3>
+    <div class="example">
+        <article class="not-article-content">
+            <h2 id="parent-other">Elsewhere on GOV.UK</h2>
+              <nav role="navigation" aria-labelledby="parent-other">
+                <ul>
+                    <li><a href="/agency-workers-your-rights">Your rights as an agency worker</a></li>
+                    <li><a href="/acas">Advisory, Conciliation and Arbitration Service (Acas)</a></li>
+                </ul>
+            </nav>
+        </article>
+    </div>
+    <!-- /From test2 -->
+
     <h2 id="css">CSS</h2>
     <h3>display:none used to visually hide content when it should be available to screenreader</h3>
     <div class="example">
@@ -886,4 +1373,16 @@ Your
             </div>
         </div>
     </div>
+
+    <!-- From test2 -->
+    <h3>Page zoom - boxes that don’t expand with the text</h3>
+    <div class="example">
+        <div class="wont-expand-box">The box below this example won't expand to fit the text contained within when zoomed in.
+
+            <p class="wont-expand">
+                This service is for England and Wales only. You must contact individual <a rel="external" href="https://www.justice-ni.gov.uk/topics/prisons/prison-visits">prisons in Northern Ireland</a> or <a rel="external" href="http://www.sps.gov.uk/Corporate/Prisons/Prisons.aspx">Scotland</a> to book a visit.
+            </p>
+        </div>
+    </div>
+    <!-- /From test2 -->
 </div>
