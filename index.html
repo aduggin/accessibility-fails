@@ -29,7 +29,6 @@
     <nav>
     <ul>
         <li><a href="#content">Content</a> 5</li>
-        <li><a href="#pagelayout">Page Layout</a> 1</li>
         <li><a href="#colourandcontrast">Colour and Contrast</a> 5</li>
         <li><a href="#typography">Typography</a> 8</li>
         <li><a href="#languageofcontent">Language of content</a> 8</li>
@@ -38,6 +37,7 @@
         <li><a href="#lists">Lists</a> 6</li>
         <li><a href="#tables">Tables</a> 8</li>
         <li><a href="#images">Images</a> 9</li>
+        <li><a href="#multimedia">Multimedia</a> 9</li>
         <li><a href="#links">Links</a> 18 </li>
         <li><a href="#buttons">Buttons</a> 5</li>
         <li><a href="#forms">Forms</a> 9</li>
@@ -90,13 +90,6 @@
         <div style="float:right; width:33%">Exfoliate</div>
 
         <div style="float:right; width:33%">Cleanse</div>
-    </div>
-
-    <h2 id="pagelayout">Page Layout</h2>
-    <h3>Wide page forces users to scroll horizontally</h3>
-    <div class="example example--wide">
-        <p class="constrained">When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.</p>
-        <p style="float:right;">This is some text you have to horizontally scroll to read.</p>
     </div>
 
     <h2 id="colourandcontrast">Colour and Contrast</h2>
@@ -171,16 +164,6 @@
         <p>For people with some reading or vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines should not exceed 80 characters</p>
     </div>
 
-    <h3>Blink element found</h3>
-    <div class="example">
-        <blink>Blinking text and moving text (such as a marquee) can distract the reader's attention. This is especially relevant to people with attention deficits or cognitive disabilities. Neither is likely to cause a seizure, but they are likely to decrease the readability of the document as a whole and increase the time it takes for users to finish reading it.</blink>
-    </div>
-
-    <h3>Marquee element found</h3>
-    <div class="example">
-        <marquee>The BLINK and MARQUEE element animates content in a way that cannot be overridden or disabled by the user.</marquee>
-    </div>
-
     <h2 id="languageofcontent">Language of content</h2>
     <h3>html element is missing a lang attribute</h3>
     <div class="example">
@@ -215,11 +198,6 @@
     <h3>lang attribute used to identify change of language, but with wrong language</h3>
     <div class="example">
         <p>Mother, he's asking you to go. He's saying, <span lang="es">"Allons, Madame plaisante!"</span></p>
-    </div>
-
-    <h3>Text language changed without required change in direction</h3>
-    <div class="example">
-        <p lang="am" >placeholder text</p>
     </div>
 
     <!-- From test2 -->
@@ -459,27 +437,6 @@
         </table>
     </div>
 
-    <h3>Table nested within table</h3>
-    <div class="example">
-        <table>
-            <tr>
-                <th>1.1</th>
-            </tr>
-            <tr>
-                <td>
-                    <table>
-                        <tr>
-                            <th>2.1</th>
-                        </tr>
-                        <tr>
-                            <td>2.2</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
-
     <h3>Table used for layout</h3>
     <div class="example">
         <table>
@@ -656,7 +613,9 @@
 
         <img src="images/sale.jpg" alt="25% off sale" />
     </div>
+    <!-- /From test2 -->
 
+    <h2 id="multimedia">Multimedia</h2>
     <h3>Embedded video file is missing text alternative</h3>
     <div class="example">
         <video controls>
@@ -674,7 +633,6 @@
     <div class="example">
         <iframe width="560" height="315" title="Banned Pokemon scene" src="https://www.youtube.com/embed/gwoQRKCEHgY" frameborder="0" allowfullscreen></iframe>
     </div>
-    <!-- /From test2 -->
 
     <h2 id="links">Links</h2>
     <h3>Uninformative link text</h3>
