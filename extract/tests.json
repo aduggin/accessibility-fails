@@ -1,0 +1,2138 @@
+{
+    "Tables": {
+        "Table with column headers and double row headers": {
+            "example": "\n<table>\n<caption>Road Traffic at Junctions</caption>\n<tr>\n<th>Road</th>\n<th>Junction</th>\n<th>Car</th>\n<th>Bus</th>\n</tr>\n<tr>\n<th>Regent Street</th>\n<th>Oxford Street</th>\n<td>307</td>\n<td>12</td>\n</tr>\n<tr>\n<th>Regent Street</th>\n<th>Bond Street</th>\n<td>1731</td>\n<td>58</td>\n</tr>\n<tr>\n<th>Southwark Street</th>\n<th>Union Street</th>\n<td>1975</td>\n<td>51</td>\n</tr>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "manual", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table has no scope attributes": {
+            "example": "\n<table>\n<caption>Shelly's Daughters</caption>\n<thead>\n<tr>\n<th>Name</th>\n<th>Age</th>\n<th>Birthday</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th>Jackie</th>\n<td>5</td>\n<td>April 5</td>\n</tr>\n<tr>\n<th>Beth</th>\n<td>8</td>\n<td>January 14</td>\n</tr>\n</tbody>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table nested within table header": {
+            "example": "\n<table>\n<tr>\n<th>\n<table>\n<tr>\n<th>b.a</th>\n</tr>\n<tr>\n<td>b.b</td>\n</tr>\n</table>\n</th>\n</tr>\n<tr>\n<td>a.b</td>\n</tr>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "different", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table has no table headings": {
+            "example": "\n<table>\n<caption>Shelly's Daughters</caption>\n<thead>\n<tr>\n<td>Name</td>\n<td>Age</td>\n<td>Birthday</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Jackie</td>\n<td>5</td>\n<td>April 5</td>\n</tr>\n<tr>\n<td>Beth</td>\n<td>8</td>\n<td>January 14</td>\n</tr>\n</tbody>\n</table>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "different", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "wrong", 
+                "achecker": "different", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table with inconsistent numbers of columns in rows": {
+            "example": "\n<table>\n<caption>Requester information</caption>\n<thead>\n<tr>\n<th colspan=\"10\">Requester Information</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th class=\"label\" colspan=\"1\" id=\"name\">Name</th>\n<td colspan=\"7\" headers=\"name\">Jon Smith</td>\n<th class=\"label\" colspan=\"1\" id=\"date\">Date</th>\n<td colspan=\"1\" headers=\"date\">9/9/2005</td>\n</tr>\n<tr>\n<th class=\"label\" colspan=\"1\" id=\"dept\">Department</th>\n<td colspan=\"9\" headers=\"dept\">Customer Service</td>\n</tr>\n<tr>\n<th class=\"label\" colspan=\"1\" id=\"remail\">E-mail</th>\n<td colspan=\"4\" headers=\"remail\">jon.smith@gov.uk</td>\n<th class=\"label\" colspan=\"1\" id=\"rphone\">Phone</th>\n<td colspan=\"4\" headers=\"rphone\">07700 900258</td>\n</tr>\n</tbody>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "manual", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table that only has TH elements in it": {
+            "example": "\n<table>\n<thead>\n<tr>\n<th>Foo</th>\n<th>Bar</th>\n<th>Bat</th>\n<th>Baz</th>\n</tr>\n</thead>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "different", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table is missing a caption": {
+            "example": "\n<table>\n<thead>\n<tr>\n<th scope=\"col\">Name</th>\n<th scope=\"col\">Age</th>\n<th scope=\"col\">Birthday</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th scope=\"row\">Jackie</th>\n<td>5</td>\n<td>April 5</td>\n</tr>\n<tr>\n<th scope=\"row\">Beth</th>\n<td>8</td>\n<td>January 14</td>\n</tr>\n</tbody>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "warning", 
+                "achecker": "different", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table used for layout": {
+            "example": "\n<table>\n<tr>\n<td>navigation</td>\n<td>main content</td>\n</tr>\n</table>\n", 
+            "results": {
+                "google": "different", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "identified", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table has an empty table header": {
+            "example": "\n<table>\n<caption>Shelly's Daughters</caption>\n<thead>\n<tr>\n<th></th>\n<th scope=\"col\">Age</th>\n<th scope=\"col\">Birthday</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th scope=\"row\">Jackie</th>\n<td>5</td>\n<td>April 5</td>\n</tr>\n<tr>\n<th scope=\"row\">Beth</th>\n<td>8</td>\n<td>January 14</td>\n</tr>\n</tbody>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "different", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Table with some empty cells": {
+            "example": "\n<table>\n<caption>Bills before Parliament 2016-17</caption>\n<thead>\n<tr>\n<th>\n                        Current House\n                    </th>\n<th>\n                        Bill title\n                    </th>\n<th>\n                        Last updated\n                    </th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\u00a0</td>\n<td>A</td>\n<td>\u00a0</td>\n</tr>\n<tr>\n<td>\n                        Lords\n                    </td>\n<td>\n                        Abortion (Disability Equality) Bill [HL]\n                    </td>\n<td>26.05.2016</td>\n</tr>\n<tr>\n<td>\n                        Lords\n                    </td>\n<td>\n                        Access to Palliative Care Bill [HL]\n                    </td>\n<td>10.06.2016</td>\n</tr>\n</tbody>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Page Title": {
+        "Inappropriate page title": {
+            "example": "\n<a href=\"inappropriate.html\">Example page with a inappropriate page title</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Empty page title": {
+            "example": "\n<a href=\"empty.html\">Example page with a empty page title</a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Missing page title": {
+            "example": "\n<a href=\"missing.html\">Example page with a missing page title</a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Links": {
+        "Image link with no alternative text": {
+            "example": "\n<a href=\"http://www.bbc.co.uk\"><img alt=\"\" src=\"images/bbc-blocks-dark.png\"/></a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link to javascript, invalid hypertext reference": {
+            "example": "\n<a href=\"javascript:alert('Hello world!')\">Press me!</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Uninformative link text": {
+            "example": "\n<h4>Polar bear</h4>\n<p>The polar bear is a carnivorous bear whose native range lies largely within the Arctic Circle,\n            encompassing the Arctic Ocean, its surrounding seas and surrounding land masses.</p>\n<a href=\"https://en.wikipedia.org/wiki/Polar_bear\">Read more</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "warning", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link launches new window with no warning": {
+            "example": "\n<a href=\"https://twitter.com/\" target=\"_blank\">Twitter</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "warning", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Links not seperated by printable characters": {
+            "example": "\n<a href=\"a.html\">Page A</a> <a href=\"b.html\">Page B</a> <a href=\"c.html\">Page C</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link text with identical title": {
+            "example": "\n<a href=\"http://www.google.com\" title=\"Google\">Google</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "warning", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Links to a sound file, no transcript": {
+            "example": "\n<a href=\"interview.mp3\">Listen to the interview</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Identifying links by colour alone": {
+            "example": "\n<p class=\"links-by-colour-alone\">\n<a href=\"#\">A normal link</a>\n<br/>\n            Some text\n            <br/>\n<a class=\"colour-alone-link\" href=\"#\">Link only identifiable by colour alone</a>\n</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link to pdf does not include information on file format and file size": {
+            "example": "\n<a href=\"http://www.bdadyslexia.org.uk/common/ckeditor/filemanager/userfiles/About_Us/policies/Dyslexia_Style_Guide.pdf\">Dyslexia style guide</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "different", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link to #, invalid hypertext reference": {
+            "example": "\n<a href=\"#\">Do something</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Blank link text": {
+            "example": "\n<a href=\"http://www.google.com\"></a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link with the same text go to different pages": {
+            "example": "\n<a href=\"https://en.wikipedia.org/wiki/Lion\">Lions</a> are the only truly social cats, with related females\n        living together in prides overseen by male coalitio that compete for possession in fierce and often fatal battles.\n        <a href=\"http://animals.nationalgeographic.com/animals/mammals/african-lion/\">Lions</a> are predatory carnivores and it's the females that perform most of the hunting at night; the majority\n        of the prey being antelope, zebra and wildebeest.\n    ", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link text does not make sense out of context": {
+            "example": "\n<p>To know more about me, visit my <a href=\"page.html\">page</a>.</p>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Adjacent links going to the same destination": {
+            "example": "\n<a href=\"https://en.wikipedia.org/wiki/Red_panda\"><img alt=\"Red Panda\" height=\"165\" src=\"images/red_panda.jpg\" width=\"220\"/></a>\n<a href=\"https://en.wikipedia.org/wiki/Red_panda\">Red Panda</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "different", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link contains only a full stop": {
+            "example": "\n        Visit the GOV.UK website <a href=\"https://www.gov.uk/\">.</a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image link alt text repeats text in the link": {
+            "example": "\n<a href=\"https://en.wikipedia.org/wiki/Red_panda\">\n<img alt=\"Red Panda\" height=\"165\" src=\"images/red_panda.jpg\" width=\"220\"/>\n            Red Panda\n        </a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link not clearly identifiable and distinguishable from surrounding text": {
+            "example": "\n<p class=\"unobvious-link\">Find out more about <a href=\"http://www.bbc.co.uk/programmes/b006q2x0\">Doctor Who</a></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "false-positive", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link to a multimedia file, no transcript": {
+            "example": "\n<a href=\"interview.mov\">Watch the interview</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Non-specific link text": {
+            "example": "\n<a href=\"rockies.html\">Click here</a> for more information on the Rocky Mountains.\n    ", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "warning", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link to an image, no text alternative": {
+            "example": "\n        My favourite <a href=\"images/bat.jpg\">bat</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Keyboard Access": {
+        "Alert shows for a short time": {
+            "example": "\n<p class=\"disappearing-alert hidden\">\n            You should complete this form in 20 minutes\n        </p>\n<label>\n            Prisoner's name\n            <input type=\"text\"/>\n</label>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Lightbox - close button doesn't receive focus": {
+            "example": "\n<a class=\"open-lightbox-close-button\" href=\"#\">Open lightbox</a>\n<div class=\"lightbox close-button hidden\">\n<span alt=\"Close lightbox\" class=\"close-button\">X</span>\n<p>\n                This lightbox's close button isn't a link so you can't focus on it.\n                The Ministry of Justice website has <a href=\"http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act\" rel=\"external\" target=\"_blank\">information about mental capacity</a>.\n            </p>\n</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Focus order in wrong order": {
+            "example": "\n<div class=\"focus-order-broken\">\n<a class=\"first\" href=\"#\">First link</a>\n<a class=\"second\" href=\"#\">Second link</a>\n<a class=\"Third\" href=\"#\">Third link</a>\n</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Tabindex greater than 0": {
+            "example": "\n<a href=\"page.html\" tabindex=\"5\">A link with a tabindex greater than 0</a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "identified", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Keyboard focus is not indicated visually": {
+            "example": "\n<a class=\"no-outine\" href=\"link.html\">Link with no focus style</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Keyboard focus assigned to a non focusable element using tabindex=0": {
+            "example": "\n<p tabindex=\"0\">My favourite car</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Concertina items don't get keyboard focus": {
+            "example": "\n<dl class=\"concertina\">\n<dt>Understanding user research</dt>\n<dd>\n<ul>\n<li>How user research improves service design</li>\n<li>Start by learning user needs</li>\n<li>Understanding users who don't use digital services</li>\n</ul>\n</dd>\n<dt>Preparing for user research</dt>\n<dd>\n<ul>\n<li>Plan user research for your service</li>\n<li>Plan a round of user research</li>\n<li>Find user research participants</li>\n<li>Choose a location for user research</li>\n<li>Write a recruitment brief</li>\n<li>Getting users' consent for research</li>\n</ul>\n</dd>\n<dt>Analysing and sharing findings</dt>\n<dd>\n<ul>\n<li>Sharing user research findings</li>\n<li>Analyse a research session</li>\n</ul>\n</dd>\n</dl>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Keyboard trap": {
+            "example": "\n<p><a href=\"keyboardtrap.html\">Example page that contains a keyboard trap</a></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Dropdown navigation - only the top level items receive focus": {
+            "example": "\n<nav class=\"dropdown-nav\" role=\"navigation\">\n<ul>\n<li>\n<a href=\"https://www.gov.uk/browse/benefits\">Benefits</a>\n<ul class=\"submenu\">\n<li><a href=\"#\">Benefits entitlement</a></li>\n<li><a href=\"#\">Benefits for families</a></li>\n<li><a href=\"#\">Carers and disability benefits</a></li>\n</ul>\n</li>\n</ul>\n</nav>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Lightbox - ESC key doesn't close the lightbox": {
+            "example": "\n<a class=\"open-lightbox-unescapable\" href=\"#\">Open lightbox</a>\n<div class=\"lightbox unescapable hidden\">\n<a alt=\"Close lightbox\" class=\"close-button\" href=\"#\">X</a>\n<p>\n                This lightbox can't be closed with an escape key.\n                The Ministry of Justice website has <a href=\"http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act\" rel=\"external\" target=\"_blank\">information about mental capacity</a>.\n            </p>\n</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Link with a role=button does not work with space bar": {
+            "example": "\n<a class=\"button\" href=\"next.html\" role=\"button\">Continue</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "different", 
+                "wave": "identified", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Tooltips don't receive keyboard focus": {
+            "example": "\n<label class=\"tooltips-not-focusable\" for=\"drivers-licence-no\">\n            Your driving licence number\n            <span class=\"tooltip-icon\">?</span>\n<span class=\"tooltip-information\">Your driving licence number can be found in section 5 of your driving licence photocard</span>\n</label>\n<input id=\"drivers-licence-no\" type=\"text\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Don't use the accesskey attribute": {
+            "example": "\n<a accesskey=\"A\" href=\"page.html\">A link with an accesskey attribute</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "identified", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "false-positive", 
+                "nu": "notfound"
+            }
+        }, 
+        "Lightbox - focus is not moved immediately to lightbox": {
+            "example": "\n<a class=\"open-lightbox-focus-far\" href=\"#\">Open lightbox</a>\n<div class=\"lightbox focus-far hidden\">\n<span alt=\"Close lightbox\" class=\"close-button\">X</span>\n<p>\n                This lightbox is placed at the end of the DOM so you'll have to tab through other links to reach it.\n                The Ministry of Justice website has <a href=\"http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act\" rel=\"external\" target=\"_blank\">information about mental capacity</a>.\n            </p>\n</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Lightbox - focus is not retained within the lightbox": {
+            "example": "\n<a class=\"open-lightbox-not-focused\" href=\"#\">Open lightbox</a>\n<div class=\"lightbox not-focused hidden\">\n<a alt=\"Close lightbox\" class=\"close-button\" href=\"#\">X</a>\n<p>\n                This lightbox doesn't retain the focus within itself.\n                The Ministry of Justice website has <a href=\"http://www.justice.gov.uk/protecting-the-vulnerable/mental-capacity-act\" rel=\"external\" target=\"_blank\">information about mental capacity</a>.\n            </p>\n</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Fake button is not keyboard accessible": {
+            "example": "\n<div class=\"button\" id=\"webchat\">launch webchat</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Forms": {
+        "Errors identified by colour only": {
+            "example": "\n<form class=\"errors-badly-identified errors-colour-only\">\n<div class=\"validation-summary\" role=\"alert\">\n                You need to fix the errors on this page before continuing.\n            </div>\n<label>\n                Passport number\n                <input class=\"has-errors\" name=\"name\" type=\"text\"/>\n</label>\n<label>\n                Name on passport\n                <input name=\"surname\" type=\"text\"/>\n</label>\n<label>\n                Date of expiry\n                <input class=\"has-errors\" name=\"date-of-birth\" type=\"text\"/>\n</label>\n</form>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Labels missing when they would look clumsy for some form controls": {
+            "example": "\n<label for=\"missing-labels-day\">Your child's date of birth</label>\n<p>\n<input id=\"missing-labels-day\" type=\"text\"/>\n<input id=\"missing-labels-month\" type=\"text\"/>\n<input id=\"missing-labels-year\" type=\"text\"/>\n</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Error messages - no suggestion for corrections given, eg. required format": {
+            "example": "\n<label class=\"required-format-not-given\">\n            Phone number\n            <span class=\"error-message\">is not valid</span>\n<input class=\"has-errors\" pattern=\"7[0-9]{9}\" required=\"\" type=\"tel\"/>\n</label>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Left aligned form labels with too much white space": {
+            "example": "\n<p class=\"too-much-whitespace\">\n<label for=\"input-too-far-away\">Country</label>\n<input id=\"input-too-far-away\" type=\"text\"/>\n</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Group of radio buttons not enclosed in a fieldset": {
+            "example": "\n<h4>Do you already have a personal user account?</h4>\n<label class=\"block-label\" for=\"radio-inline-1\">\n<input id=\"radio-inline-1\" name=\"radio-inline-group\" type=\"radio\" value=\"Yes\">\n            Yes\n        </input></label><br/>\n<label class=\"block-label\" for=\"radio-inline-2\">\n<input id=\"radio-inline-2\" name=\"radio-inline-group\" type=\"radio\" value=\"No\">\n            No\n        </input></label>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "warning", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Form element has no label": {
+            "example": "\n<input type=\"text\">\n</input>", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Fieldset without a legend": {
+            "example": "\n<fieldset>\n            I am a fieldset without a legend\n        </fieldset>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "different", 
+                "axe": "notfound", 
+                "codesniffer": "error", 
+                "achecker": "notfound", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Empty legend": {
+            "example": "\n<fieldset>\n<legend></legend>\n</fieldset>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "error", 
+                "achecker": "notfound", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Label element with for= attribute but not matching id= attribute of form control": {
+            "example": "\n<fieldset>\n<legend>Non-matching for attribute</legend>\n<label id=\"not-matching-anything\">form</label>\n<input id=\"label-for-not-matching\" type=\"checkbox\" value=\"yes\"/>\n</fieldset>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Group of check boxes not enclosed in a fieldset": {
+            "example": "\n<h4>Which types of waste do you transport regularly?</h4>\n<label class=\"block-label\" for=\"waste-type-1\">\n<input id=\"waste-type-1\" name=\"waste-types\" type=\"checkbox\" value=\"waste-animal\">\n            Waste from animal carcasses\n        </input></label><br/>\n<label class=\"block-label\" for=\"waste-type-2\">\n<input id=\"waste-type-2\" name=\"waste-types\" type=\"checkbox\" value=\"waste-mines\">\n            Waste from mines or quarries\n        </input></label><br/>\n<label class=\"block-label\" for=\"waste-type-3\">\n<input id=\"waste-type-3\" name=\"waste-types\" type=\"checkbox\" value=\"waste-farm-agricultural\">\n            Farm or agricultural waste\n        </input></label>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Empty label found": {
+            "example": "\n<label for=\"empty\"></label>\n<input id=\"empty\" type=\"text\" value=\"\">\n</input>", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Two unique labels, but identical for= attributes": {
+            "example": "\n<label for=\"two-labels-day\">Date of issue</label>\n<p>\n<label for=\"two-labels-day\">Day</label>\n<input id=\"two-labels-day\" type=\"text\"/>\n<label for=\"two-labels-month\">Month</label>\n<input id=\"two-labels-month\" type=\"text\"/>\n<label for=\"two-labels-year\">Year</label>\n<input id=\"two-labels-year\" type=\"text\"/>\n</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "error", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Errors identified with a poor colour contrast": {
+            "example": "\n<form class=\"errors-badly-identified error-poor-contrast\">\n<div class=\"validation-summary\" role=\"alert\">\n                You need to fix the errors on this page before continuing.\n            </div>\n<label>\n                Claimant's name\n                <input class=\"has-errors\" name=\"name\" type=\"text\"/>\n</label>\n<label>\n                Claimant's surname\n                <input name=\"surname\" type=\"text\"/>\n</label>\n<label>\n                Claimant's date of birth\n                <input class=\"has-errors\" name=\"date-of-birth\" type=\"text\"/>\n</label>\n</form>\n", 
+            "results": {
+                "google": "warning", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "error", 
+                "sortsite": "warning", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Non-unique field label found": {
+            "example": "\n<label for=\"x_3\">Name\n            <input id=\"x_3\" name=\"x_3\" type=\"text\">\n</input></label><br>\n<label for=\"x_4\">Name\n            <input id=\"x_4\" name=\"x_4\" type=\"text\">\n</input></label>\n</br>", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "warning", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "wrong", 
+                "nu": "notfound"
+            }
+        }, 
+        "Missing labels in checkboxes": {
+            "example": "\n<fieldset>\n<legend>What is your nationality?</legend>\n<label>British (including English, Scottish, Welsh and Northern Irish)</label>\n<input id=\"nationality_british\" name=\"nationality.british\" type=\"checkbox\" value=\"true\">\n<label>Irish</label>\n<input id=\"nationality_irish\" name=\"nationality.irish\" type=\"checkbox\" value=\"true\">\n<label>Citizen of a different country</label>\n<input id=\"nationality_hasOtherCountry\" name=\"nationality.hasOtherCountry\" type=\"checkbox\" value=\"true\">\n</input></input></input></fieldset>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Field hint not associated with input": {
+            "example": "\n<label class=\"form-label\" for=\"ni-number\">\n            National Insurance number\n        </label>\n<p class=\"form-hint\">It'll be on your last payslip. For example, JH 21 90 0A.</p>\n<input class=\"form-control\" id=\"ni-number\" type=\"text\">\n</input>", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Placeholder no label": {
+            "example": "\n<input id=\"search-main\" name=\"q\" placeholder=\"Search\" type=\"search\">\n<input class=\"submit\" type=\"submit\" value=\"Search\">\n</input></input>", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Errors are not identified": {
+            "example": "\n<form class=\"errors-badly-identified errors-not-identified\">\n<div class=\"validation-summary\" role=\"alert\">\n                You need to fix the errors on this page before continuing.\n            </div>\n<label>\n                Name\n                <input name=\"name\" type=\"text\"/>\n</label>\n<label>\n                Surname\n                <input name=\"surname\" type=\"text\"/>\n</label>\n<label>\n                Date of birth\n                <input name=\"date-of-birth\" type=\"text\"/>\n</label>\n</form>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "error", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Form control that changes context without warning": {
+            "example": "\n<label for=\"language-selector\">Select your language</label>\n<select class=\"language-selector\" id=\"language-selector\">\n<option value=\"\">Change your language</option>\n<option value=\"en\">English</option>\n<option value=\"de\">German</option>\n<option value=\"fr\">French</option>\n</select>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Frames": {
+        "iframe is missing a title attribute": {
+            "example": "\n<iframe height=\"100\" src=\"demo.html\" width=\"300\"></iframe>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "notfound", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "iframe title attribute does not describes the content or purpose in the iframe": {
+            "example": "\n<iframe height=\"100\" src=\"demo.html\" title=\"Facebook\" width=\"300\"></iframe>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Multimedia": {
+        "Embedded video file is missing text alternative": {
+            "example": "\n<video controls=\"\">\n<source src=\"http://introducinghtml5.com/examples/ch04/leverage-a-synergy.ogv\" type='video/ogg; codecs=\"theora, vorbis\"'></source>\n<source src=\"http://introducinghtml5.com/examples/ch04/leverage-a-synergy.mp4\" type='video/mp4; codecs=\"avc1.42E01E, mp4a.40.2\"'></source>\n</video>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Flashing content doesn't have warning": {
+            "example": "\n<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/gwoQRKCEHgY\" title=\"Banned Pokemon scene\" width=\"560\"></iframe>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "different", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Embedded audio file is missing text alternative": {
+            "example": "\n<audio controls=\"\" src=\"http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg\"></audio>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "different", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Typography": {
+        "Inadequate line height used": {
+            "example": "\n<p class=\"line-height\">Many people with cognitive disabilities have trouble tracking lines of text when a block of text is single spaced. Providing spacing between 1.5 to 2 allows them to start a new line more easily once they have finished the previous one.</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "All caps text found": {
+            "example": "\n<p class=\"all-caps\">Typing sentences or phrases IN ALL CAPITALS is rarely a good idea. It may make sense under some circumstances, but only rarely. Lengthy segments of capitalized content are more difficult to read. In some cases, a screen reader may interpret ALL CAPITAL text as being an acronym and may read it as letters rather than words. For example, a screen reader may read the uppercase text CONTACT US as \"Contact U. S.\" because it interprets the uppercase \"US\" as being an acronym for \"United States\".</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Italics used on long sections of text": {
+            "example": "\n<p class=\"italic\">Italics are sometimes used to highlight text. But you shouldn't use italicized text because they make letters hard to read. The letters have a jagged line compared to non-italic fonts. The letters also lean over making it hard for dyslexic users to make out the words. When the text size is small, the text is even more illegible.</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Long lines of text": {
+            "example": "\n<p>For people with some reading or vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines should not exceed 80 characters</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Very small text found": {
+            "example": "\n<p class=\"small-text\">This is some tiny text, much too small for some people to read</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Justified text found": {
+            "example": "\n<p class=\"justify\">When text is justified to both margins it may add additional spaces between words which may be difficult for users with visual or cognitive impairments to read. Full text justification can also cause words to be spaced closely together thus making it difficult to determine where a word starts and ends.</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "warning", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Lists": {
+        "LI element with no parent": {
+            "example": "\n<li>\n            no parent\n        </li>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }, 
+        "List not marked up as a list": {
+            "example": "\n        * apple <br/>\n        * orange <br/>\n        * banana <br/>\n        * pear\n    ", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "error", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "DT or DD elements that are not contained within a DL element": {
+            "example": "\n<dt>html</dt>\n<dd>a markup language for describing web documents</dd>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }, 
+        "Improperly nested lists": {
+            "example": "\n<ul>\n<ul>\n<li>improperly nested</li>\n</ul>\n</ul>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }
+    }, 
+    "Content": {
+        "Content identified by location": {
+            "example": "\n<p>The artist on the right won the Album of the year</p>\n<a href=\"swift.html\" style=\"float:right\">Taylor Swift</a>\n<a href=\"sheeran.html\" style=\"float:left\">Ed Sheeran</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Plain Language is not used": {
+            "example": "\n        Title I of the CARE Act creates a program of formula and supplemental competitive grants to help metropolitan areas\n        with 2,000 or more reported AIDS cases meet emergency care needs of low-income HIV patients. Title II of the Ryan\n        White Act provides formula grants to States and territories for operation of HIV service consortia in the localities\n        most affected bu the epidemic, provision of home and community -based care, continuation of insurance coverage for\n        persons with HIV infection, and treatments that prolong life and prevent serious deterioration of health.\n        Up to 10 percent of the funds for this program can be used to support Special Projects of National Significance.\n    ", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Content is not in correct reading order in source code": {
+            "example": "\n<h4>3-Step Skin Care</h4>\n<div style=\"float:right; width:33%\">Moisturise</div>\n<div style=\"float:right; width:33%\">Exfoliate</div>\n<div style=\"float:right; width:33%\">Cleanse</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Content is not organised into into well-defined groups or chunks, using headings, lists, and other visual mechanisms": {
+            "example": "\n        insert_example\n    ", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "First instance of abbreviation not expanded": {
+            "example": "\n<abbr>GDS</abbr> is part of the Cabinet Office. Our job is digital transformation of government.\n    ", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Images": {
+        "Image has alt and title that are different": {
+            "example": "\n<img alt=\"BBC\" src=\"images/bbc-blocks-dark.png\" title=\"BBC homepage\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image with presentation role has non-empty alt": {
+            "example": "\n<img alt=\"Decorative line clipart\" height=\"118\" role=\"presentation\" src=\"images/decoration.png\" width=\"368\">\n</img>", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "identified", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image with no alt attribute": {
+            "example": "\n<img src=\"images/bbc-blocks-dark.png\"/>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "error"
+            }
+        }, 
+        "Background image that conveys information does not have a text alternative": {
+            "example": "\n<div class=\"warning-icon\">\n            Taking too much of your pension money in early retirement could mean you don't have enough for later.\n        </div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "different", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image has empty alt and non-empty title": {
+            "example": "\n<img alt=\"\" src=\"images/bbc-blocks-dark.png\" title=\"BBC\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "error", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "A distraction is present, an animated gif": {
+            "example": "\n<img alt=\"Animated gif of a Christmas tree with a toy train round and round the base of the tree\" height=\"193\" src=\"images/animated-tree.gif\" width=\"157\">\n</img>", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image that conveys information has an empty alt attribute": {
+            "example": "\n<img alt=\"\" src=\"images/bbc-blocks-dark.png\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "identified", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "warning", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image that conveys information has inappropriate alt text": {
+            "example": "\n<img alt=\"Twitter\" src=\"images/bbc-blocks-dark.png\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image alt attribute contains image file name": {
+            "example": "\n<img alt=\"bbc-blocks-dark.png\" src=\"images/bbc-blocks-dark.png\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "manual", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Image with partial text alternative": {
+            "example": "\n<p>The image below contains a lot of information, such as which departments the sale is on. The text alternative in the alt attribute does not include this information, only a partial \"25% off sale\"</p>\n<img alt=\"25% off sale\" src=\"images/sale.jpg\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "manual", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "HTML": {
+        "Duplicate id": {
+            "example": "\n<div id=\"nav\">global nav</div>\n<div id=\"nav\">page nav</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "error"
+            }
+        }, 
+        "Article element used to mark-up an element that's not an article/blog post etc.": {
+            "example": "\n<article class=\"not-article-content\">\n<h2 id=\"parent-other\">Elsewhere on GOV.UK</h2>\n<nav aria-labelledby=\"parent-other\" role=\"navigation\">\n<ul>\n<li><a href=\"/agency-workers-your-rights\">Your rights as an agency worker</a></li>\n<li><a href=\"/acas\">Advisory, Conciliation and Arbitration Service (Acas)</a></li>\n</ul>\n</nav>\n</article>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Empty paragraph": {
+            "example": "\n<p></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Deprecated center element": {
+            "example": "\n<center>This text is centred using the center element</center>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "warning", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }, 
+        "Invalid ARIA role names": {
+            "example": "\n<div class=\"header-context\" id=\"global-breadcrumb\">\n<ol class=\"group\" role=\"breadcrumbs\">\n<li><a href=\"/\">Home</a></li>\n<li><a href=\"/browse/housing-local-services\">Housing and local services</a></li>\n<li><strong><a href=\"/browse/housing-local-services/local-councils\">Local councils and services</a></strong></li>\n</ol>\n</div>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }, 
+        "Object not embedded accessibly - wmode parameter not set to window": {
+            "example": "\n<object data=\"foo\" type=\"bar\"></object>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "different", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "different", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Spacer image found": {
+            "example": "\n<img alt=\"\" height=\"1\" src=\"images/spacer.gif\" width=\"100\">\n</img>", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "identified", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Deprecated color definition": {
+            "example": "\n<p><font color=\"blue\">The colour of this text is set using the font element and the color attribute</font></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "different", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Start and close tags don't match": {
+            "example": "\n<!--         <div>strings of pearls</span></div> -->\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }, 
+        "PRE element without CODE element inside it": {
+            "example": "\n<pre>\nYour\n\n  /\\ (`/`|| _     +\n /--\\,)\\,||   (||`|\n\n        goes here\n</pre>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Deprecated font element": {
+            "example": "\n<p><font face=\"aria\" size=\"5\">The size and face of this text is set using the font element and the size and face attributes</font></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "warning", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }
+    }, 
+    "Headings": {
+        "Empty heading": {
+            "example": "\n<h4></h4>\n<p>This paragraph is preceded by an empty H4</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "error"
+            }
+        }, 
+        "Missing H1": {
+            "example": "\n<a href=\"missing.html\">Example page with no H1</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Text formatting used instead of an actual heading": {
+            "example": "\n<div class=\"fake-heading\">Fake Heading</div>\n<p>This paragraph is preceded by a div that is styled to look like a heading</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Headings not structured in a hierarchical manner": {
+            "example": "\n<h3>Heading 3</h3>\n<p>Pages should be structured in a hierarchical manner, generally with one 1st degree headings (h1) being the\n        most important (usually page titles or main content heading), then 2nd degree headings (h2 - usually major\n            section headings), down to 3rd degree headings (sub-sections of the h2), and so on. </p>\n<h5>Heading 5</h5>\n<p>Technically, lower degree headings should be contained within headings of the next highest degree\n            (i.e., one should not skip heading levels, such as from an h2 to an h4, going down the document).</p>\n<h4>Heading 4</h4>\n<p>This is an example where heading levels have been skipped and are not in a logical order, which makes the page\n            difficult to understand and navigate for people using assitive technologies such as screen reader.</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "warning", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "warning", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Buttons": {
+        "Image button has no alt attribute": {
+            "example": "\n<input src=\"images/submit.png\" type=\"image\">\n</input>", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "error"
+            }
+        }, 
+        "Empty button": {
+            "example": "\n<button></button>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "different", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "warning", 
+                "achecker": "notfound", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "Uninformative alt attribute value on image button": {
+            "example": "\n<input alt=\"click\" src=\"images/submit.png\" type=\"image\"/>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "manual", 
+                "tenon": "error", 
+                "wave": "manual", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "warning", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Empty alt attribute on image button": {
+            "example": "\n<input alt=\"\" src=\"images/submit.png\" type=\"image\">\n</input>", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "different", 
+                "eiii": "error", 
+                "nu": "error"
+            }
+        }
+    }, 
+    "Colour and Contrast": {
+        "Color alone is used to convey content": {
+            "example": "\n<p>The green mushrooms listed here are OK to eat. The red mushrooms will kill you.</p>\n<ul>\n<li class=\"poisonous\">Amanita</li>\n<li class=\"safe\">Chanterelle</li>\n<li class=\"safe\">Porcini</li>\n<li class=\"safe\">Shitake</li>\n<li class=\"poisonous\">Tylopilus</li>\n</ul>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Large text does not have a contrast ratio of at least 3:1 so does not meet AA": {
+            "example": "\n<p class=\"low-contrast-large-aa\">This small text does not have enough contrast with it's background</p>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Small text does not have a contrast ratio of at least 7:1 so does not meet AAA": {
+            "example": "\n<p class=\"low-contrast-small-aaa\">This small text does not have enough contrast with it's background</p>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "error", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Focus not visible": {
+            "example": "\n<a class=\"not-visible-outline-link\" href=\"#\">This links has visible focus</a> but this button\n        <button class=\"not-visible-outline\">Search</button> doesn't\n    ", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Small text does not have a contrast ratio of at least 4.5:1 so does not meet AA": {
+            "example": "\n<p class=\"low-contrast-small-aa\">This small text does not have enough contrast with it's background</p>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "error", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Large text does not have a contrast ratio of at least 4.5:1 so does not meet AAA": {
+            "example": "\n<p class=\"low-contrast-large-aa\">This small text does not have enough contrast with it's background</p>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Navigation": {
+        "Inadequately-sized clickable targets found": {
+            "example": "\n<a href=\"a.html\">a</a>\n<a href=\"b.html\">b</a>\n<a href=\"c.html\">c</a>\n<a href=\"d.html\">d</a>\n<a href=\"e.html\">e</a>\n<a href=\"f.html\">f</a>\n<a href=\"g.html\">g</a>\n<a href=\"h.html\">h</a>\n<a href=\"i.html\">i</a>\n<a href=\"j.html\">j</a>\n<a href=\"k.html\">k</a>\n<a href=\"l.html\">l</a>\n<a href=\"m.html\">m</a>\n<a href=\"n.html\">n</a>\n<a href=\"o.html\">o</a>\n<a href=\"p.html\">p</a>\n<a href=\"q.html\">q</a>\n<a href=\"r.html\">r</a>\n<a href=\"s.html\">s</a>\n<a href=\"t.html\">t</a>\n<a href=\"u.html\">u</a>\n<a href=\"v.html\">v</a>\n<a href=\"w.html\">w</a>\n<a href=\"x.html\">x</a>\n<a href=\"y.html\">y</a>\n<a href=\"z.html\">z</a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "warning", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Navigation placement, display, or functionality changes from from page to page": {
+            "example": "\n        insert_example\n    ", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Language of content": {
+        "Text language changed without required change in direction": {
+            "example": "\n<p lang=\"ar\">\u0627\u0644\u0625\u0639\u0641\u0627\u0621 \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a \u0645\u0646 \u0627\u0644\u062a\u0623\u0634\u064a\u0631\u0629</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "html element has an empty lang attribute": {
+            "example": "\n<a href=\"empty.html\">Example page with an empty lang attribute</a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "lang attribute not used to identify change of language": {
+            "example": "\n<p>Mother, he's asking you to go. He's saying, \"Allons, Madame plaisante!\"</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Text language is in the wrong direction": {
+            "example": "\n<p dir=\"rtl\" lang=\"en\">Electronic visa waiver</p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "html element has an invalid value in the lang attribute": {
+            "example": "\n<a href=\"invalid.html\">Example page with a lang attribute set to an invalid</a>\n", 
+            "results": {
+                "google": "false-positive", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "lang attribute used to identify change of language, but with invalid value": {
+            "example": "\n<p>Mother, he's asking you to go. He's saying, <span lang=\"frrr\">\"Allons, Madame plaisante!\"</span></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "notfound", 
+                "nu": "error"
+            }
+        }, 
+        "html element is missing a lang attribute": {
+            "example": "\n<a href=\"missing.html\">Example page with a missing lang attribute</a>\n", 
+            "results": {
+                "google": "error", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "notfound", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
+        "html element has lang attribute set to wrong language": {
+            "example": "\n<a href=\"inappropriate.html\">Example page with a lang attribute set to the wrong language</a>\n", 
+            "results": {
+                "google": "false-positive", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "lang attribute used to identify change of language, but with wrong language": {
+            "example": "\n<p>Mother, he's asking you to go. He's saying, <span lang=\"es\">\"Allons, Madame plaisante!\"</span></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "CSS": {
+        "Content is not readable and functional when text is increased": {
+            "example": "\n<p class=\"resize\">This text becomes unreadable when you increase the text-size  (Zoom text only) in\n            <a href=\"https://www.mozilla.org/en-GB/firefox/desktop/\">Firefox</a></p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Non-decorative content inserted using CSS": {
+            "example": "\n<p id=\"css-generated-text\">My favourite food is </p>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "visibility:hidden used to visually hide content when it should be available to screenreader": {
+            "example": "\n<a href=\"rugby.html\">Read more <span style=\"visibility:hidden\"> about rugby</span></a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "display:table being used for layout": {
+            "example": "\n<div class=\"display-table\">\n<div class=\"display-table-cell\">\n                Vertically and horzontally aligned text\n            </div>\n</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "display:none used to visually hide content when it should be available to screenreader": {
+            "example": "\n<a href=\"football.html\">Read more <span style=\"display:none\"> about football</span></a>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Page zoom - boxes that don't expand with the text": {
+            "example": "\n<div class=\"wont-expand-box\">The box below this example won't expand to fit the text contained within when zoomed in.\n\n            <p class=\"wont-expand\">\n                This service is for England and Wales only. You must contact individual <a href=\"https://www.justice-ni.gov.uk/topics/prisons/prison-visits\" rel=\"external\">prisons in Northern Ireland</a> or <a href=\"http://www.sps.gov.uk/Corporate/Prisons/Prisons.aspx\" rel=\"external\">Scotland</a> to book a visit.\n            </p>\n</div>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }
+}
