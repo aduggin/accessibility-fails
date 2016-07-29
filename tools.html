@@ -21,6 +21,9 @@
 
 
 <table class="table--tool">
+    <caption>
+        Table of results for our access tools audit. The columns are the tools and the rows are the test cases we've used. There is a table for our analysis and breakdown after this table as well.
+    </caption>
     <thead>
     <tr>
         <th scope="col">Test case</th>
@@ -115,6 +118,20 @@
     </tr>
     <tr>
         <th scope="row">Content is not in correct reading order in source code</th>
+        <td class="level"></td>
+        <td class="google notfound">not found</td>
+        <td class="tenon notfound">not found</td>
+        <td class="wave notfound">not found</td>
+        <td class="codesniffer notfound">not found</td>
+        <td class="axe notfound">not found</td>
+        <td class="tanaguru notfound">not found</td>
+        <td class="sortsite notfound">not found</td>
+        <td class="eiii notfound">not found</td>
+        <td class="achecker notfound">not found</td>
+        <td class="nu notfound">not found</td>
+    </tr>
+    <tr>
+        <th scope="row">Wide page forces users to scroll horizontally</th>
         <td class="level"></td>
         <td class="google notfound">not found</td>
         <td class="tenon notfound">not found</td>
@@ -279,6 +296,34 @@
         <td class="sortsite notfound">not found</td>
         <td class="eiii notfound">not found</td>
         <td class="achecker notfound">not found</td>
+        <td class="nu notfound">not found</td>
+    </tr>
+    <tr>
+        <th scope="row">Blink element found</th>
+        <td class="level"></td>
+        <td class="google notfound">not found</td>
+        <td class="tenon error">error found</td>
+        <td class="wave error">error found</td>
+        <td class="codesniffer error">error found</td>
+        <td class="axe error">error found</td>
+        <td class="tanaguru error">error found</td>
+        <td class="sortsite error">error found</td>
+        <td class="eiii error">error found</td>
+        <td class="achecker error">error found</td>
+        <td class="nu notfound">not found</td>
+    </tr>
+    <tr>
+        <th scope="row">Marquee element found</th>
+        <td class="level"></td>
+        <td class="google notfound">not found</td>
+        <td class="tenon error">error found</td>
+        <td class="wave error">error found</td>
+        <td class="codesniffer notfound">not found</td>
+        <td class="axe error">error found</td>
+        <td class="tanaguru error">error found</td>
+        <td class="sortsite error">error found</td>
+        <td class="eiii error">error found</td>
+        <td class="achecker error">error found</td>
         <td class="nu notfound">not found</td>
     </tr>
     <tr>
@@ -2037,6 +2082,128 @@
     -->
     </tbody>
 </table>
+
+
+<h2>Summary of results</h2>
+<table>
+    <caption>
+        Analysis and breakdown of numbers from the previous table. The columns are tools and the rows are for the category of errors identified by that tool.
+    </caption>
+    <thead>
+        <tr>
+            <th scope="col">Error category</th>
+            <th scope="col">Google Accessibility Developer Tools</th>
+            <th scope="col">Tenon</th>
+            <th scope="col">Wave</th>
+            <th scope="col">HTML Code Sniffer</th>
+            <th scope="col">aXE</th>
+            <th scope="col">tanaguru</th>
+            <th scope="col">sort site</th>
+            <th scope="col">EIII</th>
+            <th scope="col">AChecker</th>
+            <th scope="col">Nu Html Checker</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Not found</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Error found</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Allows manual inspection</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Warning reported</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Different error found</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">False positive</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Identified but not an error</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Wrong error reported</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 
 </body>
 </html>

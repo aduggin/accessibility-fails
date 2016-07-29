@@ -45,6 +45,10 @@
                 "nu": "notfound"
             }
         }, 
+        "Table nested within table": {
+            "example": "\n<table>\n<tr>\n<th>1.1</th>\n</tr>\n<tr>\n<td>\n<table>\n<tr>\n<th>2.1</th>\n</tr>\n<tr>\n<td>2.2</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>\n", 
+            "results": {}
+        }, 
         "Table has no table headings": {
             "example": "\n<table>\n<caption>Shelly's Daughters</caption>\n<thead>\n<tr>\n<td>Name</td>\n<td>Age</td>\n<td>Birthday</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Jackie</td>\n<td>5</td>\n<td>April 5</td>\n</tr>\n<tr>\n<td>Beth</td>\n<td>8</td>\n<td>January 14</td>\n</tr>\n</tbody>\n</table>\n", 
             "results": {
@@ -137,6 +141,23 @@
         }, 
         "Table with some empty cells": {
             "example": "\n<table>\n<caption>Bills before Parliament 2016-17</caption>\n<thead>\n<tr>\n<th>\n                        Current House\n                    </th>\n<th>\n                        Bill title\n                    </th>\n<th>\n                        Last updated\n                    </th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\u00a0</td>\n<td>A</td>\n<td>\u00a0</td>\n</tr>\n<tr>\n<td>\n                        Lords\n                    </td>\n<td>\n                        Abortion (Disability Equality) Bill [HL]\n                    </td>\n<td>26.05.2016</td>\n</tr>\n<tr>\n<td>\n                        Lords\n                    </td>\n<td>\n                        Access to Palliative Care Bill [HL]\n                    </td>\n<td>10.06.2016</td>\n</tr>\n</tbody>\n</table>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "notfound", 
+                "tenon": "notfound", 
+                "wave": "notfound", 
+                "sortsite": "notfound", 
+                "axe": "notfound", 
+                "codesniffer": "notfound", 
+                "achecker": "notfound", 
+                "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }
+    }, 
+    "Page Layout": {
+        "Wide page forces users to scroll horizontally": {
+            "example": "\n<p class=\"constrained\">When sites are constructed to require horizontal scrolling in order to navigate or read content at a normal size of 100% using standard screen sizes, additional problems can arise for users with low vision or mobility impairments.</p>\n<p style=\"float:right;\">This is some text you have to horizontally scroll to read.</p>\n", 
             "results": {
                 "google": "notfound", 
                 "tanaguru": "notfound", 
@@ -1139,6 +1160,21 @@
                 "nu": "notfound"
             }
         }, 
+        "Blink element found": {
+            "example": "\n<blink>Blinking text and moving text (such as a marquee) can distract the reader's attention. This is especially relevant to people with attention deficits or cognitive disabilities. Neither is likely to cause a seizure, but they are likely to decrease the readability of the document as a whole and increase the time it takes for users to finish reading it.</blink>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "error", 
+                "achecker": "error", 
+                "eiii": "error", 
+                "nu": "notfound"
+            }
+        }, 
         "Italics used on long sections of text": {
             "example": "\n<p class=\"italic\">Italics are sometimes used to highlight text. But you shouldn't use italicized text because they make letters hard to read. The letters have a jagged line compared to non-italic fonts. The letters also lean over making it hard for dyslexic users to make out the words. When the text size is small, the text is even more illegible.</p>\n", 
             "results": {
@@ -1151,6 +1187,21 @@
                 "codesniffer": "notfound", 
                 "achecker": "notfound", 
                 "eiii": "notfound", 
+                "nu": "notfound"
+            }
+        }, 
+        "Marquee element found": {
+            "example": "\n<marquee>The BLINK and MARQUEE element animates content in a way that cannot be overridden or disabled by the user.</marquee>\n", 
+            "results": {
+                "google": "notfound", 
+                "tanaguru": "error", 
+                "tenon": "error", 
+                "wave": "error", 
+                "sortsite": "error", 
+                "axe": "error", 
+                "codesniffer": "notfound", 
+                "achecker": "error", 
+                "eiii": "error", 
                 "nu": "notfound"
             }
         }, 
@@ -1613,7 +1664,7 @@
             }
         }, 
         "Start and close tags don't match": {
-            "example": "\n<!--         <div>strings of pearls</span></div> -->\n", 
+            "example": "\n         <div>strings of pearls</span></div>\n  ", 
             "results": {
                 "google": "notfound", 
                 "tanaguru": "notfound", 

@@ -1,0 +1,8 @@
+beautifulsoup4==4.4.1
+pbr==1.6.0
+PyYAML==3.11
+six==1.9.0
+stevedore==1.7.0
+virtualenv==13.1.2
+virtualenv-clone==0.2.6
+virtualenvwrapper==4.7.0
