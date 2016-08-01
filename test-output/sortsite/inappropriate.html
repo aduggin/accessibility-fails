@@ -1,0 +1,608 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!-- saved from url=(0104)http://try.powermapper.com/Reports/c87d5178-bb24-4285-be70-c44405785f56/report/res/9.view.htm#err-l0c0-0 -->
+<html lang="en"><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<title>Source View: https://aduggin.github.io/accessibility-fails/inappropriate.html</title><meta name="robots" content="noindex,nofollow"><meta name="SortSite-IgnoreRule-Page" content="AccWcag1-13.1.3,AccWcag1-14.1.3,Section508-m-3,BugHtmlColgroup,BugIeCssMinMaxWidthHeight,ErrSpellingError,SeoBingTitleLength,SeoPage150k,UseGov5.1,UseGov9.2.3,UseGov10.11,UseGov11.7,UseGov14.3,UseGov17.4,UseGunningFog,W3cTitleTooLong"><style type="text/css"> 
+
+				body { font-size: 0.95em; color: black; background-color: white; font-family: Arial, Helvetica, sans-serif; }
+
+                
+
+				div.pre { color: #333; white-space: pre; font-family: monospace; clear: both; }
+
+				div.linespan { display: inline; }
+
+				span.ok { color: #000; } 
+
+				span.err { color: #f00; } 
+
+				span.line { } 
+
+				div.line { float: left; width: 40%; clear: both; }
+
+				div.col1 { float: left; width: 5%; padding: 2px; white-space: normal; }
+
+				div.col2 { float: left; width: 90%; padding-left: 6px; white-space: normal; }
+
+				div.hdr, div.err { border-radius: 10px; margin-bottom: 10px; margin-top: 10px; position: relative; z-index: 1; top: 0px; left: 0px; width: 90%; padding: 6px; color: black; background-color: #f7f7f7; border: 1px solid #e0e0e0; font-family: Arial, Helvetica, sans-serif; float: left; clear: both;  }
+
+				div.err-hilite { margin-bottom: 10px; position: relative; z-index: 1; top: 0px; left: 40px; width: 40%; padding: 6px; color: black; background-color: #f7f7f7; border: 1px solid #e0e0e0; font-family: Arial, Helvetica, sans-serif; font-weight: bold; } 
+
+				div.desc { float: left; width: 40%; margin-bottom: 1em; }
+
+				div.help { float: right; width: 55%; margin-bottom: 1em; }
+
+				div.menu-title { float: right; width: 25%; min-width: 100px; text-align: right; padding: 1px; white-space: nowrap; }
+
+				code.dhtml { background-color: #eeeeff; font-weight: bold; }
+
+				a.accessible { display: none; } 
+
+				a.menu-title { text-decoration: none; color: black; background-color: white; border-left: 1px solid #bbb; border-top: 1px solid #bbb; border-right: 1px solid #222; border-bottom: 1px solid #222; text-align: right; display: block; padding: 2px; }
+
+				a.menu-title:hover { text-decoration: underline; } 
+
+				was-div.hdr { border-radius: 10px; margin-bottom: 10px; margin-top: 10px; width: 90%; padding: 10px; color: black; background-color: #f7f7f7; border: 1px solid #e0e0e0; font-family: Arial, Helvetica, sans-serif; }
+
+				th { text-align: left; font-weight: normal; font-style: normal; }
+
+				tr { vertical-align: top; }
+
+				tr.middle { vertical-align: middle; }
+
+				img { border: none; vertical-align: middle; }
+
+				p { padding:0; margin:0; }
+
+				p code { display: block; float: left; width: 90%; font-size: 1em; }
+
+				p code:first-child { width: 4em; clear: both; }
+
+                
+
+				a.spell-bad
+
+				{
+
+					text-decoration: none;
+
+					color: black;
+
+					border-bottom: 1px dotted red;
+
+					line-height: 1.5em;
+
+				}
+
+				a.spell-good
+
+				{
+
+					text-decoration: line-through;
+
+					color: gray;
+
+					border-bottom: none;
+
+					line-height: 1.5em;
+
+				}
+
+
+
+					
+
+				
+
+					div.menu-title
+
+					{
+
+						visibility: hidden;
+
+					}
+
+				</style><script type="text/javascript" src="./inappropriate_files/jquery.min.js"></script><style type="text/css">:root #header + #content > #left > #rlblock_left,
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle
+{display:none !important;}</style><script type="text/javascript">
+
+				var g_errViewSource = "";
+
+				var g_viewSourceDir = "";
+
+				
+
+				
+
+				function pageLoad()
+
+				{
+
+					fixupOptions();
+
+					enableSpellings();
+
+					selectLine();
+
+				}
+
+				
+
+				function fixupOptions()
+
+				{
+
+					for ( var i = 0 ; i < document.links.length ; ++i )
+
+					{
+
+						var oLink = document.links[i];
+
+						
+
+						if ( oLink.onclick && oLink.onclick.toString().indexOf( "Options(" ) > 0 )
+
+						{
+
+							oLink.oncontextmenu = document.oncontextmenu = function() { this.click(); return false; }
+
+						}
+
+					}
+
+				}
+
+		
+
+				function toggleChevron( id )
+
+				{
+
+					var oElement = document.getElementById( "chev" + id );
+
+					//alert( id + " " + oElement.outerHTML );
+
+
+
+					if ( oElement.src.indexOf( "chevron-up.png" ) != -1 )
+
+					{
+
+						oElement.src = oElement.src.replace( "up", "down" );
+
+					}
+
+					else
+
+					{
+
+						oElement.src = oElement.src.replace( "down", "up" );
+
+					}
+
+
+
+					toggleVisibility( id );
+
+				}
+
+					
+
+				function toggleVisibility( id )
+
+				{					
+
+					var oElement = document.getElementById( id );					
+
+										
+
+					var strVisible = 'block';
+
+					
+
+					if ( oElement.style.display == 'none' )
+
+						oElement.style.display = strVisible;
+
+					else
+
+						oElement.style.display = 'none';
+
+				}
+
+				
+
+				
+
+				function viewSource( pageid, line, col )
+
+				{	
+
+					try
+
+					{
+
+						if ( g_viewSourceDir != '' )
+
+						{
+
+							window.location.href = g_viewSourceDir + pageid + ".view.htm#htm-l" + line;
+
+						}
+
+						else
+
+						{
+
+							window.external.ViewSource( pageid, line, col );
+
+						}
+
+					}
+
+					catch( err )
+
+					{
+
+						if ( g_errViewSource )
+
+							alert( g_errViewSource );
+
+					}
+
+				}
+
+
+
+				function enableSpellings()
+
+				{
+
+					var oRows = document.getElementsByTagName('a');
+
+					
+
+					for ( i = 0 ; i < oRows.length ; ++i )
+
+					{
+
+						var	oElement = oRows[i];
+
+											
+
+						if ( oElement.className == "spell-bad"  )
+
+						{
+
+						
+
+							try
+
+							{
+
+								var strWord = oElement.innerHTML;
+
+								
+
+								var bCorrect = window.external.GetSpellingCorrect( strWord );
+
+
+
+								if ( bCorrect )
+
+									oElement.className = 'spell-good';
+
+							}
+
+							catch(err)
+
+							{
+
+								//Do nothing
+
+							}
+
+						}
+
+					}
+
+				}
+
+				
+
+				function spellOptions( oLink, strWord, strAppEdition )
+
+				{
+
+					SpellAction = {
+
+						spellOther : 0,
+
+						spellAdded : 1,
+
+						spellRemoved : 2
+
+					};
+
+
+
+					try
+
+					{
+
+						var action = SpellAction.spellOther;
+
+
+
+						if ( strAppEdition.indexOf( "web" ) != -1 )
+
+						{
+
+							// add to custom dictionary
+
+							var urlAdd = '/Scans/AddCustomSpelling?word=' + strWord;
+
+							var urlRemove = '/Scans/RemoveCustomSpelling?word=' + strWord;
+
+
+
+							if ( $( '#iframeSpelling' ).attr('src') == urlAdd )
+
+							{
+
+								// clicking word again removes it from dictionary
+
+								action = SpellAction.spellRemoved;	
+
+								$( '#iframeSpelling' ).attr('src', urlRemove );
+
+							}
+
+							else
+
+							{
+
+								action = SpellAction.spellAdded;
+
+								$( '#iframeSpelling' ).attr('src', urlAdd );
+
+							}
+
+						}
+
+						else
+
+						{
+
+							// popup menu
+
+							action = window.external.SpellOptions( strWord );
+
+						}
+
+
+
+						if ( action == SpellAction.spellAdded )
+
+						{
+
+							// mark this one as good
+
+							oLink.className = 'spell-good';
+
+
+
+							// mark all instances of this word as good
+
+							for (var i = 0; i < document.links.length; i++)
+
+							{
+
+								var	oAnchor = document.links[i];
+
+
+
+								if ( oAnchor.className == 'spell-bad' && oAnchor.innerHTML == strWord )
+
+								{
+
+									oAnchor.className = 'spell-good';
+
+								}
+
+							}
+
+						}
+
+						else if ( action == SpellAction.spellRemoved )
+
+						{
+
+							// mark this one as bad again
+
+							oLink.className = 'spell-bad';
+
+
+
+							// mark all instances of this word as good
+
+							for (var i = 0; i < document.links.length; i++)
+
+							{
+
+								var	oAnchor = document.links[i];
+
+
+
+								if ( oAnchor.className == 'spell-good' && oAnchor.innerHTML == strWord )
+
+								{
+
+									oAnchor.className = 'spell-bad';
+
+								}
+
+							}
+
+						}
+
+					}
+
+					catch( err )
+
+					{
+
+						alert( "Spelling options are only available when the report is viewed in SortSite." );
+
+					}
+
+
+
+					// don't jump around or scroll after showing options menu
+
+					return false;
+
+				}
+
+				</script></head><body onload="pageLoad()"><a class="accessible" href="http://try.powermapper.com/Reports/c87d5178-bb24-4285-be70-c44405785f56/report/res/9.view.htm#mainContent">[Skip to Content]</a><div class="hdr"><h1>
+
+						HTML Document
+
+					</h1><table><tbody><tr><th>
+
+						URL: 
+
+					</th><td><a rel="nofollow" target="_top" href="https://aduggin.github.io/accessibility-fails/inappropriate.html">https://aduggin.github.io/accessibility-fails/inappropriate.html</a></td></tr><tr><th title="The status code returned by the web server tells the browser if the request was successful.">
+
+						HTTP Status: 
+
+					</th><td title="The status code returned by the web server tells the browser if the request was successful.">200 OK</td></tr><tr><th title="The MIME type returned by the web server tells the browser how to display the returned content. For example text/html tells the browser to display the content as HTML.">
+
+						MIME Type: 
+
+					</th><td title="The MIME type returned by the web server tells the browser how to display the returned content. For example text/html tells the browser to display the content as HTML.">text/html</td></tr><tr><th title="The last modification date says when the content was last modified. It is often wrong for dynamic pages.">
+
+						Last Modified: 
+
+					</th><td title="The last modification date says when the content was last modified. It is often wrong for dynamic pages.">Mon, 29 Feb 2016 22:56:31 GMT</td></tr><tr><th>
+
+						Download Time: 
+
+					</th><td>
+
+								Less than a second
+
+							</td></tr><tr><th>
+
+						Cookies: 
+
+					</th><td>
+
+								None
+
+							</td></tr><tr><th>
+
+						Size: 
+
+					</th><td>1 KB 
+
+						</td></tr><tr><th>
+
+								Page Weight: 
+
+							</th><td>1 KB (total size of HTML, CSS, JavaScript and images)
+
+							</td></tr><tr><th>
+
+								Depth: 
+
+							</th><td>1 clicks from home page
+
+							</td></tr><tr><th>
+
+								Charset: 
+
+							</th><td>UTF-8</td></tr><tr><th>
+
+								Forms: 
+
+							</th><td>0 forms containing 0 controls
+
+							</td></tr><tr><th>
+
+						HTTP Headers: 
+
+					</th><td><a href="http://try.powermapper.com/Reports/c87d5178-bb24-4285-be70-c44405785f56/report/res/9.view.htm#" onclick="toggleChevron(&#39;HttpHeaders&#39;); return false;" onkeypress="this.click();"><img width="20" height="20" alt="View Headers" id="chevHttpHeaders" src="./inappropriate_files/chevron-down.png"></a>&nbsp;<a href="http://try.powermapper.com/Reports/c87d5178-bb24-4285-be70-c44405785f56/report/res/9.view.htm#" onclick="toggleChevron(&#39;HttpHeaders&#39;); return false;" onkeypress="this.click();">14&nbsp;headers</a><div style="display: none; width: 100%;" id="HttpHeaders"><a rel="nofollow">Accept-Ranges: bytes</a><br><a rel="nofollow">Access-Control-Allow-Origin: *</a><br><a rel="nofollow">Age: 0</a><br><a rel="nofollow">Cache-Control: max-age=600</a><br><a rel="nofollow">Connection: keep-alive</a><br><a rel="nofollow">Date: Tue, 05 Jul 2016 11:57:03 GMT</a><br><a rel="nofollow">Server: GitHub.com</a><br><a rel="nofollow">Vary: Accept-Encoding</a><br><a rel="nofollow">Via: 1.1 varnish</a><br><a rel="nofollow">X-Cache: MISS</a><br><a rel="nofollow">X-Cache-Hits: 0</a><br><a rel="nofollow">X-Fastly-Request-ID: 884d8148c0a8e8f0c5454f8240e3cbf3b6efd060</a><br><a rel="nofollow">X-GitHub-Request-Id: B91F1326:4065:A6D4B0:577BA08F</a><br><a rel="nofollow">X-Served-By: cache-lhr6327-LHR</a><br></div></td></tr><tr><th>
+
+						Links In: 
+
+					</th><td><a href="http://try.powermapper.com/Reports/c87d5178-bb24-4285-be70-c44405785f56/report/res/9.view.htm#" onclick="toggleChevron(&#39;LinksIn&#39;); return false;" onkeypress="this.click();"><img width="20" height="20" alt="View Links" id="chevLinksIn" src="./inappropriate_files/chevron-down.png"></a>&nbsp;<a href="http://try.powermapper.com/Reports/c87d5178-bb24-4285-be70-c44405785f56/report/res/9.view.htm#" onclick="toggleChevron(&#39;LinksIn&#39;); return false;" onkeypress="this.click();">1&nbsp;pages</a><div style="display: none; width: 100%;" id="LinksIn"><a rel="nofollow" href="https://aduggin.github.io/accessibility-fails/" onclick="viewSource( 2, 0, 0 ); return false;" onkeypress="this.click();">https://aduggin.github.io/accessibility-fails/</a><br></div></td></tr><tr><th>
+
+							Links Out: 
+
+						</th><td><a><img width="20" height="20" alt="View Links" id="chevLinksOut" src="./inappropriate_files/chevron-disabled.png"></a>&nbsp;<a>0&nbsp;links</a><div style="display: none; width: 100%;" id="LinksOut"></div></td></tr><tr><th>
+
+							Images: 
+
+						</th><td><a><img width="20" height="20" alt="View Images" id="chevImages" src="./inappropriate_files/chevron-disabled.png"></a>&nbsp;<a>0&nbsp;images</a><div style="display: none; width: 100%;" id="Images"></div></td></tr><tr><th>
+
+							CSS: 
+
+						</th><td><a><img width="20" height="20" alt="View CSS Files" id="chevCSS" src="./inappropriate_files/chevron-disabled.png"></a>&nbsp;<a>0&nbsp;files</a><div style="display: none; width: 100%;" id="CSS"></div></td></tr><tr><th>
+
+							JavaScript: 
+
+						</th><td><a><img width="20" height="20" alt="View JavaScript Files" id="chevJavaScript" src="./inappropriate_files/chevron-disabled.png"></a>&nbsp;<a>0&nbsp;files</a><div style="display: none; width: 100%;" id="JavaScript"></div></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr class="middle"><th><img alt="Issue" style="text-align:absmiddle" width="20" height="20" src="./inappropriate_files/bench-worse.png">	
+
+								Issues: 
+
+							</th><td>1
+
+								issues found on
+
+								1
+
+								lines
+
+							</td></tr></tbody></table></div><div id="mainContent" class="pre"><script type="text/javascript">function selectLine() {}</script><br style="clear: both"> <div id="err-l1c1-0" class="err">  <div class="col1"><img src="./inappropriate_files/p2.png" width="20" height="20" alt="Priority 2"> </div>  <div class="col2">   <div class="desc">This page has no privacy policy. If your web server logs visits, then every page reachable by a search engine should have a privacy policy explaining what is logged and how the logs are used. </div>   <div class="line"><span class="line">Line 1</span>  <a href="https://ico.org.uk/for-organisations/guide-to-pecr/" target="_top">EU Privacy Regulations</a></div>   <div class="menu-title"><a href="http://try.powermapper.com/Reports/c87d5178-bb24-4285-be70-c44405785f56/report/res/9.view.htm#" class="menu-title" onclick="window.external.RuleOptions( this, &quot;LegNoPrivacy&quot; ); return false;">Options <img src="./inappropriate_files/dropbox.png" width="8" height="8" alt=""></a></div>  </div> </div> <br><br style="clear: both"><p><code>1</code><code>&lt;!DOCTYPE html&gt;</code></p>
+<p><code>2</code><code>&lt;html lang="fr"&gt;</code></p>
+<p><code>3</code><code>&lt;head&gt;</code></p>
+<p><code>4</code><code>    &lt;title&gt;Alistair Duggin&lt;/title&gt;</code></p>
+<p><code>5</code><code>    &lt;link rel="stylesheet" href="css/normalize.css"/&gt;</code></p>
+<p><code>6</code><code>    &lt;link rel="stylesheet" href="css/main.css"/&gt;</code></p>
+<p><code>7</code><code>&lt;/head&gt;</code></p>
+<p><code>8</code><code>&lt;body&gt;</code></p>
+<p><code>9</code><code>&lt;h1&gt;Alistair Duggin&lt;/h1&gt;</code></p>
+<p><code>10</code><code>          </code></p>
+<p><code>11</code><code>&lt;p&gt;last updated: 17 February 2016&lt;/p&gt;</code></p>
+<p><code>12</code><code>          </code></p>
+<p><code>13</code><code>&lt;h2&gt;Language of content&lt;/h2&gt;</code></p>
+<p><code>14</code><code>&lt;h3&gt;html element has lang attribute set to wrong language&lt;/h3&gt;</code></p>
+<p><code>15</code><code>&lt;div class="example"&gt;</code></p>
+<p><code>16</code><code>    &lt;p&gt;This page has a lang attribute set to the wrong language&lt;/p&gt;</code></p>
+<p><code>17</code><code>&lt;/div&gt;</code></p>
+<p><code>18</code><code>          </code></p>
+<p><code>19</code><code>&lt;h2&gt;Page Title&lt;/h2&gt;</code></p>
+<p><code>20</code><code>&lt;h3&gt;Missing page title&lt;/h3&gt;</code></p>
+<p><code>21</code><code>&lt;div class="example"&gt;</code></p>
+<p><code>22</code><code>    &lt;p&gt;This page has no title element&lt;/p&gt;</code></p>
+<p><code>23</code><code>&lt;/div&gt;</code></p>
+<p><code>24</code><code>          </code></p>
+<p><code>25</code><code>&lt;h2&gt;Headings&lt;/h2&gt;</code></p>
+<p><code>26</code><code>&lt;h3&gt;Missing H1&lt;/h3&gt;</code></p>
+<p><code>27</code><code>&lt;div class="example"&gt;</code></p>
+<p><code>28</code><code>    &lt;p&gt;This page has no h1&lt;/p&gt;</code></p>
+<p><code>29</code><code>&lt;/div&gt;</code></p>
+<p><code>30</code><code>          </code></p>
+<p><code>31</code><code>&lt;h3&gt;Implicit heading&lt;/h3&gt;</code></p>
+<p><code>32</code><code>&lt;div class="example"&gt;</code></p>
+<p><code>33</code><code>    &lt;p&gt;This page has a div which is being styled to look like an H1&lt;/p&gt;</code></p>
+<p><code>34</code><code>&lt;/div&gt;</code></p>
+</div><iframe src="./inappropriate_files/saved_resource.html" style="width:0px;height:0px;border:0px solid white;" id="iframeSpelling" title="Ignore - used for spell checking">
+
+					Ignore - used for spell checking
+
+				</iframe></body></html>

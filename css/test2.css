@@ -1,0 +1,286 @@
+body {
+    margin: 20px;
+    line-height: 150%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Global breadcrumb lifted from GOV.UK */
+#global-breadcrumb {
+    background-color: #fff;
+    max-width: 1020px;
+    margin: 0 auto;
+    z-index: 50;
+    overflow: hidden;
+}
+
+#global-breadcrumb ol {
+    max-width: 960px;
+    margin: 0 30px;
+    padding: 0.75em 0
+}
+
+#global-breadcrumb ol li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.14286;
+    font-weight: 400;
+    text-transform: none;
+    font-size-adjust: 0.5;
+    background-image: url(https://assets.publishing.service.gov.uk/static/separator-871ef28abf1920b1b8050934ebec4366c18e3cba6ddb704392935e076a7e744d.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    float: left;
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    padding-right: 1em
+}
+
+#global-breadcrumb ol li a {
+    color: #0b0c0c
+}
+
+#global-breadcrumb ol li strong {
+    font-weight: normal
+}
+
+#global-breadcrumb ol li:last-child {
+    background-image: none;
+    margin-right: 0
+}
+
+/* End of Global Breadcrumb */
+
+/* Outline not visible */
+.not-visible-outline {
+    background: #fff;
+    border: 2px solid #000;
+    padding: 0.4em 2em;
+
+}
+
+.not-visible-outline:focus {
+    border: 1px solid #000;
+    outline: #000 solid 1px;
+}
+
+.not-visible-outline-link:focus {
+    outline: #000 solid 1px;
+}
+
+/* Left aligned form labels */
+
+.too-much-whitespace {
+    overflow: hidden;
+}
+
+.too-much-whitespace label {
+    float: left;
+}
+
+.too-much-whitespace input {
+    float: right;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    height: 100px;
+    width: 400px;
+    top: 20%;
+    left: 50%;
+    margin-left: -200px;
+    background: white;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.lightbox .close-button {
+    float: right;
+    color: #000;
+    text-decoration: none;
+}
+
+.lightbox span.close-button {
+    cursor: pointer;
+    cursor: hand;
+}
+
+/* Links only identifiable by colour alone */
+.links-by-colour-alone a {
+    color: #005ea5;
+}
+
+.links-by-colour-alone a:hover {
+    color: #2e8aca;
+}
+
+.links-by-colour-alone .colour-alone-link {
+    text-decoration: none;
+}
+
+/* Wrong focus order */
+
+.focus-order-broken a {
+    margin-left: 0.75em;
+}
+
+.focus-order-broken .first, 
+.focus-order-broken .third {
+    float: left;
+}
+
+.focus-order-broken .second {
+    float: right;
+}
+
+
+.wont-expand-box {
+    overflow: hidden;
+    height: 8em;
+}
+
+.wont-expand {
+    border: 1px solid #BFC1C3;
+    padding: 1em;
+    position: absolute;
+    width: 50%;
+    height: 3em;
+    overflow: hidden;
+}
+
+/* Concertina */
+.concertina dt {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-top: 1px solid #bfc1c3;
+}
+
+.concertina dt:hover {
+    cursor: pointer;
+    cursor: hand;
+    background: #f8f8f8;
+}
+
+.concertina dt:before {
+    content: '>';
+    font-size: 0.7em;
+    margin-left: 1em;
+    margin-right: 0.4em;
+    position: relative;
+    top: -0.25em;
+}
+
+.concertina dt.expanded:before {
+    content: 'v';
+}
+
+/* Validation */
+.errors-badly-identified .validation-summary {
+    padding: 1em;
+    border: 3px solid #df3034;
+    background: #fae1e1;
+}
+
+.errors-badly-identified label {
+    display: block;
+    margin: 1em 0 1em 0;
+}
+
+.errors-badly-identified label input {
+    display: block;
+}
+
+.errors-colour-only .has-errors {
+    background: #fae1e1;
+    border: 1px solid #df3034;
+}
+
+.error-poor-contrast .validation-summary {
+    color: #fff;
+}
+
+.error-poor-contrast .has-errors {
+    border: 1px solid #fae1e1;
+}
+
+.required-format-not-given .error-message {
+    display: block;
+    color: #df3034;
+    margin: 0 0 0.3em 0;
+}
+
+.dropdown-nav > ul > li > ul {
+    display: none;
+}
+
+.dropdown-nav > ul > li:hover > ul {
+    display: block;
+}
+
+.tooltips-not-focusable {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.tooltips-not-focusable .tooltip-icon {
+    cursor: pointer;
+    cursor: hand;
+    background: #6F777B;
+    color: #fff;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    text-align: center;
+    text-indent: -0.1em;
+}
+
+.tooltips-not-focusable .tooltip-icon:hover + .tooltip-information {
+    display: block;
+}
+
+.tooltips-not-focusable .tooltip-information {
+    display: none;
+    position: absolute;
+    width: 12em;
+    background: #6F777B;
+    color: white;
+    padding: 1em;
+    margin-top: -10.2em;
+    margin-left: 6.3em;
+}
+
+/* Tooltip arrow */
+.tooltips-not-focusable .tooltip-information:after, .tooltips-not-focusable .tooltip-information:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.tooltips-not-focusable .tooltip-information:after {
+    border-color: rgba(111, 119, 123, 0);
+    border-top-color: #6F777B;
+    border-width: 10px;
+    margin-left: -10px;
+}
+.tooltips-not-focusable .tooltip-information:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #;
+    border-width: 11px;
+    margin-left: -11px;
+}
+
+
+.not-article-content h2 {
+    margin: 0.5em 0;
+}
